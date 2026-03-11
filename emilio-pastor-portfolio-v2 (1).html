@@ -1,0 +1,1538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Emilio Pastor Zurita — Frontend Developer</title>
+<meta name="description" content="Frontend developer with a background in web development and industrial software. Based in Córdoba."/>
+<meta name="keywords" content="frontend developer, web developer, React, JavaScript, portfolio, Emilio Pastor"/>
+<meta property="og:title" content="Emilio Pastor Zurita — Frontend Developer"/>
+<meta property="og:description" content="Building clean, functional web products."/>
+<meta property="og:type" content="website"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist+Mono:wght@300;400;500&family=Geist:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+:root{
+  --white:#F5F3EE;
+  --off:#EDEAE3;
+  --paper:#E8E4DA;
+  --ink:#111111;
+  --ink2:#1C1C1C;
+  --muted:#888880;
+  --muted2:#AAAA9F;
+  --line:rgba(17,17,17,0.12);
+  --line2:rgba(17,17,17,0.06);
+  --accent:#D4460F;
+  --accent2:#1A6B3C;
+  --mono:'Geist Mono',monospace;
+  --serif:'Instrument Serif',serif;
+  --sans:'Geist',sans-serif;
+}
+
+html{scroll-behavior:smooth;font-size:16px}
+body{
+  background:var(--white);
+  color:var(--ink);
+  font-family:var(--sans);
+  line-height:1.6;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+::selection{background:var(--ink);color:var(--white)}
+::-webkit-scrollbar{width:3px}
+::-webkit-scrollbar-track{background:var(--white)}
+::-webkit-scrollbar-thumb{background:var(--ink)}
+
+/* ── CUSTOM CURSOR ── */
+.cur{
+  width:8px;height:8px;
+  background:var(--accent);
+  border-radius:50%;
+  position:fixed;top:0;left:0;
+  pointer-events:none;z-index:9999;
+  transform:translate(-50%,-50%);
+  transition:transform .15s,width .25s,height .25s;
+  mix-blend-mode:multiply;
+}
+.cur-o{
+  width:28px;height:28px;
+  border:1px solid rgba(17,17,17,0.3);
+  border-radius:50%;
+  position:fixed;top:0;left:0;
+  pointer-events:none;z-index:9998;
+  transform:translate(-50%,-50%);
+  transition:left .18s ease,top .18s ease,width .25s,height .25s,border-color .25s;
+}
+body:has(a:hover) .cur-o,
+body:has(button:hover) .cur-o{
+  width:40px;height:40px;
+  border-color:var(--accent);
+}
+
+/* ── NAV ── */
+nav{
+  position:fixed;top:0;left:0;right:0;
+  z-index:200;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:20px 48px;
+  mix-blend-mode:multiply;
+  transition:padding .3s;
+}
+nav.solid{
+  mix-blend-mode:normal;
+  background:rgba(245,243,238,0.92);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line);
+  padding:14px 48px;
+}
+.nav-mark{
+  font-family:var(--serif);
+  font-size:1.15rem;
+  font-style:italic;
+  color:var(--ink);
+  text-decoration:none;
+  letter-spacing:-0.01em;
+}
+.nav-r{display:flex;align-items:center;gap:32px}
+.nav-links{display:flex;gap:28px;list-style:none}
+.nav-links a{
+  font-size:.78rem;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:var(--muted);
+  text-decoration:none;
+  font-weight:500;
+  transition:color .2s;
+}
+.nav-links a:hover{color:var(--ink)}
+.nav-hire{
+  font-size:.75rem;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  font-weight:600;
+  padding:8px 18px;
+  border:1px solid var(--ink);
+  color:var(--ink);
+  text-decoration:none;
+  transition:background .2s,color .2s;
+}
+.nav-hire:hover{background:var(--ink);color:var(--white)}
+.lang-toggle{
+  display:flex;align-items:center;gap:0;
+  border:1px solid var(--line);
+  overflow:hidden;
+  flex-shrink:0;
+}
+.lang-btn{
+  font-family:var(--mono);
+  font-size:.62rem;
+  letter-spacing:.1em;
+  font-weight:500;
+  padding:7px 11px;
+  background:transparent;
+  color:var(--muted);
+  border:none;
+  cursor:pointer;
+  transition:background .2s,color .2s;
+  line-height:1;
+}
+.lang-btn.active{
+  background:var(--ink);
+  color:var(--white);
+}
+.lang-btn:not(.active):hover{color:var(--ink)}
+.burger{
+  display:none;flex-direction:column;gap:5px;
+  background:none;border:none;cursor:pointer;padding:2px;
+}
+.burger span{
+  display:block;width:22px;height:1.5px;
+  background:var(--ink);transition:all .3s;
+}
+
+/* ── MOBILE MENU ── */
+.mob-menu{
+  display:none;
+  position:fixed;inset:0;
+  background:var(--white);
+  z-index:199;
+  flex-direction:column;
+  align-items:flex-start;
+  justify-content:flex-end;
+  padding:48px;
+  gap:12px;
+}
+.mob-menu.open{display:flex}
+.mob-menu a{
+  font-family:var(--serif);
+  font-style:italic;
+  font-size:3rem;
+  color:var(--ink);
+  text-decoration:none;
+  line-height:1.1;
+}
+.mob-menu-close{
+  position:absolute;top:24px;right:48px;
+  background:none;border:none;cursor:pointer;
+  font-size:1.2rem;color:var(--muted);
+}
+
+/* ── HERO ── */
+#hero{
+  min-height:100svh;
+  display:grid;
+  grid-template-rows:1fr auto;
+  padding:0 48px;
+  position:relative;
+  overflow:hidden;
+}
+.hero-main{
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  padding-bottom:48px;
+  padding-top:120px;
+  position:relative;z-index:2;
+}
+.hero-eyebrow{
+  display:flex;align-items:center;gap:12px;
+  margin-bottom:24px;
+  opacity:0;animation:up .7s .1s forwards;
+}
+.hero-avail{
+  display:flex;align-items:center;gap:6px;
+  font-family:var(--mono);
+  font-size:.7rem;
+  letter-spacing:.08em;
+  color:var(--accent2);
+}
+.hero-avail-dot{
+  width:6px;height:6px;border-radius:50%;
+  background:var(--accent2);
+  animation:blink 2.5s ease-in-out infinite;
+}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+
+.hero-loc{
+  font-family:var(--mono);
+  font-size:.7rem;
+  letter-spacing:.08em;
+  color:var(--muted);
+}
+
+h1.hero-name{
+  font-family:var(--serif);
+  font-style:italic;
+  font-size:clamp(4rem,10vw,9.5rem);
+  line-height:.92;
+  letter-spacing:-.03em;
+  color:var(--ink);
+  opacity:0;animation:up .9s .25s forwards;
+}
+.hero-role-line{
+  display:flex;
+  align-items:baseline;
+  gap:20px;
+  margin-top:16px;
+  opacity:0;animation:up .9s .4s forwards;
+  flex-wrap:wrap;
+}
+.hero-role{
+  font-family:var(--mono);
+  font-size:clamp(.8rem,1.5vw,1rem);
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  color:var(--muted);
+}
+.hero-sep{display:block;width:1px;height:14px;background:var(--line);align-self:center}
+.hero-desc{
+  font-size:clamp(.9rem,1.3vw,.95rem);
+  color:var(--muted);
+  max-width:480px;
+  line-height:1.7;
+}
+.hero-actions{
+  display:flex;gap:12px;
+  margin-top:36px;
+  opacity:0;animation:up .9s .55s forwards;
+  flex-wrap:wrap;
+}
+.btn-dark{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:12px 28px;
+  background:var(--ink);
+  color:var(--white);
+  font-size:.78rem;
+  font-weight:600;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  text-decoration:none;
+  transition:background .2s,transform .2s;
+  border:none;cursor:pointer;
+}
+.btn-dark:hover{background:var(--ink2);transform:translateY(-1px)}
+.btn-ghost{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:12px 28px;
+  background:transparent;
+  color:var(--ink);
+  font-size:.78rem;
+  font-weight:600;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  text-decoration:none;
+  border:1px solid var(--line);
+  transition:border-color .2s,transform .2s;
+  cursor:pointer;
+}
+.btn-ghost:hover{border-color:var(--ink);transform:translateY(-1px)}
+
+.hero-bottom-bar{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  border-top:1px solid var(--line);
+  padding:20px 0;
+  opacity:0;animation:up .8s .7s forwards;
+  flex-wrap:wrap;gap:16px;
+  position:relative;z-index:2;
+}
+.hero-stack-pills{display:flex;gap:8px;flex-wrap:wrap}
+.pill{
+  font-family:var(--mono);
+  font-size:.65rem;
+  letter-spacing:.06em;
+  padding:4px 10px;
+  border:1px solid var(--line);
+  color:var(--muted);
+}
+.hero-scroll-hint{
+  display:flex;align-items:center;gap:8px;
+  font-family:var(--mono);
+  font-size:.65rem;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:var(--muted2);
+}
+.scroll-arrow{
+  width:14px;height:14px;
+  border-right:1px solid var(--muted2);
+  border-bottom:1px solid var(--muted2);
+  transform:rotate(45deg);
+  animation:bounce 2s ease-in-out infinite;
+}
+@keyframes bounce{0%,100%{transform:rotate(45deg) translateY(0)}50%{transform:rotate(45deg) translateY(3px)}}
+
+/* large italic watermark */
+.hero-bg-text{
+  position:absolute;
+  right:-2%;
+  top:50%;
+  transform:translateY(-50%);
+  font-family:var(--serif);
+  font-style:italic;
+  font-size:clamp(8rem,18vw,22rem);
+  color:rgba(17,17,17,0.04);
+  white-space:nowrap;
+  pointer-events:none;
+  line-height:1;
+  z-index:1;
+  letter-spacing:-.04em;
+  opacity:0;animation:up 1.2s .2s forwards;
+}
+
+@keyframes up{
+  from{opacity:0;transform:translateY(20px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+/* ── DIVIDER ── */
+.section-divider{
+  width:100%;height:1px;
+  background:var(--line);
+}
+
+/* ── SECTION SHELL ── */
+.s{
+  padding:96px 48px;
+  max-width:1200px;
+  margin:0 auto;
+}
+.s-full{padding:96px 48px;border-top:1px solid var(--line)}
+.s-full > .s-inner{max-width:1200px;margin:0 auto}
+
+/* ── SECTION HEADER ── */
+.s-head{
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  margin-bottom:56px;
+  gap:24px;
+  flex-wrap:wrap;
+  border-bottom:1px solid var(--line);
+  padding-bottom:20px;
+}
+.s-label{
+  font-family:var(--mono);
+  font-size:.68rem;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--muted);
+  margin-bottom:8px;
+}
+.s-title{
+  font-family:var(--serif);
+  font-style:italic;
+  font-size:clamp(2rem,4vw,3.2rem);
+  letter-spacing:-.02em;
+  color:var(--ink);
+  line-height:1.1;
+}
+.s-count{
+  font-family:var(--mono);
+  font-size:.7rem;
+  letter-spacing:.08em;
+  color:var(--muted2);
+}
+
+/* ── REVEAL ── */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease}
+.rv.in{opacity:1;transform:none}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}.d4{transition-delay:.32s}.d5{transition-delay:.40s}
+
+/* ── FEATURED PROJECTS ── */
+#projects{background:var(--white);border-top:1px solid var(--line)}
+
+.projects-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:1px;
+  background:var(--line);
+  border:1px solid var(--line);
+}
+.project-card{
+  background:var(--white);
+  padding:40px;
+  display:flex;
+  flex-direction:column;
+  gap:24px;
+  transition:background .2s;
+  cursor:default;
+}
+.project-card:hover{background:var(--off)}
+.project-card.span2{grid-column:span 2}
+
+.proj-head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px}
+.proj-num{
+  font-family:var(--mono);
+  font-size:.65rem;
+  letter-spacing:.1em;
+  color:var(--muted2);
+}
+.proj-links{display:flex;gap:16px}
+.proj-link{
+  font-family:var(--mono);
+  font-size:.65rem;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:var(--muted);
+  text-decoration:none;
+  display:flex;align-items:center;gap:4px;
+  transition:color .2s;
+}
+.proj-link:hover{color:var(--ink)}
+.proj-link svg{width:10px;height:10px}
+
+.proj-img{
+  width:100%;
+  height:200px;
+  background:var(--paper);
+  border:1px solid var(--line);
+  display:flex;align-items:center;justify-content:center;
+  overflow:hidden;
+  position:relative;
+}
+.proj-img-inner{
+  display:grid;
+  grid-template-columns:repeat(6,1fr);
+  grid-template-rows:repeat(4,1fr);
+  gap:1px;
+  width:85%;height:75%;
+  opacity:.35;
+}
+.proj-img-inner span{background:var(--ink);border-radius:1px}
+/* Different grid patterns per card */
+.pattern-a .proj-img-inner span:nth-child(odd){opacity:.6}
+.pattern-a .proj-img-inner span:nth-child(3n){opacity:.9}
+.pattern-b .proj-img-inner{grid-template-columns:repeat(3,1fr)}
+.pattern-b .proj-img-inner span:nth-child(2n){opacity:.3}
+.pattern-c .proj-img-inner{grid-template-columns:1fr 2fr 1fr}
+
+.proj-title{
+  font-family:var(--serif);
+  font-style:italic;
+  font-size:1.5rem;
+  letter-spacing:-.01em;
+  color:var(--ink);
+  line-height:1.2;
+}
+.proj-desc{
+  font-size:.88rem;
+  color:var(--muted);
+  line-height:1.7;
+  flex:1;
+}
+.proj-techs{
+  display:flex;flex-wrap:wrap;gap:6px;
+}
+.proj-tech{
+  font-family:var(--mono);
+  font-size:.62rem;
+  letter-spacing:.06em;
+  padding:3px 8px;
+  border:1px solid var(--line);
+  color:var(--muted);
+}
+
+/* placeholder "add project" card */
+.proj-add{
+  background:var(--off);
+  border:1px dashed var(--muted2);
+  display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+  gap:8px;min-height:200px;
+  cursor:default;
+}
+.proj-add-label{
+  font-family:var(--mono);
+  font-size:.65rem;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:var(--muted2);
+}
+
+/* ── ABOUT ── */
+#about{background:var(--off);border-top:1px solid var(--line)}
+.about-layout{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:80px;
+  align-items:start;
+}
+.about-text p{
+  font-size:1rem;
+  color:var(--ink);
+  line-height:1.8;
+  margin-bottom:16px;
+  opacity:.85;
+}
+.about-text p:last-child{margin-bottom:0}
+.about-aside{}
+.aside-block{
+  padding:28px 0;
+  border-bottom:1px solid var(--line);
+}
+.aside-block:first-child{border-top:1px solid var(--line)}
+.aside-label{
+  font-family:var(--mono);
+  font-size:.65rem;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:var(--muted);
+  margin-bottom:12px;
+}
+.aside-val{
+  font-size:.9rem;
+  color:var(--ink);
+  line-height:1.6;
+}
+.aside-val strong{font-weight:600}
+
+/* ── EXPERIENCE ── */
+#experience{background:var(--white);border-top:1px solid var(--line)}
+.exp-table{
+  display:flex;flex-direction:column;
+}
+.exp-row{
+  display:grid;
+  grid-template-columns:180px 1fr;
+  gap:48px;
+  padding:40px 0;
+  border-bottom:1px solid var(--line);
+  transition:background .2s;
+}
+.exp-row:first-child{border-top:1px solid var(--line)}
+.exp-row:hover{background:var(--off);margin:0 -48px;padding:40px 48px}
+.exp-left{}
+.exp-period{
+  font-family:var(--mono);
+  font-size:.68rem;
+  letter-spacing:.08em;
+  color:var(--muted);
+  margin-bottom:4px;
+}
+.exp-co{
+  font-family:var(--mono);
+  font-size:.72rem;
+  font-weight:500;
+  color:var(--accent);
+  letter-spacing:.04em;
+}
+.exp-right{}
+.exp-title{
+  font-family:var(--serif);
+  font-style:italic;
+  font-size:1.5rem;
+  letter-spacing:-.01em;
+  color:var(--ink);
+  margin-bottom:12px;
+}
+.exp-body{
+  font-size:.88rem;
+  color:var(--muted);
+  line-height:1.75;
+  margin-bottom:20px;
+  max-width:560px;
+}
+.exp-tags{display:flex;flex-wrap:wrap;gap:6px}
+.exp-tag{
+  font-family:var(--mono);
+  font-size:.62rem;
+  letter-spacing:.06em;
+  padding:3px 8px;
+  border:1px solid var(--line);
+  color:var(--muted);
+}
+.exp-tag.hi{border-color:rgba(212,70,15,.25);color:var(--accent)}
+.exp-tag.gr{border-color:rgba(26,107,60,.25);color:var(--accent2)}
+
+/* ── TECH STACK ── */
+#stack{background:var(--off);border-top:1px solid var(--line)}
+.stack-cols{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:1px;
+  background:var(--line);
+  border:1px solid var(--line);
+}
+.stack-col{
+  background:var(--off);
+  padding:32px 28px;
+}
+.stack-col-title{
+  font-family:var(--mono);
+  font-size:.65rem;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--muted);
+  margin-bottom:24px;
+  padding-bottom:12px;
+  border-bottom:1px solid var(--line);
+}
+.stack-list{display:flex;flex-direction:column;gap:12px}
+.stack-item{
+  display:flex;align-items:center;justify-content:space-between;
+}
+.stack-name{
+  font-size:.88rem;
+  font-weight:500;
+  color:var(--ink);
+}
+.stack-note{
+  font-family:var(--mono);
+  font-size:.6rem;
+  letter-spacing:.05em;
+  color:var(--muted2);
+}
+
+/* ── MORE PROJECTS ── */
+#more{background:var(--white);border-top:1px solid var(--line)}
+.more-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1px;
+  background:var(--line);
+  border:1px solid var(--line);
+}
+.more-card{
+  background:var(--white);
+  padding:32px;
+  transition:background .2s;
+}
+.more-card:hover{background:var(--off)}
+.more-num{
+  font-family:var(--mono);
+  font-size:.62rem;
+  letter-spacing:.1em;
+  color:var(--muted2);
+  margin-bottom:12px;
+}
+.more-title{
+  font-family:var(--serif);
+  font-style:italic;
+  font-size:1.15rem;
+  color:var(--ink);
+  margin-bottom:8px;
+  letter-spacing:-.01em;
+}
+.more-desc{
+  font-size:.82rem;
+  color:var(--muted);
+  line-height:1.65;
+  margin-bottom:16px;
+}
+.more-foot{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  flex-wrap:wrap;gap:8px;
+}
+.more-techs{display:flex;gap:4px;flex-wrap:wrap}
+.more-tech{
+  font-family:var(--mono);
+  font-size:.58rem;
+  letter-spacing:.06em;
+  padding:2px 6px;
+  border:1px solid var(--line);
+  color:var(--muted);
+}
+.more-link{
+  font-family:var(--mono);
+  font-size:.62rem;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:var(--muted);
+  text-decoration:none;
+  transition:color .2s;
+}
+.more-link:hover{color:var(--ink)}
+
+/* ── CONTACT ── */
+#contact{background:var(--ink);border-top:1px solid var(--line)}
+#contact .s-label{color:rgba(245,243,238,.4)}
+#contact .s-title{color:var(--white)}
+#contact .s-count{color:rgba(245,243,238,.3)}
+#contact .s-head{border-bottom-color:rgba(245,243,238,.1)}
+.contact-layout{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:80px;
+  align-items:start;
+}
+.contact-left p{
+  font-size:.95rem;
+  color:rgba(245,243,238,.6);
+  line-height:1.75;
+  margin-bottom:32px;
+}
+.contact-items{display:flex;flex-direction:column;gap:1px}
+.contact-item{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:18px 0;
+  border-bottom:1px solid rgba(245,243,238,.08);
+  text-decoration:none;
+  transition:opacity .2s;
+}
+.contact-item:hover{opacity:.7}
+.contact-item-label{
+  font-family:var(--mono);
+  font-size:.65rem;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:rgba(245,243,238,.4);
+}
+.contact-item-val{
+  font-size:.9rem;
+  font-weight:500;
+  color:var(--white);
+}
+.contact-arrow{
+  width:14px;height:14px;
+  border-top:1px solid rgba(245,243,238,.3);
+  border-right:1px solid rgba(245,243,238,.3);
+  transform:rotate(45deg);
+}
+
+/* Form */
+.contact-form{display:flex;flex-direction:column;gap:1px}
+.fg{
+  display:flex;flex-direction:column;
+  background:rgba(245,243,238,.04);
+  border:1px solid rgba(245,243,238,.08);
+  margin-bottom:8px;
+}
+.fg label{
+  font-family:var(--mono);
+  font-size:.62rem;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:rgba(245,243,238,.35);
+  padding:12px 16px 0;
+}
+.fg input,.fg textarea{
+  background:transparent;
+  border:none;
+  padding:6px 16px 12px;
+  color:var(--white);
+  font-family:var(--sans);
+  font-size:.9rem;
+  outline:none;
+  width:100%;
+}
+.fg textarea{min-height:100px;resize:vertical}
+.fg input::placeholder,.fg textarea::placeholder{color:rgba(245,243,238,.2)}
+.fg:focus-within{border-color:rgba(245,243,238,.25)}
+.form-btn{
+  margin-top:8px;
+  padding:14px 24px;
+  background:var(--white);
+  color:var(--ink);
+  border:none;
+  font-family:var(--sans);
+  font-size:.78rem;
+  font-weight:600;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  cursor:pointer;
+  transition:background .2s,transform .2s;
+  width:100%;
+}
+.form-btn:hover{background:var(--paper);transform:translateY(-1px)}
+
+/* ── FOOTER ── */
+footer{
+  background:var(--ink);
+  border-top:1px solid rgba(245,243,238,.08);
+  padding:24px 48px;
+  display:flex;align-items:center;justify-content:space-between;
+  flex-wrap:wrap;gap:16px;
+}
+.foot-copy{
+  font-family:var(--mono);
+  font-size:.65rem;
+  letter-spacing:.06em;
+  color:rgba(245,243,238,.3);
+}
+.foot-links{display:flex;gap:24px}
+.foot-links a{
+  font-family:var(--mono);
+  font-size:.62rem;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:rgba(245,243,238,.4);
+  text-decoration:none;
+  transition:color .2s;
+}
+.foot-links a:hover{color:var(--white)}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1024px){
+  .stack-cols{grid-template-columns:repeat(2,1fr)}
+  .more-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:768px){
+  nav{padding:18px 24px}
+  nav.solid{padding:14px 24px}
+  .nav-links,.nav-hire{display:none}
+  .burger{display:flex}
+  .mob-menu-close{right:24px}
+  #hero{padding:0 24px}
+  .s{padding:72px 24px}
+  .s-full{padding:72px 24px}
+  .projects-grid{grid-template-columns:1fr}
+  .project-card.span2{grid-column:span 1}
+  .about-layout{grid-template-columns:1fr;gap:48px}
+  .exp-row{grid-template-columns:1fr;gap:12px}
+  .exp-row:hover{margin:0;padding:40px 0}
+  .stack-cols{grid-template-columns:1fr 1fr}
+  .more-grid{grid-template-columns:1fr}
+  .contact-layout{grid-template-columns:1fr;gap:48px}
+  footer{flex-direction:column;align-items:flex-start;padding:24px}
+  .cur,.cur-o{display:none}
+}
+@media(max-width:480px){
+  .stack-cols{grid-template-columns:1fr}
+  h1.hero-name{font-size:3.2rem}
+  .hero-bg-text{display:none}
+}
+</style>
+</head>
+<body>
+
+<!-- CURSOR -->
+<div class="cur" id="cur"></div>
+<div class="cur-o" id="curo"></div>
+
+<!-- MOBILE MENU -->
+<div class="mob-menu" id="mobMenu">
+  <button class="mob-menu-close" onclick="closeMob()">close</button>
+  <a href="#projects" onclick="closeMob()" data-i18n="nav.projects">Projects</a>
+  <a href="#about" onclick="closeMob()" data-i18n="nav.about">About</a>
+  <a href="#experience" onclick="closeMob()" data-i18n="nav.experience">Experience</a>
+  <a href="#stack" onclick="closeMob()" data-i18n="nav.stack">Stack</a>
+  <a href="#contact" onclick="closeMob()" data-i18n="nav.contact">Contact</a>
+</div>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="#" class="nav-mark">Emilio Pastor</a>
+  <div class="nav-r">
+    <ul class="nav-links">
+      <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
+      <li><a href="#about" data-i18n="nav.about">About</a></li>
+      <li><a href="#experience" data-i18n="nav.experience">Experience</a></li>
+      <li><a href="#stack" data-i18n="nav.stack">Stack</a></li>
+    </ul>
+    <div class="lang-toggle">
+      <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
+      <button class="lang-btn" id="btn-es" onclick="setLang('es')">ES</button>
+    </div>
+    <a href="#contact" class="nav-hire" data-i18n="nav.hire">Hire me</a>
+    <button class="burger" onclick="openMob()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg-text">Frontend</div>
+  <div class="hero-main">
+    <div class="hero-eyebrow">
+      <span class="hero-avail">
+        <span class="hero-avail-dot"></span>
+        <span data-i18n="hero.available">Available for work</span>
+      </span>
+      <span class="hero-sep" style="width:1px;height:12px;background:rgba(17,17,17,.15);display:block"></span>
+      <span class="hero-loc">Córdoba, ES</span>
+    </div>
+    <h1 class="hero-name">Emilio<br>Pastor<br>Zurita</h1>
+    <div class="hero-role-line">
+      <span class="hero-role" data-i18n="hero.role">Frontend Developer</span>
+      <span class="hero-sep"></span>
+      <span class="hero-desc" data-i18n="hero.desc">I build clean, functional web products — with a background in industrial software that gives me a different perspective on what it means for code to actually work.</span>
+    </div>
+    <div class="hero-actions">
+      <a href="#projects" class="btn-dark" data-i18n="hero.btn1">View projects</a>
+      <a href="#contact" class="btn-ghost" data-i18n="hero.btn2">Get in touch</a>
+    </div>
+  </div>
+  <div class="hero-bottom-bar">
+    <div class="hero-stack-pills">
+      <span class="pill">React</span>
+      <span class="pill">JavaScript</span>
+      <span class="pill">Laravel</span>
+      <span class="pill">Tailwind</span>
+      <span class="pill">Git</span>
+    </div>
+    <div class="hero-scroll-hint">
+      <div class="scroll-arrow"></div>
+      Scroll
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED PROJECTS -->
+<section id="projects" class="s-full">
+  <div class="s-inner">
+    <div class="s-head rv">
+      <div>
+        <div class="s-label" data-i18n="projects.label">Work</div>
+        <div class="s-title" data-i18n="projects.title">Featured Projects</div>
+      </div>
+      <div class="s-count" data-i18n="projects.count">02 projects</div>
+    </div>
+    <div class="projects-grid">
+
+      <!-- Project 01 -->
+      <div class="project-card pattern-a rv d1">
+        <div class="proj-head">
+          <span class="proj-num">01</span>
+          <div class="proj-links">
+            <a href="#" class="proj-link" data-i18n="projects.live">
+              Live
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+            </a>
+            <a href="#" class="proj-link">
+              GitHub
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="proj-img">
+          <div class="proj-img-inner">
+            <span></span><span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span><span></span>
+          </div>
+        </div>
+        <div class="proj-title" data-i18n="projects.p1.title">Add your first project here</div>
+        <p class="proj-desc" data-i18n="projects.p1.desc">This card is ready for your real project. Describe what problem it solves, what you built, and what you learned. Keep it concrete and specific.</p>
+        <div class="proj-techs">
+          <span class="proj-tech">React</span>
+          <span class="proj-tech">JavaScript</span>
+          <span class="proj-tech">TailwindCSS</span>
+        </div>
+      </div>
+
+      <!-- Project 02 -->
+      <div class="project-card pattern-b rv d2">
+        <div class="proj-head">
+          <span class="proj-num">02</span>
+          <div class="proj-links">
+            <a href="#" class="proj-link" data-i18n="projects.live">
+              Live
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+            </a>
+            <a href="#" class="proj-link">
+              GitHub
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="proj-img">
+          <div class="proj-img-inner">
+            <span></span><span></span><span></span>
+            <span></span><span></span><span></span>
+            <span></span><span></span><span></span>
+            <span></span><span></span><span></span>
+          </div>
+        </div>
+        <div class="proj-title" data-i18n="projects.p2.title">Add your second project here</div>
+        <p class="proj-desc" data-i18n="projects.p2.desc">Another project slot. Real projects — even small ones — show far more than an empty grid. A working to-do app with good code beats a fake startup landing page.</p>
+        <div class="proj-techs">
+          <span class="proj-tech">Laravel</span>
+          <span class="proj-tech">MySQL</span>
+          <span class="proj-tech">HTML/CSS</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="s-full">
+  <div class="s-inner">
+    <div class="s-head rv">
+      <div>
+        <div class="s-label" data-i18n="about.label">Background</div>
+        <div class="s-title" data-i18n="about.title">About</div>
+      </div>
+    </div>
+    <div class="about-layout">
+      <div class="about-text rv d1">
+        <p data-i18n="about.p1">I'm a web developer based in Córdoba, with formal training in Web Application Development (DAW) and hands-on experience deploying and configuring software in real industrial environments.</p>
+        <p data-i18n="about.p2">My current role involves working on MOM/MES systems for industrial digitalisation projects — configuring manufacturing software, integrating data from OPC and SQL sources, and doing functional testing in production environments. It's not typical frontend work, but it's taught me that software has to actually work, not just look like it does.</p>
+        <p data-i18n="about.p3">What I want to do next is focus on the web side: building interfaces, products, and applications that people use. I'm interested in frontend development, product thinking, and the kind of work that happens at good digital agencies and tech companies.</p>
+        <p data-i18n="about.p4">I learn fast, I take code quality seriously, and I'm at the stage where I want to go from building things alone to building things with a team.</p>
+      </div>
+      <div class="about-aside rv d2">
+        <div class="aside-block">
+          <div class="aside-label" data-i18n="about.aside.formation.label">Formation</div>
+          <div class="aside-val" data-i18n="about.aside.formation.val"><strong>Desarrollo de Aplicaciones Web</strong><br>DAW — Ciclo Formativo Superior</div>
+        </div>
+        <div class="aside-block">
+          <div class="aside-label" data-i18n="about.aside.role.label">Current role</div>
+          <div class="aside-val" data-i18n="about.aside.role.val"><strong>Developer MOM/MES</strong><br>Indra / Deuser, Córdoba<br>Oct 2025 – Present</div>
+        </div>
+        <div class="aside-block">
+          <div class="aside-label" data-i18n="about.aside.looking.label">Looking for</div>
+          <div class="aside-val" data-i18n="about.aside.looking.val">Frontend or web developer position at a digital agency, tech startup, or product company</div>
+        </div>
+        <div class="aside-block">
+          <div class="aside-label" data-i18n="about.aside.languages.label">Languages</div>
+          <div class="aside-val" data-i18n="about.aside.languages.val">Spanish (native) · English (working level)</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="s-full">
+  <div class="s-inner">
+    <div class="s-head rv">
+      <div>
+        <div class="s-label" data-i18n="exp.label">Career</div>
+        <div class="s-title" data-i18n="exp.title">Experience</div>
+      </div>
+      <div class="s-count" data-i18n="exp.count">03 roles</div>
+    </div>
+    <div class="exp-table">
+
+      <div class="exp-row rv d1">
+        <div class="exp-left">
+          <div class="exp-period" data-i18n="exp.e1.period">Oct 2025 – Present</div>
+          <div class="exp-co">Indra / Deuser</div>
+        </div>
+        <div class="exp-right">
+          <div class="exp-title" data-i18n="exp.e1.title">Developer MOM / MES</div>
+          <p class="exp-body" data-i18n="exp.e1.body">Working on industrial digitalisation projects for manufacturing environments. Developing and configuring applications in Mendix, implementing modules in Siemens Opcenter, integrating data via OPC and SQL, and handling functional testing and deployments on the factory floor.</p>
+          <div class="exp-tags">
+            <span class="exp-tag hi">Mendix</span>
+            <span class="exp-tag hi">Siemens Opcenter</span>
+            <span class="exp-tag">OPC / SQL</span>
+            <span class="exp-tag">Git</span>
+            <span class="exp-tag" data-i18n="exp.tag.testing">Testing</span>
+            <span class="exp-tag">MES / MOM</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="exp-row rv d2">
+        <div class="exp-left">
+          <div class="exp-period" data-i18n="exp.e2.period">Internship</div>
+          <div class="exp-co">S.T.A.E — Reggio Emilia, Italy</div>
+        </div>
+        <div class="exp-right">
+          <div class="exp-title" data-i18n="exp.e2.title">IT Technician (Erasmus+ internship)</div>
+          <p class="exp-body" data-i18n="exp.e2.body">Technical support, hardware maintenance and network configuration in an international work environment. Part of the Erasmus+ programme.</p>
+          <div class="exp-tags">
+            <span class="exp-tag" data-i18n="exp.e2.tag1">Technical support</span>
+            <span class="exp-tag" data-i18n="exp.e2.tag2">Networks & systems</span>
+            <span class="exp-tag" data-i18n="exp.e2.tag3">Hardware</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="exp-row rv d3">
+        <div class="exp-left">
+          <div class="exp-period" data-i18n="exp.e3.period">Previous</div>
+          <div class="exp-co">Librería La Pizarra — Córdoba</div>
+        </div>
+        <div class="exp-right">
+          <div class="exp-title" data-i18n="exp.e3.title">Digital Marketing Intern</div>
+          <p class="exp-body" data-i18n="exp.e3.body">Web content management, social media and support with the online visibility of a local business.</p>
+          <div class="exp-tags">
+            <span class="exp-tag gr" data-i18n="exp.e3.tag1">Web content</span>
+            <span class="exp-tag gr" data-i18n="exp.e3.tag2">Social media</span>
+            <span class="exp-tag">WordPress</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- TECH STACK -->
+<section id="stack" class="s-full">
+  <div class="s-inner">
+    <div class="s-head rv">
+      <div>
+        <div class="s-label" data-i18n="stack.label">Tools</div>
+        <div class="s-title" data-i18n="stack.title">Tech Stack</div>
+      </div>
+    </div>
+    <div class="stack-cols">
+      <div class="stack-col rv d1">
+        <div class="stack-col-title">Frontend</div>
+        <div class="stack-list">
+          <div class="stack-item"><span class="stack-name">HTML / CSS</span><span class="stack-note" data-i18n="stack.solid">Solid</span></div>
+          <div class="stack-item"><span class="stack-name">JavaScript</span><span class="stack-note" data-i18n="stack.solid">Solid</span></div>
+          <div class="stack-item"><span class="stack-name">React</span><span class="stack-note" data-i18n="stack.working">Working</span></div>
+          <div class="stack-item"><span class="stack-name">Tailwind CSS</span><span class="stack-note" data-i18n="stack.working">Working</span></div>
+        </div>
+      </div>
+      <div class="stack-col rv d2">
+        <div class="stack-col-title">Backend</div>
+        <div class="stack-list">
+          <div class="stack-item"><span class="stack-name">Laravel</span><span class="stack-note" data-i18n="stack.familiar">Familiar</span></div>
+          <div class="stack-item"><span class="stack-name">MySQL</span><span class="stack-note" data-i18n="stack.familiar">Familiar</span></div>
+          <div class="stack-item"><span class="stack-name">SQL (industrial)</span><span class="stack-note" data-i18n="stack.working">Working</span></div>
+        </div>
+      </div>
+      <div class="stack-col rv d3">
+        <div class="stack-col-title" data-i18n="stack.tools">Tools</div>
+        <div class="stack-list">
+          <div class="stack-item"><span class="stack-name">Git / GitHub</span><span class="stack-note" data-i18n="stack.daily">Daily</span></div>
+          <div class="stack-item"><span class="stack-name">VS Code</span><span class="stack-note" data-i18n="stack.daily">Daily</span></div>
+          <div class="stack-item"><span class="stack-name">Postman</span><span class="stack-note" data-i18n="stack.familiar">Familiar</span></div>
+        </div>
+      </div>
+      <div class="stack-col rv d4">
+        <div class="stack-col-title" data-i18n="stack.industrial">Industrial</div>
+        <div class="stack-list">
+          <div class="stack-item"><span class="stack-name">Mendix</span><span class="stack-note" data-i18n="stack.working">Working</span></div>
+          <div class="stack-item"><span class="stack-name">Siemens Opcenter</span><span class="stack-note" data-i18n="stack.working">Working</span></div>
+          <div class="stack-item"><span class="stack-name">OPC integration</span><span class="stack-note" data-i18n="stack.working">Working</span></div>
+          <div class="stack-item"><span class="stack-name">MES / MOM</span><span class="stack-note" data-i18n="stack.working">Working</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MORE PROJECTS -->
+<section id="more" class="s-full">
+  <div class="s-inner">
+    <div class="s-head rv">
+      <div>
+        <div class="s-label" data-i18n="more.label">More work</div>
+        <div class="s-title" data-i18n="more.title">Other Projects</div>
+      </div>
+      <div class="s-count" data-i18n="more.count">Placeholder</div>
+    </div>
+    <div class="more-grid">
+      <div class="more-card rv d1">
+        <div class="more-num">03</div>
+        <div class="more-title" data-i18n="more.slot">Project slot</div>
+        <p class="more-desc" data-i18n="more.m1.desc">Add a real project here — a DAW exercise, a personal site you built, a small app, anything that shows your code.</p>
+        <div class="more-foot">
+          <div class="more-techs"><span class="more-tech">HTML</span><span class="more-tech">CSS</span><span class="more-tech">JS</span></div>
+          <a href="#" class="more-link">GitHub →</a>
+        </div>
+      </div>
+      <div class="more-card rv d2">
+        <div class="more-num">04</div>
+        <div class="more-title" data-i18n="more.slot">Project slot</div>
+        <p class="more-desc" data-i18n="more.m2.desc">A Laravel CRUD app, a React component library, a landing page — real projects speak louder than placeholders.</p>
+        <div class="more-foot">
+          <div class="more-techs"><span class="more-tech">Laravel</span><span class="more-tech">MySQL</span></div>
+          <a href="#" class="more-link">GitHub →</a>
+        </div>
+      </div>
+      <div class="more-card rv d3">
+        <div class="more-num">05</div>
+        <div class="more-title" data-i18n="more.slot">Project slot</div>
+        <p class="more-desc" data-i18n="more.m3.desc">Even small personal projects count. A weather app, a portfolio clone, a component you're proud of. Add it here.</p>
+        <div class="more-foot">
+          <div class="more-techs"><span class="more-tech">React</span><span class="more-tech">API</span></div>
+          <a href="#" class="more-link">GitHub →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="s-full">
+  <div class="s-inner">
+    <div class="s-head rv">
+      <div>
+        <div class="s-label" data-i18n="contact.label">Get in touch</div>
+        <div class="s-title" data-i18n="contact.title">Contact</div>
+      </div>
+    </div>
+    <div class="contact-layout">
+      <div class="contact-left rv d1">
+        <p data-i18n="contact.desc">I'm looking for a frontend or web developer role. If you're at an agency, a startup, or a product company and you think there could be a fit, I'd like to hear from you.</p>
+        <div class="contact-items">
+          <a href="mailto:emiliopastorzurita906@gmail.com" class="contact-item">
+            <span class="contact-item-label">Email</span>
+            <span class="contact-item-val">your@email.com</span>
+            <div class="contact-arrow"></div>
+          </a>
+          <a href="https://linkedin.com/in/yourprofile" target="_blank" class="contact-item">
+            <span class="contact-item-label">LinkedIn</span>
+            <span class="contact-item-val">Emilio Pastor Zurita</span>
+            <div class="contact-arrow"></div>
+          </a>
+          <a href="https://github.com/EmilioPastor" target="_blank" class="contact-item">
+            <span class="contact-item-label">GitHub</span>
+            <span class="contact-item-val">@yourusername</span>
+            <div class="contact-arrow"></div>
+          </a>
+        </div>
+      </div>
+      <div class="rv d2">
+        <form class="contact-form" onsubmit="submitForm(event)">
+          <div class="fg">
+            <label for="cf-name" data-i18n="contact.form.name">Name</label>
+            <input type="text" id="cf-name" data-i18n-placeholder="contact.form.namePh" placeholder="Your name" required/>
+          </div>
+          <div class="fg">
+            <label for="cf-email">Email</label>
+            <input type="email" id="cf-email" placeholder="your@email.com" required/>
+          </div>
+          <div class="fg">
+            <label for="cf-msg" data-i18n="contact.form.message">Message</label>
+            <textarea id="cf-msg" data-i18n-placeholder="contact.form.messagePh" placeholder="Tell me about the role or project..." required></textarea>
+          </div>
+          <button type="submit" class="form-btn" id="formBtn" data-i18n="contact.form.send">Send message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot-copy">© 2025 Emilio Pastor Zurita</div>
+  <div class="foot-links">
+    <a href="https://github.com" target="_blank">GitHub</a>
+    <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+    <a href="mailto:your@email.com">Email</a>
+  </div>
+</footer>
+
+<script>
+// ── CURSOR
+const cur=document.getElementById('cur');
+const curo=document.getElementById('curo');
+let mx=0,my=0,ox=0,oy=0;
+document.addEventListener('mousemove',e=>{
+  mx=e.clientX;my=e.clientY;
+  cur.style.left=mx+'px';cur.style.top=my+'px';
+});
+(function loop(){ox+=(mx-ox)*.14;oy+=(my-oy)*.14;curo.style.left=ox+'px';curo.style.top=oy+'px';requestAnimationFrame(loop)})();
+
+// ── NAV SCROLL
+const navEl=document.getElementById('nav');
+window.addEventListener('scroll',()=>navEl.classList.toggle('solid',scrollY>80));
+
+// ── MOBILE
+function openMob(){document.getElementById('mobMenu').classList.add('open');document.body.style.overflow='hidden'}
+function closeMob(){document.getElementById('mobMenu').classList.remove('open');document.body.style.overflow=''}
+
+// ── SCROLL REVEAL
+const rvEls=document.querySelectorAll('.rv');
+const io=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})
+},{threshold:.1,rootMargin:'0px 0px -32px 0px'});
+rvEls.forEach(el=>io.observe(el));
+
+// ── SMOOTH SCROLL
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',e=>{
+    const t=document.querySelector(a.getAttribute('href'));
+    if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'})}
+  });
+});
+
+// ── FORM
+function submitForm(e){
+  e.preventDefault();
+  const btn=document.getElementById('formBtn');
+  const lang=document.documentElement.lang||'en';
+  btn.textContent=lang==='es'?'Enviando...':'Sending...';
+  btn.disabled=true;
+  setTimeout(()=>{
+    btn.textContent=lang==='es'?'Mensaje enviado':'Message sent';
+    btn.style.background='rgba(245,243,238,.12)';
+    btn.style.color='rgba(245,243,238,.6)';
+    setTimeout(()=>{
+      btn.textContent=i18n[lang]['contact.form.send'];
+      btn.disabled=false;
+      btn.style.background='';btn.style.color='';
+      e.target.reset();
+    },3000);
+  },1000);
+}
+
+// ── I18N ──────────────────────────────────────────────
+const i18n = {
+  en: {
+    // NAV
+    'nav.projects': 'Projects',
+    'nav.about': 'About',
+    'nav.experience': 'Experience',
+    'nav.stack': 'Stack',
+    'nav.contact': 'Contact',
+    'nav.hire': 'Hire me',
+    // HERO
+    'hero.available': 'Available for work',
+    'hero.role': 'Frontend Developer',
+    'hero.desc': 'I build clean, functional web products — with a background in industrial software that gives me a different perspective on what it means for code to actually work.',
+    'hero.btn1': 'View projects',
+    'hero.btn2': 'Get in touch',
+    // PROJECTS
+    'projects.label': 'Work',
+    'projects.title': 'Featured Projects',
+    'projects.count': '02 projects',
+    'projects.live': 'Live',
+    'projects.p1.title': 'Add your first project here',
+    'projects.p1.desc': 'This card is ready for your real project. Describe what problem it solves, what you built, and what you learned. Keep it concrete and specific.',
+    'projects.p2.title': 'Add your second project here',
+    'projects.p2.desc': 'Another project slot. Real projects — even small ones — show far more than an empty grid. A working to-do app with good code beats a fake startup landing page.',
+    // ABOUT
+    'about.label': 'Background',
+    'about.title': 'About',
+    'about.p1': "I'm a web developer based in Córdoba, with formal training in Web Application Development (DAW) and hands-on experience deploying and configuring software in real industrial environments.",
+    'about.p2': "My current role involves working on MOM/MES systems for industrial digitalisation projects — configuring manufacturing software, integrating data from OPC and SQL sources, and doing functional testing in production environments. It's not typical frontend work, but it's taught me that software has to actually work, not just look like it does.",
+    'about.p3': "What I want to do next is focus on the web side: building interfaces, products, and applications that people use. I'm interested in frontend development, product thinking, and the kind of work that happens at good digital agencies and tech companies.",
+    'about.p4': "I learn fast, I take code quality seriously, and I'm at the stage where I want to go from building things alone to building things with a team.",
+    'about.aside.formation.label': 'Formation',
+    'about.aside.formation.val': '<strong>Desarrollo de Aplicaciones Web</strong><br>DAW — Ciclo Formativo Superior',
+    'about.aside.role.label': 'Current role',
+    'about.aside.role.val': '<strong>Developer MOM/MES</strong><br>Indra / Deuser, Córdoba<br>Oct 2025 – Present',
+    'about.aside.looking.label': 'Looking for',
+    'about.aside.looking.val': 'Frontend or web developer position at a digital agency, tech startup, or product company',
+    'about.aside.languages.label': 'Languages',
+    'about.aside.languages.val': 'Spanish (native) · English (working level)',
+    // EXPERIENCE
+    'exp.label': 'Career',
+    'exp.title': 'Experience',
+    'exp.count': '03 roles',
+    'exp.e1.period': 'Oct 2025 – Present',
+    'exp.e1.title': 'Developer MOM / MES',
+    'exp.e1.body': 'Working on industrial digitalisation projects for manufacturing environments. Developing and configuring applications in Mendix, implementing modules in Siemens Opcenter, integrating data via OPC and SQL, and handling functional testing and deployments on the factory floor.',
+    'exp.tag.testing': 'Testing',
+    'exp.e2.period': 'Internship',
+    'exp.e2.title': 'IT Technician (Erasmus+ internship)',
+    'exp.e2.body': 'Technical support, hardware maintenance and network configuration in an international work environment. Part of the Erasmus+ programme.',
+    'exp.e2.tag1': 'Technical support',
+    'exp.e2.tag2': 'Networks & systems',
+    'exp.e2.tag3': 'Hardware',
+    'exp.e3.period': 'Previous',
+    'exp.e3.title': 'Digital Marketing Intern',
+    'exp.e3.body': 'Web content management, social media and support with the online visibility of a local business.',
+    'exp.e3.tag1': 'Web content',
+    'exp.e3.tag2': 'Social media',
+    // STACK
+    'stack.label': 'Tools',
+    'stack.title': 'Tech Stack',
+    'stack.solid': 'Solid',
+    'stack.working': 'Working',
+    'stack.familiar': 'Familiar',
+    'stack.daily': 'Daily',
+    'stack.tools': 'Tools',
+    'stack.industrial': 'Industrial',
+    // MORE
+    'more.label': 'More work',
+    'more.title': 'Other Projects',
+    'more.count': 'Placeholder',
+    'more.slot': 'Project slot',
+    'more.m1.desc': 'Add a real project here — a DAW exercise, a personal site you built, a small app, anything that shows your code.',
+    'more.m2.desc': 'A Laravel CRUD app, a React component library, a landing page — real projects speak louder than placeholders.',
+    'more.m3.desc': "Even small personal projects count. A weather app, a portfolio clone, a component you're proud of. Add it here.",
+    // CONTACT
+    'contact.label': 'Get in touch',
+    'contact.title': 'Contact',
+    'contact.desc': "I'm looking for a frontend or web developer role. If you're at an agency, a startup, or a product company and you think there could be a fit, I'd like to hear from you.",
+    'contact.form.name': 'Name',
+    'contact.form.namePh': 'Your name',
+    'contact.form.message': 'Message',
+    'contact.form.messagePh': 'Tell me about the role or project...',
+    'contact.form.send': 'Send message',
+  },
+  es: {
+    // NAV
+    'nav.projects': 'Proyectos',
+    'nav.about': 'Sobre mí',
+    'nav.experience': 'Experiencia',
+    'nav.stack': 'Stack',
+    'nav.contact': 'Contacto',
+    'nav.hire': 'Contrátame',
+    // HERO
+    'hero.available': 'Disponible para trabajar',
+    'hero.role': 'Desarrollador Frontend',
+    'hero.desc': 'Construyo productos web limpios y funcionales — con experiencia en software industrial que me da una perspectiva diferente sobre lo que significa que el código funcione de verdad.',
+    'hero.btn1': 'Ver proyectos',
+    'hero.btn2': 'Contactar',
+    // PROJECTS
+    'projects.label': 'Trabajo',
+    'projects.title': 'Proyectos destacados',
+    'projects.count': '02 proyectos',
+    'projects.live': 'Demo',
+    'projects.p1.title': 'Añade tu primer proyecto aquí',
+    'projects.p1.desc': 'Esta tarjeta está lista para tu proyecto real. Describe qué problema resuelve, qué construiste y qué aprendiste. Sé concreto y específico.',
+    'projects.p2.title': 'Añade tu segundo proyecto aquí',
+    'projects.p2.desc': 'Otro hueco para un proyecto. Los proyectos reales — incluso los pequeños — dicen mucho más que una cuadrícula vacía. Una app de tareas con buen código vale más que una landing page falsa.',
+    // ABOUT
+    'about.label': 'Perfil',
+    'about.title': 'Sobre mí',
+    'about.p1': 'Soy desarrollador web con base en Córdoba, con formación en Desarrollo de Aplicaciones Web (DAW) y experiencia real desplegando y configurando software en entornos industriales.',
+    'about.p2': 'Mi trabajo actual consiste en proyectos de digitalización industrial con sistemas MOM/MES — configurando software de fabricación, integrando datos vía OPC y SQL, y haciendo testing funcional en entornos de producción. No es trabajo frontend al uso, pero me ha enseñado que el software tiene que funcionar de verdad, no solo parecerlo.',
+    'about.p3': 'Lo que quiero hacer a continuación es centrarme en la parte web: construir interfaces, productos y aplicaciones que la gente use. Me interesa el desarrollo frontend, el pensamiento de producto y el tipo de trabajo que se hace en buenas agencias digitales y empresas tecnológicas.',
+    'about.p4': 'Aprendo rápido, me tomo en serio la calidad del código y estoy en el momento en que quiero pasar de construir cosas solo a construirlas con un equipo.',
+    'about.aside.formation.label': 'Formación',
+    'about.aside.formation.val': '<strong>Desarrollo de Aplicaciones Web</strong><br>DAW — Ciclo Formativo Superior',
+    'about.aside.role.label': 'Puesto actual',
+    'about.aside.role.val': '<strong>Desarrollador MOM/MES</strong><br>Indra / Deuser, Córdoba<br>Oct 2025 – Actualidad',
+    'about.aside.looking.label': 'Busco',
+    'about.aside.looking.val': 'Puesto de desarrollador frontend o web en agencia digital, startup tecnológica o empresa de producto',
+    'about.aside.languages.label': 'Idiomas',
+    'about.aside.languages.val': 'Español (nativo) · Inglés (nivel profesional)',
+    // EXPERIENCE
+    'exp.label': 'Trayectoria',
+    'exp.title': 'Experiencia',
+    'exp.count': '03 puestos',
+    'exp.e1.period': 'Oct 2025 – Actualidad',
+    'exp.e1.title': 'Desarrollador MOM / MES',
+    'exp.e1.body': 'Participación en proyectos de digitalización industrial para entornos de fabricación. Desarrollo y configuración de aplicaciones en Mendix, implementación de módulos en Siemens Opcenter, integración de datos vía OPC y SQL, testing funcional y despliegues en planta.',
+    'exp.tag.testing': 'Testing',
+    'exp.e2.period': 'Prácticas',
+    'exp.e2.title': 'Técnico IT (prácticas Erasmus+)',
+    'exp.e2.body': 'Soporte técnico, mantenimiento de hardware y configuración de redes en un entorno laboral internacional. Programa Erasmus+.',
+    'exp.e2.tag1': 'Soporte técnico',
+    'exp.e2.tag2': 'Redes y sistemas',
+    'exp.e2.tag3': 'Hardware',
+    'exp.e3.period': 'Anterior',
+    'exp.e3.title': 'Becario de Marketing Digital',
+    'exp.e3.body': 'Gestión de contenidos web, redes sociales y apoyo a la visibilidad online de un negocio local.',
+    'exp.e3.tag1': 'Contenido web',
+    'exp.e3.tag2': 'Redes sociales',
+    // STACK
+    'stack.label': 'Herramientas',
+    'stack.title': 'Stack tecnológico',
+    'stack.solid': 'Sólido',
+    'stack.working': 'En uso',
+    'stack.familiar': 'Conocido',
+    'stack.daily': 'Diario',
+    'stack.tools': 'Herramientas',
+    'stack.industrial': 'Industrial',
+    // MORE
+    'more.label': 'Más trabajo',
+    'more.title': 'Otros proyectos',
+    'more.count': 'Próximamente',
+    'more.slot': 'Hueco para proyecto',
+    'more.m1.desc': 'Añade un proyecto real aquí — un ejercicio del DAW, una web personal, una app pequeña, cualquier cosa que muestre tu código.',
+    'more.m2.desc': 'Una app CRUD en Laravel, una librería de componentes React, una landing page — los proyectos reales hablan más que los marcadores de posición.',
+    'more.m3.desc': 'Incluso los proyectos pequeños cuentan. Una app del tiempo, un clon de portfolio, un componente del que estés orgulloso. Ponlo aquí.',
+    // CONTACT
+    'contact.label': 'Contacto',
+    'contact.title': 'Contacto',
+    'contact.desc': 'Estoy buscando un puesto como desarrollador frontend o web. Si estás en una agencia, una startup o una empresa de producto y crees que puede encajar, me gustaría saber de ti.',
+    'contact.form.name': 'Nombre',
+    'contact.form.namePh': 'Tu nombre',
+    'contact.form.message': 'Mensaje',
+    'contact.form.messagePh': 'Cuéntame sobre el puesto o proyecto...',
+    'contact.form.send': 'Enviar mensaje',
+  }
+};
+
+// ── APPLY TRANSLATIONS
+let currentLang = 'en';
+
+function setLang(lang) {
+  currentLang = lang;
+  document.documentElement.lang = lang;
+
+  // Toggle active button
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  document.getElementById('btn-es').classList.toggle('active', lang === 'es');
+
+  const t = i18n[lang];
+
+  // Text content nodes
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (t[key] !== undefined) {
+      // Use innerHTML to support <br> and <strong> in values
+      el.innerHTML = t[key];
+    }
+  });
+
+  // Placeholder attributes
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+    const key = el.getAttribute('data-i18n-placeholder');
+    if (t[key] !== undefined) el.placeholder = t[key];
+  });
+
+  // Page title & html lang
+  document.title = lang === 'es'
+    ? 'Emilio Pastor Zurita — Desarrollador Frontend'
+    : 'Emilio Pastor Zurita — Frontend Developer';
+}
+
+// Init default
+setLang('en');
+</script>
+</body>
+</html>
