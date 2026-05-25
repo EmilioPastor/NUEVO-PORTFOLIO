@@ -6,7 +6,6 @@ import { Cursor } from "@/components/effects/cursor";
 import { ScrollProgress } from "@/components/effects/scroll-progress";
 import { Nav } from "@/components/nav";
 import { Hero } from "@/components/sections/hero";
-import { Marquee } from "@/components/sections/marquee";
 import { Stats } from "@/components/sections/stats";
 import { Cases } from "@/components/sections/cases";
 import { Services } from "@/components/sections/services";
@@ -44,7 +43,6 @@ function Shell() {
       <Nav />
       <main id="main" className="relative">
         <Hero />
-        <Marquee />
         <Stats />
         <Services />
         <Cases />

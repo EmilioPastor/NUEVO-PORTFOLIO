@@ -43,7 +43,7 @@ export function Cases() {
                   decoding="async"
                   width="800"
                   height="500"
-                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
+                  className="h-full w-full object-contain p-8 transition-transform duration-700 group-hover:scale-[1.04]"
                 />
               </div>
               <h3 className="font-serif text-2xl italic leading-tight tracking-tightish text-ink">

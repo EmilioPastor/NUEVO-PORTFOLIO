@@ -85,7 +85,7 @@ export const STATS = [
 export const CASES = [
   {
     n: "01",
-    image: "/assets/Migraria.jpg",
+    image: "/assets/Migraria.png",
     sector: { es: "Despachos · Extranjería", en: "Law firm · Immigration" },
     title: {
       es: "ERP para despacho de extranjería",
@@ -106,7 +106,7 @@ export const CASES = [
   },
   {
     n: "02",
-    image: "/assets/concesionario.jpg",
+    image: "/assets/concesionario.png",
     sector: { es: "Automoción · Captación", en: "Automotive · Lead-gen" },
     title: {
       es: "Web de captación para concesionario",

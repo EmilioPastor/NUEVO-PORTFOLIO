@@ -37,19 +37,6 @@ export function Hero() {
         style={{ background: "radial-gradient(circle, rgba(26,107,60,0.07) 0%, transparent 70%)" }}
       />
 
-      {/* ghost word */}
-      <span
-        aria-hidden
-        className="pointer-events-none absolute right-[-2%] top-1/2 z-[1] hidden -translate-y-1/2 select-none font-serif italic ghost-text whitespace-nowrap md:block"
-        style={{
-          fontSize: "clamp(8rem, 18vw, 22rem)",
-          lineHeight: 1,
-          letterSpacing: "-0.04em",
-        }}
-      >
-        A medida
-      </span>
-
       <div className="relative z-[2] flex flex-col justify-end pb-12 pt-[120px]">
         <motion.div
           initial={{ opacity: 0, y: 10 }}
