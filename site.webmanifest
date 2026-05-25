@@ -1,0 +1,19 @@
+{
+  "name": "Emilio Pastor — Desarrollador freelance",
+  "short_name": "Emilio Pastor",
+  "description": "Desarrollador freelance. Webs y software a medida con IA.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "minimal-ui",
+  "background_color": "#F5F3EE",
+  "theme_color": "#F5F3EE",
+  "lang": "es",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
