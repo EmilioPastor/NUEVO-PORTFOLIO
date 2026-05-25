@@ -10,7 +10,7 @@ export function Services() {
     <section
       id="services"
       aria-label="Servicios"
-      className="border-t border-line bg-paper px-6 py-24 md:px-12 md:py-32"
+      className="border-t border-line bg-paper px-6 py-16 md:px-12 md:py-24"
     >
       <div className="mx-auto max-w-[1200px]">
         <SectionHead
@@ -22,9 +22,9 @@ export function Services() {
           {SERVICES.map((s, i) => (
             <motion.div
               key={s.n}
-              initial={{ opacity: 0, y: 44 }}
+              initial={{ y: 44 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "0px 0px -10% 0px" }}
+              viewport={{ once: true, amount: 0.15 }}
               transition={{ duration: 0.85, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] }}
               className="group relative isolate flex flex-col gap-4 bg-paper p-8 transition-colors hover:bg-paperOff"
             >

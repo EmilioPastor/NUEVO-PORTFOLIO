@@ -10,7 +10,7 @@ export function Experience() {
     <section
       id="experience"
       aria-label="Trayectoria"
-      className="border-t border-line bg-paper px-6 py-24 md:px-12 md:py-32"
+      className="border-t border-line bg-paper px-6 py-16 md:px-12 md:py-24"
     >
       <div className="mx-auto max-w-[1200px]">
         <SectionHead
@@ -22,9 +22,9 @@ export function Experience() {
           {EXPERIENCE.map((e, i) => (
             <motion.li
               key={i}
-              initial={{ opacity: 0, x: -50 }}
+              initial={{ x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "0px 0px -10% 0px" }}
+              viewport={{ once: true, amount: 0.15 }}
               transition={{ duration: 0.9, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] }}
               className="group relative grid grid-cols-1 gap-3 border-b border-line py-9 transition-colors first:border-t hover:bg-paperOff md:grid-cols-[180px_1fr] md:gap-12"
             >

@@ -9,7 +9,14 @@
       "Bash(git add *)",
       "Bash(git commit *)",
       "Bash(mkdir -p public/assets public/.well-known && mv assets/* public/assets/ && mv favicon.svg public/ && mv site.webmanifest public/ && mv robots.txt public/ && mv sitemap.xml public/ && mv 404.html public/ && mv .well-known/security.txt public/.well-known/ && rmdir assets .well-known && ls public/)",
-      "Bash(npm install *)"
+      "Bash(npm install *)",
+      "mcp__plugin_playwright_playwright__browser_resize",
+      "mcp__plugin_playwright_playwright__browser_navigate",
+      "mcp__plugin_playwright_playwright__browser_console_messages",
+      "mcp__plugin_playwright_playwright__browser_take_screenshot",
+      "mcp__plugin_playwright_playwright__browser_evaluate",
+      "Read(//c/c/Users/emili/Desktop/PROYECTOS PERSONALES/NUEVO PORTFOLIO/**)",
+      "Bash(xargs sed -i 's/py-24 md:py-32/py-16 md:py-24/g')"
     ],
     "additionalDirectories": [
       "C:\\Users\\emili\\Desktop\\PROYECTOS PERSONALES\\NUEVO PORTFOLIO\\assets"

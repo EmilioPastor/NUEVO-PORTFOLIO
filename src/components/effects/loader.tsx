@@ -11,7 +11,7 @@ export function Loader({ onDone }: { onDone: () => void }) {
 
   useEffect(() => {
     const ctl = animate(0, 100, {
-      duration: 1.6,
+      duration: 1.0,
       ease: [0.65, 0, 0.35, 1],
       onUpdate: (v) => setN(Math.floor(v)),
       onComplete: () => {

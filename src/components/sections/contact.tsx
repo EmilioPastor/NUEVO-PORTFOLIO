@@ -45,7 +45,7 @@ export function Contact() {
     <section
       id="contact"
       aria-label="Contacto"
-      className="border-t border-line bg-ink px-6 py-24 md:px-12 md:py-32"
+      className="border-t border-line bg-ink px-6 py-16 md:px-12 md:py-24"
     >
       <div className="mx-auto max-w-[1200px]">
         <SectionHead
@@ -55,9 +55,9 @@ export function Contact() {
         />
 
         <motion.div
-          initial={{ opacity: 0, x: -50 }}
+          initial={{ x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, margin: "0px 0px -10% 0px" }}
+          viewport={{ once: true, amount: 0.15 }}
           transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
           className="mb-14 overflow-hidden border-b border-paper/[0.06] pb-12 pt-8"
         >
@@ -72,9 +72,9 @@ export function Contact() {
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-20">
           <div>
             <motion.p
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "0px 0px -10% 0px" }}
+              viewport={{ once: true, amount: 0.15 }}
               transition={{ duration: 0.8 }}
               className="mb-8 max-w-[42ch] text-[0.95rem] leading-[1.75] text-paper/60"
             >
@@ -101,9 +101,9 @@ export function Contact() {
               ].map((it, i) => (
                 <motion.li
                   key={i}
-                  initial={{ opacity: 0, x: -32 }}
+                  initial={{ x: -32 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true, margin: "0px 0px -10% 0px" }}
+                  viewport={{ once: true, amount: 0.15 }}
                   transition={{ duration: 0.7, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] }}
                 >
                   <a
@@ -131,9 +131,9 @@ export function Contact() {
           </div>
 
           <motion.form
-            initial={{ opacity: 0, y: 32 }}
+            initial={{ y: 32 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "0px 0px -10% 0px" }}
+            viewport={{ once: true, amount: 0.15 }}
             transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
             onSubmit={submit}
             noValidate

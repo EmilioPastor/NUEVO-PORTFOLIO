@@ -11,11 +11,11 @@ interface Props {
 export function SectionHead({ label, title, count, dark }: Props) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 30 }}
+      initial={{ y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "0px 0px -10% 0px" }}
-      transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
-      className={`mb-14 flex flex-wrap items-end justify-between gap-6 border-b pb-5 ${
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.85, ease: [0.16, 1, 0.3, 1] }}
+      className={`mb-10 flex flex-wrap items-end justify-between gap-6 border-b pb-5 ${
         dark ? "border-paper/10" : "border-line"
       }`}
     >
@@ -27,20 +27,14 @@ export function SectionHead({ label, title, count, dark }: Props) {
         >
           {label}
         </div>
-        <div className="overflow-hidden">
-          <motion.h2
-            initial={{ y: "105%" }}
-            whileInView={{ y: 0 }}
-            viewport={{ once: true, margin: "0px 0px -10% 0px" }}
-            transition={{ duration: 1.0, ease: [0.16, 1, 0.3, 1], delay: 0.08 }}
-            className={`font-serif italic leading-[1.1] tracking-tightish ${
-              dark ? "text-paper" : "text-ink"
-            }`}
-            style={{ fontSize: "clamp(2rem, 4vw, 3.2rem)" }}
-          >
-            {title}
-          </motion.h2>
-        </div>
+        <h2
+          className={`font-serif italic leading-[1.1] tracking-tightish ${
+            dark ? "text-paper" : "text-ink"
+          }`}
+          style={{ fontSize: "clamp(2rem, 4vw, 3.2rem)" }}
+        >
+          {title}
+        </h2>
       </div>
       {count && (
         <div

@@ -9,7 +9,7 @@ export function About() {
     <section
       id="about"
       aria-label="Sobre mí"
-      className="border-t border-line bg-paperOff px-6 py-24 md:px-12 md:py-32"
+      className="border-t border-line bg-paperOff px-6 py-16 md:px-12 md:py-24"
     >
       <div className="mx-auto max-w-[1200px]">
         <SectionHead
@@ -21,9 +21,9 @@ export function About() {
             {ABOUT_PARAS.map((p, i) => (
               <motion.p
                 key={i}
-                initial={{ opacity: 0, y: 24 }}
+                initial={{ y: 24 }}
                 whileInView={{ opacity: 0.85, y: 0 }}
-                viewport={{ once: true, margin: "0px 0px -10% 0px" }}
+                viewport={{ once: true, amount: 0.15 }}
                 transition={{ duration: 0.7, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] }}
                 className="mb-4 text-base leading-[1.8] text-ink last:mb-0"
               >
@@ -33,9 +33,9 @@ export function About() {
           </div>
           <div>
             <motion.div
-              initial={{ opacity: 0, x: 32 }}
+              initial={{ x: 32 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "0px 0px -10% 0px" }}
+              viewport={{ once: true, amount: 0.15 }}
               transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
               className="border-y border-line py-7"
             >
@@ -58,9 +58,9 @@ export function About() {
             {ABOUT_ASIDE.map((a, i) => (
               <motion.div
                 key={i}
-                initial={{ opacity: 0, x: 32 }}
+                initial={{ x: 32 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, margin: "0px 0px -10% 0px" }}
+                viewport={{ once: true, amount: 0.15 }}
                 transition={{ duration: 0.7, delay: i * 0.06, ease: [0.16, 1, 0.3, 1] }}
                 className="border-b border-line py-7"
               >

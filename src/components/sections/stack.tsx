@@ -1,5 +1,5 @@
 import { motion, useInView } from "motion/react";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { SectionHead } from "@/components/section-head";
 import { STACK } from "@/data/copy";
 import { useT } from "@/hooks/use-lang";
@@ -7,7 +7,16 @@ import { cn } from "@/lib/utils";
 
 function Bar({ pct, hot }: { pct: number; hot: boolean }) {
   const ref = useRef<HTMLDivElement | null>(null);
-  const inView = useInView(ref, { once: true, margin: "0px 0px -10% 0px" });
+  const inView = useInView(ref, { once: true, amount: 0.3 });
+  const [w, setW] = useState(pct);
+
+  useEffect(() => {
+    if (!inView) return;
+    setW(0);
+    const id = window.requestAnimationFrame(() => setW(pct));
+    return () => window.cancelAnimationFrame(id);
+  }, [inView, pct]);
+
   return (
     <div ref={ref} className="h-[1.5px] w-full overflow-hidden rounded-sm bg-line">
       <div
@@ -15,7 +24,10 @@ function Bar({ pct, hot }: { pct: number; hot: boolean }) {
           "h-full rounded-sm transition-[width] [transition-duration:1200ms]",
           hot ? "bg-rust" : "bg-ink/80",
         )}
-        style={{ width: inView ? `${pct}%` : "0%", transitionTimingFunction: "cubic-bezier(0.25, 0.46, 0.45, 0.94)" }}
+        style={{
+          width: `${w}%`,
+          transitionTimingFunction: "cubic-bezier(0.25, 0.46, 0.45, 0.94)",
+        }}
       />
     </div>
   );
@@ -27,7 +39,7 @@ export function Stack() {
     <section
       id="stack"
       aria-label="Stack"
-      className="border-t border-line bg-paperOff px-6 py-24 md:px-12 md:py-32"
+      className="border-t border-line bg-paperOff px-6 py-16 md:px-12 md:py-24"
     >
       <div className="mx-auto max-w-[1200px]">
         <SectionHead
@@ -38,9 +50,9 @@ export function Stack() {
           {STACK.map((col, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, y: 40 }}
+              initial={{ y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "0px 0px -10% 0px" }}
+              viewport={{ once: true, amount: 0.15 }}
               transition={{ duration: 0.85, delay: i * 0.08, ease: [0.16, 1, 0.3, 1] }}
               className="bg-paperOff p-7"
             >

@@ -9,7 +9,7 @@ export function Cases() {
     <section
       id="casos"
       aria-label="Casos"
-      className="border-t border-line bg-paper px-6 py-24 md:px-12 md:py-32"
+      className="border-t border-line bg-paper px-6 py-16 md:px-12 md:py-24"
     >
       <div className="mx-auto max-w-[1200px]">
         <SectionHead
@@ -21,10 +21,10 @@ export function Cases() {
           {CASES.map((c, i) => (
             <motion.article
               key={c.n}
-              initial={{ opacity: 0, y: 60, clipPath: "inset(20% 0% 0% 0%)" }}
-              whileInView={{ opacity: 1, y: 0, clipPath: "inset(0% 0% 0% 0%)" }}
-              viewport={{ once: true, margin: "0px 0px -10% 0px" }}
-              transition={{ duration: 1.0, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] }}
+              initial={{ y: 30 }}
+              whileInView={{ y: 0 }}
+              viewport={{ once: true, amount: 0.15 }}
+              transition={{ duration: 0.8, delay: i * 0.08, ease: [0.16, 1, 0.3, 1] }}
               className="group flex flex-col gap-6 bg-paper p-8 transition-colors hover:bg-paperOff md:p-10"
             >
               <header className="flex items-start justify-between gap-4">

@@ -1,20 +1,23 @@
 import { useEffect, useRef, useState } from "react";
-import { motion, useInView } from "motion/react";
-import { animate } from "motion/react";
+import { motion, useInView, animate } from "motion/react";
 import { STATS } from "@/data/copy";
 import { useT } from "@/hooks/use-lang";
 
 function Counter({ value, suffix }: { value: number; suffix: string }) {
-  const [n, setN] = useState(0);
+  const [n, setN] = useState(value);
   const ref = useRef<HTMLSpanElement | null>(null);
-  const inView = useInView(ref, { once: true, margin: "0px 0px -10% 0px" });
+  const inView = useInView(ref, { once: true, amount: 0.3 });
+  const ran = useRef(false);
 
   useEffect(() => {
-    if (!inView) return;
+    if (!inView || ran.current) return;
+    ran.current = true;
+    setN(0);
     const ctl = animate(0, value, {
       duration: 1.3,
       ease: [0.16, 1, 0.3, 1],
       onUpdate: (v) => setN(Math.round(v)),
+      onComplete: () => setN(value),
     });
     return () => ctl.stop();
   }, [inView, value]);
@@ -22,9 +25,7 @@ function Counter({ value, suffix }: { value: number; suffix: string }) {
   return (
     <span ref={ref} className="inline-block">
       {n}
-      {suffix && (
-        <span className="align-super text-[0.6em] ml-px">{suffix}</span>
-      )}
+      {suffix && <span className="align-super text-[0.6em] ml-px">{suffix}</span>}
     </span>
   );
 }
@@ -32,17 +33,14 @@ function Counter({ value, suffix }: { value: number; suffix: string }) {
 export function Stats() {
   const t = useT();
   return (
-    <section
-      aria-label="Métricas"
-      className="border-y border-line bg-paperOff"
-    >
+    <section aria-label="Métricas" className="border-y border-line bg-paperOff">
       <div className="mx-auto grid max-w-[1200px] grid-cols-2 px-6 md:grid-cols-4 md:px-12">
         {STATS.map((s, i) => (
           <motion.div
             key={i}
-            initial={{ opacity: 0, y: 24 }}
+            initial={{ y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "0px 0px -10% 0px" }}
+            viewport={{ once: true, amount: 0.15 }}
             transition={{ duration: 0.7, delay: i * 0.08, ease: [0.16, 1, 0.3, 1] }}
             className="border-r border-line py-10 text-center last:border-r-0 max-md:[&:nth-child(2)]:border-r-0 max-md:[&:nth-child(3)]:border-t max-md:[&:nth-child(4)]:border-t"
           >
