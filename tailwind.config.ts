@@ -96,6 +96,10 @@ const config: Config = {
           "0%,100%": { transform: "rotate(45deg) translateY(0)" },
           "50%": { transform: "rotate(45deg) translateY(4px)" },
         },
+        "hl-sheen": {
+          "0%": { transform: "translateX(-30%)" },
+          "60%, 100%": { transform: "translateX(360%)" },
+        },
       },
       animation: {
         blink: "blink 2.5s ease-in-out infinite",

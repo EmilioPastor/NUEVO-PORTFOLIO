@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button";
 import { HERO } from "@/data/copy";
 import { useT } from "@/hooks/use-lang";
 import { ScrambleText } from "@/components/effects/scramble";
+import { HeroLive } from "@/components/effects/hero-live";
+import { Particles } from "@/components/effects/particles";
 
 const NAME_LINES = ["Emilio", "Pastor", "Zurita"];
 
@@ -36,6 +38,9 @@ export function Hero() {
         className="pointer-events-none absolute -left-[6%] bottom-[-4%] z-0 h-[450px] w-[450px] rounded-full blur-[90px]"
         style={{ background: "radial-gradient(circle, rgba(26,107,60,0.07) 0%, transparent 70%)" }}
       />
+
+      <Particles targetSelector="#top" />
+      <HeroLive />
 
       <div className="relative z-[2] flex flex-col justify-end pb-12 pt-[120px]">
         <motion.div
