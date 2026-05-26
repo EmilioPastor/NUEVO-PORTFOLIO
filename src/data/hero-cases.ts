@@ -14,6 +14,11 @@ export type HeroCase = {
   tradi: Record<Lang, { weeks: string; cost: string; ratio: number }>;
   mine: Record<Lang, { weeks: string; cost: string; ratio: number; delta: string }>;
   signal: { confidence: number; tokens: number; latencyMs: number; roi: number };
+  headline: Record<Lang, string>;
+  kicker: Record<Lang, string>;
+  pull: Record<Lang, string>;
+  stamp: Record<Lang, string>;
+  hue: "amber" | "ink" | "moss" | "rust";
 };
 
 export const STATE_LABEL: Record<FlowStep["state"], Record<Lang, string>> = {
@@ -55,6 +60,20 @@ export const HERO_CASES: HeroCase[] = [
       en: { weeks: "10 days", cost: "≈ 32%", ratio: 0.32, delta: "Δ −83%" },
     },
     signal: { confidence: 0.94, tokens: 1284, latencyMs: 1.4, roi: 14 },
+    headline: {
+      es: "El despacho que recuperó 8 horas cada semana",
+      en: "The firm that took back 8 hours a week",
+    },
+    kicker: {
+      es: "del expediente en papel al ERP en producción · diez días",
+      en: "from paper case files to a live ERP · ten days",
+    },
+    pull: {
+      es: "«Antes perdíamos plazos a mano. Ahora el ERP los gestiona por nosotros.»",
+      en: "«We used to miss deadlines by hand. Now the ERP handles them for us.»",
+    },
+    stamp: { es: "real · córdoba 2026", en: "real · córdoba 2026" },
+    hue: "rust",
   },
   {
     id: "EP-002",
@@ -87,6 +106,20 @@ export const HERO_CASES: HeroCase[] = [
       en: { weeks: "12 days", cost: "≈ 28%", ratio: 0.28, delta: "Δ −81%" },
     },
     signal: { confidence: 0.91, tokens: 1102, latencyMs: 1.2, roi: 11 },
+    headline: {
+      es: "Cero huecos perdidos en una clínica que se ahogaba",
+      en: "Zero missed slots in a drowning clinic",
+    },
+    kicker: {
+      es: "del papel a un panel a medida · doce días",
+      en: "from paper to a custom panel · twelve days",
+    },
+    pull: {
+      es: "«Dejamos de discutir agendas. El panel decide y nosotros atendemos.»",
+      en: "«We stopped arguing about agendas. The panel decides, we just care.»",
+    },
+    stamp: { es: "real · córdoba 2026", en: "real · córdoba 2026" },
+    hue: "moss",
   },
   {
     id: "EP-003",
@@ -119,6 +152,20 @@ export const HERO_CASES: HeroCase[] = [
       en: { weeks: "7 days", cost: "≈ 25%", ratio: 0.25, delta: "Δ −80%" },
     },
     signal: { confidence: 0.96, tokens: 1421, latencyMs: 0.9, roi: 18 },
+    headline: {
+      es: "La landing que triplicó los contactos cualificados",
+      en: "The landing that tripled qualified contacts",
+    },
+    kicker: {
+      es: "de la web invisible al embudo medido · siete días",
+      en: "from invisible site to measured funnel · seven days",
+    },
+    pull: {
+      es: "«Por primera vez sabemos quién nos visita y por qué nos escribe.»",
+      en: "«For the first time we know who visits and why they write.»",
+    },
+    stamp: { es: "real · córdoba 2026", en: "real · córdoba 2026" },
+    hue: "amber",
   },
   {
     id: "EP-004",
@@ -151,5 +198,19 @@ export const HERO_CASES: HeroCase[] = [
       en: { weeks: "9 days", cost: "≈ 35%", ratio: 0.35, delta: "Δ −68%" },
     },
     signal: { confidence: 0.89, tokens: 974, latencyMs: 1.6, roi: 8 },
+    headline: {
+      es: "La cocina que dejó atrás el 90% de los errores",
+      en: "The kitchen that left 90% of errors behind",
+    },
+    kicker: {
+      es: "de la comanda gritada a la app de servicio · nueve días",
+      en: "from shouted orders to a service app · nine days",
+    },
+    pull: {
+      es: "«La sala canta lo que la cocina escucha. Por fin coinciden.»",
+      en: "«The floor sings exactly what the kitchen hears. Finally aligned.»",
+    },
+    stamp: { es: "real · córdoba 2026", en: "real · córdoba 2026" },
+    hue: "ink",
   },
 ];

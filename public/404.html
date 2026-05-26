@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <meta name="robots" content="noindex,nofollow"/>
 <title>404 — Página no encontrada · Emilio Pastor</title>
-<meta name="description" content="La página que buscas no existe. Vuelve al inicio del portfolio de Emilio Pastor."/>
+<meta name="description" content="La página que buscas no existe. Pero hemos preparado algo mientras vuelves al inicio."/>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
 <link rel="canonical" href="https://emiliopastor.dev/404"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
@@ -13,46 +13,331 @@
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&family=Geist+Mono:wght@400;500&family=Geist:wght@400;500&display=swap" rel="stylesheet"/>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--white:#F5F3EE;--ink:#111111;--muted:#888880;--line:rgba(17,17,17,0.12);--accent:#D4460F}
+:root{
+  --paper:#F5F3EE;--ink:#111;--muted:#888880;--line:rgba(17,17,17,0.12);
+  --rust:#D4460F;--paper-off:#EDEAE3;
+  --serif:'Instrument Serif',serif;--mono:'Geist Mono',monospace;
+  --sans:'Geist',sans-serif;
+}
 html,body{height:100%}
 body{
-  background:var(--white);color:var(--ink);
-  font-family:'Geist',sans-serif;
-  display:flex;align-items:center;justify-content:center;
-  padding:48px 24px;text-align:center;-webkit-font-smoothing:antialiased;
+  background:var(--paper);color:var(--ink);
+  font-family:var(--sans);
+  -webkit-font-smoothing:antialiased;
+  font-feature-settings:"kern","liga","calt";
+  overflow:hidden;
 }
-.wrap{max-width:560px}
+.shell{
+  min-height:100vh;display:flex;flex-direction:column;
+  padding:24px;max-width:1200px;margin:0 auto;
+}
+.top, .bottom{
+  display:flex;justify-content:space-between;align-items:center;gap:24px;
+  font-family:var(--mono);font-size:.55rem;letter-spacing:.22em;
+  text-transform:uppercase;color:rgba(17,17,17,.55);
+  padding-bottom:14px;border-bottom:1px solid var(--line);
+}
+.bottom{border-bottom:none;border-top:1px solid var(--line);
+  padding-bottom:0;padding-top:14px;margin-top:auto;color:rgba(17,17,17,.45);}
+.rust{color:var(--rust)}
+.game-area{
+  flex:1;display:grid;grid-template-columns:1fr 1.4fr;gap:32px;
+  padding:24px 0;align-items:center;
+}
+@media (max-width: 820px){
+  .game-area{grid-template-columns:1fr;gap:16px}
+  .meta{order:2}
+}
+.meta{display:flex;flex-direction:column;gap:24px;max-width:420px}
 .code{
-  font-family:'Instrument Serif',serif;font-style:italic;
-  font-size:clamp(7rem,18vw,12rem);line-height:.9;letter-spacing:-.04em;
-  color:var(--ink);margin-bottom:18px;
+  font-family:var(--serif);font-style:italic;
+  font-size:clamp(5rem,12vw,9rem);line-height:.9;letter-spacing:-.045em;
 }
-h1{
-  font-family:'Geist Mono',monospace;font-size:.78rem;font-weight:500;
-  letter-spacing:.15em;text-transform:uppercase;color:var(--muted);
-  margin-bottom:24px;
+.rule{height:1px;width:64px;background:var(--rust)}
+.label{
+  font-family:var(--mono);font-size:.6rem;letter-spacing:.22em;
+  text-transform:uppercase;color:rgba(17,17,17,.6);
 }
-p{font-size:1rem;line-height:1.7;color:var(--muted);margin-bottom:32px}
-a.home{
-  display:inline-block;padding:12px 28px;background:var(--ink);color:var(--white);
-  font-size:.78rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
-  text-decoration:none;border:none;transition:background .25s;
+.copy{
+  font-family:var(--serif);font-style:italic;
+  font-size:clamp(1.05rem,1.5vw,1.3rem);line-height:1.5;
+  color:rgba(17,17,17,.78);
 }
-a.home:hover{background:var(--accent)}
-a.home:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
-.mono{
-  font-family:'Geist Mono',monospace;font-size:.62rem;letter-spacing:.12em;
-  color:rgba(17,17,17,.35);text-transform:uppercase;margin-top:48px;
+.cta-row{display:flex;gap:24px;align-items:center;flex-wrap:wrap}
+.cta{
+  display:inline-flex;align-items:center;gap:14px;
+  font-family:var(--mono);font-size:.72rem;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--ink);text-decoration:none;
+  border-bottom:1px solid rgba(17,17,17,.3);padding:10px 4px 10px 0;
+  transition:color .35s,border-color .35s;cursor:pointer;background:transparent;border-left:0;border-right:0;border-top:0;
 }
+.cta:hover{color:var(--rust);border-color:var(--rust)}
+.cta .arrow{font-size:1.1rem;line-height:1;transition:transform .5s cubic-bezier(.16,1,.3,1);}
+.cta:hover .arrow{transform:translateX(8px)}
+.dot{display:inline-block;width:5px;height:5px;border-radius:50%;background:var(--rust);margin-right:8px}
+
+.game{
+  position:relative;width:100%;aspect-ratio:5/3;
+  background:var(--paper-off);
+  border:1px solid var(--line);
+  overflow:hidden;cursor:none;
+}
+canvas{display:block;width:100%;height:100%}
+.game-hint{
+  position:absolute;top:10px;left:12px;right:12px;
+  display:flex;justify-content:space-between;align-items:baseline;
+  font-family:var(--mono);font-size:.55rem;letter-spacing:.22em;
+  text-transform:uppercase;color:rgba(17,17,17,.55);pointer-events:none;
+}
+.game-hint .right{color:var(--rust);font-variant-numeric:tabular-nums}
+.game-end{
+  position:absolute;inset:0;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;gap:18px;
+  background:rgba(245,243,238,.92);backdrop-filter:blur(2px);
+  padding:24px;text-align:center;
+}
+.game-end h2{
+  font-family:var(--serif);font-style:italic;font-size:clamp(1.8rem,3vw,2.4rem);
+  line-height:1;letter-spacing:-.02em;color:var(--ink);
+}
+.game-end p{font-family:var(--mono);font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(17,17,17,.6);font-variant-numeric:tabular-nums}
 </style>
 </head>
 <body>
-<main class="wrap">
-  <div class="code" aria-hidden="true">404</div>
-  <h1>Página no encontrada</h1>
-  <p>La URL no existe o ha sido movida. Vuelve al inicio del portfolio para seguir explorando.</p>
-  <a class="home" href="/">Volver al inicio</a>
-  <div class="mono">Emilio Pastor · Desarrollador freelance</div>
+<main class="shell">
+  <div class="top">
+    <span><span class="dot"></span>EP · 2026</span>
+    <span class="rust">error · 404</span>
+  </div>
+
+  <div class="game-area">
+    <div class="meta">
+      <span class="label">página · perdida</span>
+      <span class="code" aria-hidden="true">404.</span>
+      <span class="rule" aria-hidden="true"></span>
+      <p class="copy">
+        La URL no existe. Mientras decides qué hacer, mueve el ratón y pilota el avión por los huecos. El que llegue lejos, gana.
+      </p>
+      <div class="cta-row">
+        <a class="cta" href="/">
+          <span>Volver al inicio</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+        <button class="cta" type="button" id="restartBtn">
+          <span>Reiniciar juego</span>
+          <span class="arrow" aria-hidden="true">↻</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="game" id="gameWrap">
+      <canvas id="game" width="700" height="420" aria-label="Pilota el avión por los huecos"></canvas>
+      <div class="game-hint">
+        <span>mueve el ratón · pilota el avión</span>
+        <span class="right" id="scoreHud">000</span>
+      </div>
+      <div class="game-end" id="endScreen" style="display:none">
+        <h2 id="endMsg">así me gusta.</h2>
+        <p>tu puntuación · <span id="endScore">000</span></p>
+        <button class="cta" type="button" id="endBtn">
+          <span>Otra partida</span>
+          <span class="arrow" aria-hidden="true">↻</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="bottom">
+    <span>Córdoba · estudio</span>
+    <span>Emilio Pastor Zurita · v1.0</span>
+  </div>
 </main>
+
+<script>
+(function(){
+  var wrap = document.getElementById('gameWrap');
+  var canvas = document.getElementById('game');
+  var ctx = canvas.getContext('2d');
+  var scoreHud = document.getElementById('scoreHud');
+  var endScreen = document.getElementById('endScreen');
+  var endMsg = document.getElementById('endMsg');
+  var endScore = document.getElementById('endScore');
+  var endBtn = document.getElementById('endBtn');
+  var restartBtn = document.getElementById('restartBtn');
+
+  var W = canvas.width;
+  var H = canvas.height;
+  var dpr = Math.min(window.devicePixelRatio || 1, 2);
+  function resize(){
+    var r = canvas.getBoundingClientRect();
+    W = r.width; H = r.height;
+    canvas.width = Math.floor(W * dpr);
+    canvas.height = Math.floor(H * dpr);
+    ctx.setTransform(dpr,0,0,dpr,0,0);
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  var planeY = H/2, planeTargetY = H/2, planeX = W*0.18;
+  var obstacles = [];
+  var spawnTimer = 0;
+  var spawnEvery = 1200;
+  var score = 0;
+  var alive = true;
+  var lastT = performance.now();
+  var bestEndings = [
+    'así me gusta.',
+    'no está mal.',
+    'reflejos de pro.',
+    'el avión sobrevive.',
+    'venga, otra.',
+    'casi vuelas como yo escribo código.'
+  ];
+  var firstEndings = [
+    'rápido. demasiado rápido.',
+    'casi sin empezar.',
+    'inténtalo otra vez.',
+    'eso no cuenta.',
+  ];
+
+  function onMove(e){
+    var r = canvas.getBoundingClientRect();
+    var y;
+    if (e.touches && e.touches.length){
+      y = e.touches[0].clientY - r.top;
+    } else {
+      y = e.clientY - r.top;
+    }
+    planeTargetY = Math.max(12, Math.min(H-12, y));
+  }
+  wrap.addEventListener('mousemove', onMove);
+  wrap.addEventListener('touchmove', onMove, {passive:true});
+
+  function spawn(){
+    var gapH = Math.max(80, 200 - score*0.6);
+    var gapY = 40 + Math.random() * (H - gapH - 80);
+    obstacles.push({
+      x: W + 20,
+      gapY: gapY,
+      gapH: gapH,
+      passed: false,
+      w: 14
+    });
+  }
+
+  function reset(){
+    planeY = H/2; planeTargetY = H/2;
+    obstacles = []; spawnTimer = 0; spawnEvery = 1200;
+    score = 0; alive = true; lastT = performance.now();
+    endScreen.style.display = 'none';
+    scoreHud.textContent = '000';
+    requestAnimationFrame(loop);
+  }
+
+  endBtn.addEventListener('click', reset);
+  restartBtn.addEventListener('click', reset);
+
+  function gameOver(){
+    alive = false;
+    endScreen.style.display = 'flex';
+    endScore.textContent = String(score).padStart(3,'0');
+    var pool = score >= 8 ? bestEndings : firstEndings;
+    endMsg.textContent = pool[Math.floor(Math.random()*pool.length)];
+  }
+
+  function drawPaperPlane(x, y){
+    ctx.save();
+    ctx.translate(x, y);
+    var lift = (planeTargetY - planeY) * 0.04;
+    ctx.rotate(lift * 0.04);
+    ctx.fillStyle = '#D4460F';
+    ctx.strokeStyle = '#111';
+    ctx.lineWidth = 1;
+    ctx.beginPath();
+    ctx.moveTo(-14, -8);
+    ctx.lineTo(14, 0);
+    ctx.lineTo(-14, 8);
+    ctx.lineTo(-6, 0);
+    ctx.closePath();
+    ctx.fill();
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.moveTo(-14, -8);
+    ctx.lineTo(-6, 0);
+    ctx.lineTo(-14, 8);
+    ctx.strokeStyle = 'rgba(17,17,17,0.5)';
+    ctx.stroke();
+    ctx.restore();
+  }
+
+  function loop(now){
+    var dt = Math.min(50, now - lastT);
+    lastT = now;
+    if (!alive) return;
+
+    ctx.clearRect(0,0,W,H);
+
+    // grid bg
+    ctx.strokeStyle = 'rgba(17,17,17,0.05)';
+    ctx.lineWidth = 1;
+    for (var gx = 0; gx < W; gx += 20){
+      ctx.beginPath();
+      ctx.moveTo(gx + 0.5, 0); ctx.lineTo(gx + 0.5, H);
+      ctx.stroke();
+    }
+    for (var gy = 0; gy < H; gy += 20){
+      ctx.beginPath();
+      ctx.moveTo(0, gy + 0.5); ctx.lineTo(W, gy + 0.5);
+      ctx.stroke();
+    }
+
+    // physics
+    planeY += (planeTargetY - planeY) * 0.18;
+
+    spawnTimer += dt;
+    if (spawnTimer >= spawnEvery){
+      spawnTimer = 0;
+      spawn();
+      spawnEvery = Math.max(700, 1200 - score*18);
+    }
+
+    var speed = 0.18 + score*0.005;
+    for (var i = obstacles.length - 1; i >= 0; i--){
+      var o = obstacles[i];
+      o.x -= speed * dt;
+
+      // top
+      ctx.fillStyle = 'rgba(17,17,17,0.85)';
+      ctx.fillRect(o.x, 0, o.w, o.gapY);
+      ctx.fillRect(o.x, o.gapY + o.gapH, o.w, H - (o.gapY + o.gapH));
+
+      // collision
+      var px = planeX, py = planeY;
+      var hitX = px + 12 > o.x && px - 12 < o.x + o.w;
+      if (hitX){
+        if (py - 8 < o.gapY || py + 8 > o.gapY + o.gapH){
+          gameOver();
+        }
+      }
+
+      if (!o.passed && o.x + o.w < planeX - 12){
+        o.passed = true;
+        score++;
+        scoreHud.textContent = String(score).padStart(3,'0');
+      }
+
+      if (o.x + o.w < -20){
+        obstacles.splice(i, 1);
+      }
+    }
+
+    drawPaperPlane(planeX, planeY);
+
+    requestAnimationFrame(loop);
+  }
+
+  reset();
+})();
+</script>
 </body>
 </html>

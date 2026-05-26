@@ -1,0 +1,63 @@
+[  111692ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:21608
+[  114275ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:21608
+[  127466ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:21608
+[  159366ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:21608
+[  231654ms] ReferenceError: ROMAN is not defined
+    at http://localhost:5173/src/components/nav.tsx?t=1779820460408:105:35
+    at Array.map (<anonymous>)
+    at Nav (http://localhost:5173/src/components/nav.tsx?t=1779820460408:93:113)
+    at renderWithHooks (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:11596:26)
+    at updateFunctionComponent (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:14630:28)
+    at beginWork (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:15972:22)
+    at HTMLUnknownElement.callCallback2 (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:3680:22)
+    at Object.invokeGuardedCallbackDev (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:3705:24)
+    at invokeGuardedCallback (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:3739:39)
+    at beginWork$1 (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:19818:15)
+[  231657ms] ReferenceError: ROMAN is not defined
+    at http://localhost:5173/src/components/nav.tsx?t=1779820460408:105:35
+    at Array.map (<anonymous>)
+    at Nav (http://localhost:5173/src/components/nav.tsx?t=1779820460408:93:113)
+    at renderWithHooks (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:11596:26)
+    at updateFunctionComponent (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:14630:28)
+    at beginWork (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:15972:22)
+    at HTMLUnknownElement.callCallback2 (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:3680:22)
+    at Object.invokeGuardedCallbackDev (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:3705:24)
+    at invokeGuardedCallback (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:3739:39)
+    at beginWork$1 (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:19818:15)
+[  231660ms] [ERROR] The above error occurred in the <Nav> component:
+
+    at Nav (http://localhost:5173/src/components/nav.tsx?t=1779820460408:25:13)
+    at Shell (http://localhost:5173/src/App.tsx?t=1779820209454:51:18)
+    at LangProvider (http://localhost:5173/src/hooks/use-lang.tsx:26:32)
+    at App
+
+Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries. @ http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:14079
+[  231662ms] ReferenceError: ROMAN is not defined
+    at http://localhost:5173/src/components/nav.tsx?t=1779820460408:105:35
+    at Array.map (<anonymous>)
+    at Nav (http://localhost:5173/src/components/nav.tsx?t=1779820460408:93:113)
+    at renderWithHooks (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:11596:26)
+    at updateFunctionComponent (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:14630:28)
+    at beginWork (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:15972:22)
+    at beginWork$1 (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:19806:22)
+    at performUnitOfWork (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:19251:20)
+    at workLoopSync (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:19190:13)
+    at renderRootSync (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:19169:15)
+[  565233ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:21608
+[  565247ms] [LOG] %cHola, dev. color:#D4460F;font-family:'Instrument Serif',serif;font-style:italic;font-size:28px;line-height:1; @ http://localhost:5173/src/lib/console-egg.ts:19
+[  565247ms] [LOG] %c
+  ███████ ██████
+  ██      ██   ██
+  █████   ██████
+  ██      ██
+  ███████ ██
+
+  Emilio Pastor Zurita — estudio
+  Webs y software a medida con IA · Córdoba
+ color:#111;background:#F5F3EE;font-family:ui-monospace,SFMono-Regular,monospace;font-size:12px;line-height:1.4;padding:8px 12px; @ http://localhost:5173/src/lib/console-egg.ts:20
+[  565247ms] [LOG] %cSi has llegado a la consola, lees código. Construyo cosas serias con clientes serios y a veces necesito manos como las tuyas.
+%cTengo proyectos interesantes — algunos con IA real, otros con SQL real, todos con plazos reales. color:#111;font-family:ui-sans-serif,system-ui,sans-serif;font-size:13px;line-height:1.55; color:#111;font-family:ui-sans-serif,system-ui,sans-serif;font-size:13px;line-height:1.55; @ http://localhost:5173/src/lib/console-egg.ts:21
+[  565247ms] [LOG] %c→ %cemiliopastorzurita906@gmail.com color:#111;font-family:ui-sans-serif,system-ui,sans-serif;font-size:13px;line-height:1.55; color:#D4460F;font-family:ui-sans-serif,system-ui,sans-serif;font-size:13px;text-decoration:underline; @ http://localhost:5173/src/lib/console-egg.ts:26
+[  565247ms] [LOG] %cstack visible · src/data/copy.ts · STACK color:#888880;font-family:ui-monospace,SFMono-Regular,monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase; @ http://localhost:5173/src/lib/console-egg.ts:31
+[  565247ms] [LOG] %ccaveman tip: si entiendes el código, sabrás si encajas. Y si no, también. color:#888880;font-family:ui-monospace,SFMono-Regular,monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase; @ http://localhost:5173/src/lib/console-egg.ts:32

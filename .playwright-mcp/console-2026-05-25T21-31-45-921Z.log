@@ -2,3 +2,46 @@
 [ 3265304ms] [LOG] [vite] server connection lost. Polling for restart... @ http://localhost:5173/@vite/client:963
 [ 3265305ms] [ERROR] WebSocket connection to 'ws://localhost:5173/' failed: Error in connection establishment: net::ERR_NETWORK_IO_SUSPENDED @ http://localhost:5173/@vite/client:1034
 [ 3910568ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=41dca982:21608
+[ 4377808ms] ReferenceError: HeroLive is not defined
+    at Hero (http://localhost:5173/@fs/C:/Users/emili/Desktop/PROYECTOS%20PERSONALES/NUEVO%20PORTFOLIO/src/components/sections/hero.tsx?t=1779749083604:81:32)
+    at renderWithHooks (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=41dca982:11596:26)
+    at updateFunctionComponent (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=41dca982:14630:28)
+    at beginWork (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=41dca982:15972:22)
+    at HTMLUnknownElement.callCallback2 (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=41dca982:3680:22)
+    at Object.invokeGuardedCallbackDev (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=41dca982:3705:24)
+    at invokeGuardedCallback (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=41dca982:3739:39)
+    at beginWork$1 (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=41dca982:19818:15)
+    at performUnitOfWork (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=41dca982:19251:20)
+    at workLoopSync (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=41dca982:19190:13)
+[ 4377809ms] ReferenceError: HeroLive is not defined
+    at Hero (http://localhost:5173/@fs/C:/Users/emili/Desktop/PROYECTOS%20PERSONALES/NUEVO%20PORTFOLIO/src/components/sections/hero.tsx?t=1779749083604:81:32)
+    at renderWithHooks (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=41dca982:11596:26)
+    at updateFunctionComponent (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=41dca982:14630:28)
+    at beginWork (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=41dca982:15972:22)
+    at HTMLUnknownElement.callCallback2 (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=41dca982:3680:22)
+    at Object.invokeGuardedCallbackDev (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=41dca982:3705:24)
+    at invokeGuardedCallback (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=41dca982:3739:39)
+    at beginWork$1 (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=41dca982:19818:15)
+    at performUnitOfWork (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=41dca982:19251:20)
+    at workLoopSync (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=41dca982:19190:13)
+[ 4377812ms] [ERROR] The above error occurred in the <Hero> component:
+
+    at Hero (http://localhost:5173/@fs/C:/Users/emili/Desktop/PROYECTOS%20PERSONALES/NUEVO%20PORTFOLIO/src/components/sections/hero.tsx?t=1779749083604:28:13)
+    at main
+    at Shell (http://localhost:5173/@fs/C:/Users/emili/Desktop/PROYECTOS%20PERSONALES/NUEVO%20PORTFOLIO/src/App.tsx?t=1779744682485:50:18)
+    at LangProvider (http://localhost:5173/@fs/C:/Users/emili/Desktop/PROYECTOS%20PERSONALES/NUEVO%20PORTFOLIO/src/hooks/use-lang.tsx:26:32)
+    at App
+
+Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries. @ http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=41dca982:14079
+[ 4377814ms] ReferenceError: HeroLive is not defined
+    at Hero (http://localhost:5173/@fs/C:/Users/emili/Desktop/PROYECTOS%20PERSONALES/NUEVO%20PORTFOLIO/src/components/sections/hero.tsx?t=1779749083604:81:32)
+    at renderWithHooks (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=41dca982:11596:26)
+    at updateFunctionComponent (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=41dca982:14630:28)
+    at beginWork (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=41dca982:15972:22)
+    at beginWork$1 (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=41dca982:19806:22)
+    at performUnitOfWork (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=41dca982:19251:20)
+    at workLoopSync (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=41dca982:19190:13)
+    at renderRootSync (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=41dca982:19169:15)
+    at recoverFromConcurrentError (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=41dca982:18786:28)
+    at performSyncWorkOnRoot (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=41dca982:18932:28)

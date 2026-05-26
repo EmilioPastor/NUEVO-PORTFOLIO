@@ -1,0 +1,34 @@
+[     124ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:21608
+[     142ms] [LOG] %cHola, dev. color:#D4460F;font-family:'Instrument Serif',serif;font-style:italic;font-size:28px;line-height:1; @ http://localhost:5173/src/lib/console-egg.ts:19
+[     142ms] [LOG] %c
+  ███████ ██████
+  ██      ██   ██
+  █████   ██████
+  ██      ██
+  ███████ ██
+
+  Emilio Pastor Zurita — estudio
+  Webs y software a medida con IA · Córdoba
+ color:#111;background:#F5F3EE;font-family:ui-monospace,SFMono-Regular,monospace;font-size:12px;line-height:1.4;padding:8px 12px; @ http://localhost:5173/src/lib/console-egg.ts:20
+[     142ms] [LOG] %cSi has llegado a la consola, lees código. Construyo cosas serias con clientes serios y a veces necesito manos como las tuyas.
+%cTengo proyectos interesantes — algunos con IA real, otros con SQL real, todos con plazos reales. color:#111;font-family:ui-sans-serif,system-ui,sans-serif;font-size:13px;line-height:1.55; color:#111;font-family:ui-sans-serif,system-ui,sans-serif;font-size:13px;line-height:1.55; @ http://localhost:5173/src/lib/console-egg.ts:21
+[     142ms] [LOG] %c→ %cemiliopastorzurita906@gmail.com color:#111;font-family:ui-sans-serif,system-ui,sans-serif;font-size:13px;line-height:1.55; color:#D4460F;font-family:ui-sans-serif,system-ui,sans-serif;font-size:13px;text-decoration:underline; @ http://localhost:5173/src/lib/console-egg.ts:26
+[     142ms] [LOG] %cstack visible · src/data/copy.ts · STACK color:#888880;font-family:ui-monospace,SFMono-Regular,monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase; @ http://localhost:5173/src/lib/console-egg.ts:31
+[     142ms] [LOG] %ccaveman tip: si entiendes el código, sabrás si encajas. Y si no, también. color:#888880;font-family:ui-monospace,SFMono-Regular,monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase; @ http://localhost:5173/src/lib/console-egg.ts:32
+[  106696ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:21608
+[  106709ms] [LOG] %cHola, dev. color:#D4460F;font-family:'Instrument Serif',serif;font-style:italic;font-size:28px;line-height:1; @ http://localhost:5173/src/lib/console-egg.ts:19
+[  106709ms] [LOG] %c
+  ███████ ██████
+  ██      ██   ██
+  █████   ██████
+  ██      ██
+  ███████ ██
+
+  Emilio Pastor Zurita — estudio
+  Webs y software a medida con IA · Córdoba
+ color:#111;background:#F5F3EE;font-family:ui-monospace,SFMono-Regular,monospace;font-size:12px;line-height:1.4;padding:8px 12px; @ http://localhost:5173/src/lib/console-egg.ts:20
+[  106709ms] [LOG] %cSi has llegado a la consola, lees código. Construyo cosas serias con clientes serios y a veces necesito manos como las tuyas.
+%cTengo proyectos interesantes — algunos con IA real, otros con SQL real, todos con plazos reales. color:#111;font-family:ui-sans-serif,system-ui,sans-serif;font-size:13px;line-height:1.55; color:#111;font-family:ui-sans-serif,system-ui,sans-serif;font-size:13px;line-height:1.55; @ http://localhost:5173/src/lib/console-egg.ts:21
+[  106709ms] [LOG] %c→ %cemiliopastorzurita906@gmail.com color:#111;font-family:ui-sans-serif,system-ui,sans-serif;font-size:13px;line-height:1.55; color:#D4460F;font-family:ui-sans-serif,system-ui,sans-serif;font-size:13px;text-decoration:underline; @ http://localhost:5173/src/lib/console-egg.ts:26
+[  106709ms] [LOG] %cstack visible · src/data/copy.ts · STACK color:#888880;font-family:ui-monospace,SFMono-Regular,monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase; @ http://localhost:5173/src/lib/console-egg.ts:31
+[  106709ms] [LOG] %ccaveman tip: si entiendes el código, sabrás si encajas. Y si no, también. color:#888880;font-family:ui-monospace,SFMono-Regular,monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase; @ http://localhost:5173/src/lib/console-egg.ts:32

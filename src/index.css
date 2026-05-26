@@ -39,7 +39,59 @@
 
   body {
     @apply bg-paper text-ink font-sans;
-    font-feature-settings: "ss01", "cv11";
+    font-feature-settings: "ss01", "cv11", "kern", "liga", "calt";
+    transition: background-color 2s ease;
+  }
+
+  html[data-mood] body {
+    background-color: var(--mood-paper, #F5F3EE);
+  }
+  html[data-mood] body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 9889;
+    background: var(--mood-rust, #D4460F);
+    mix-blend-mode: multiply;
+    opacity: 0.025;
+    transition: opacity 2s ease, background 2s ease;
+  }
+
+  html[data-section] body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 9888;
+    background: var(--section-tint, transparent);
+    mix-blend-mode: multiply;
+    transition: background 1.2s ease;
+  }
+
+  .font-serif {
+    font-feature-settings: "kern", "liga", "calt", "salt";
+  }
+
+  .num-tabular {
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: "tnum";
+  }
+
+  .num-oldstyle {
+    font-variant-numeric: oldstyle-nums;
+    font-feature-settings: "onum";
+  }
+
+  .drop-cap::first-letter {
+    float: left;
+    font-family: var(--font-serif, "Instrument Serif"), serif;
+    font-style: italic;
+    font-size: 4.2em;
+    line-height: 0.85;
+    padding: 0.08em 0.14em 0 0;
+    color: hsl(var(--accent));
+    font-feature-settings: "kern", "salt";
   }
 
   ::selection {
@@ -115,5 +167,115 @@
   }
   .grain-overlay {
     animation: none !important;
+  }
+}
+
+html[data-blueprint="true"] {
+  filter: grayscale(1) contrast(1.05);
+}
+html[data-blueprint="true"] body {
+  background: #F3F0E8 !important;
+  background-image:
+    linear-gradient(to right, rgba(17, 17, 17, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(17, 17, 17, 0.04) 1px, transparent 1px);
+  background-size: 24px 24px, 24px 24px;
+}
+html[data-blueprint="true"] body::before {
+  display: none !important;
+}
+html[data-blueprint="true"] *:not(svg):not(path):not(circle):not(line):not(rect) {
+  background: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+  color: #111 !important;
+  border-color: rgba(17, 17, 17, 0.35) !important;
+}
+html[data-blueprint="true"] img {
+  filter: grayscale(1) contrast(0.9) opacity(0.45) !important;
+}
+html[data-blueprint="true"] section,
+html[data-blueprint="true"] article,
+html[data-blueprint="true"] .relative,
+html[data-blueprint="true"] aside,
+html[data-blueprint="true"] header,
+html[data-blueprint="true"] footer {
+  outline: 1px dashed rgba(17, 17, 17, 0.28) !important;
+  outline-offset: -1px;
+}
+html[data-blueprint="true"] [class*="bg-rust"],
+html[data-blueprint="true"] [class*="text-rust"],
+html[data-blueprint="true"] [style*="rust"] {
+  color: #111 !important;
+}
+html[data-blueprint="true"] .grain-overlay,
+html[data-blueprint="true"] .cursor-trail {
+  display: none !important;
+}
+
+@media print {
+  @page {
+    size: A4;
+    margin: 16mm 14mm;
+  }
+  html, body {
+    background: #fff !important;
+    color: #111 !important;
+    font-size: 10pt;
+    line-height: 1.45;
+  }
+  nav, footer, .grain-overlay, .skip-link,
+  [aria-label="Navegación principal"],
+  [data-print-hide],
+  [aria-label="Formulario de contacto"],
+  [aria-hidden="true"] {
+    display: none !important;
+  }
+  .cursor-trail, .scroll-progress, button[aria-pressed],
+  [class*="hp-honeypot"], [role="dialog"] {
+    display: none !important;
+  }
+  main, section {
+    page-break-inside: avoid;
+    break-inside: avoid;
+    background: #fff !important;
+    border: none !important;
+    padding: 8mm 0 !important;
+    color: #111 !important;
+  }
+  h1, h2, h3, p, span, dt, dd, li, a {
+    color: #111 !important;
+  }
+  h1 {
+    font-size: 26pt;
+    line-height: 1;
+    margin-bottom: 4mm;
+  }
+  h2 {
+    font-size: 18pt;
+    line-height: 1.05;
+    margin-bottom: 3mm;
+    border-bottom: 0.5pt solid #888 !important;
+    padding-bottom: 2mm;
+  }
+  h3 {
+    font-size: 12pt;
+  }
+  a {
+    text-decoration: none !important;
+  }
+  a[href^="http"]::after,
+  a[href^="mailto:"]::after {
+    content: " (" attr(href) ")";
+    font-family: ui-monospace, SFMono-Regular, monospace;
+    font-size: 8pt;
+    color: #666 !important;
+  }
+  img {
+    filter: grayscale(100%) !important;
+    max-width: 60mm !important;
+  }
+  .drop-cap::first-letter {
+    color: #111 !important;
   }
 }

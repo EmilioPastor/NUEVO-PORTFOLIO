@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Mail, Linkedin } from "lucide-react";
 import { SectionHead } from "@/components/section-head";
 import { CONTACT } from "@/data/copy";
@@ -7,15 +7,36 @@ import { useT, useLang } from "@/hooks/use-lang";
 import { cn } from "@/lib/utils";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+const WEB3FORMS_KEY = import.meta.env.VITE_WEB3FORMS_KEY as string | undefined;
+const TARGET_EMAIL = "emiliopastorzurita906@gmail.com";
 
 export function Contact() {
   const t = useT();
   const { lang } = useLang();
-  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "invalid">("idle");
+  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "invalid" | "error">("idle");
   const [statusMsg, setStatusMsg] = useState("");
+  const msgRef = useRef<HTMLTextAreaElement | null>(null);
 
-  function submit(e: React.FormEvent<HTMLFormElement>) {
+  useEffect(() => {
+    function onPrefill(e: Event) {
+      const detail = (e as CustomEvent<{ text?: string }>).detail;
+      const text = detail?.text || "";
+      const el = msgRef.current;
+      if (!el) return;
+      el.value = text;
+      el.dispatchEvent(new Event("input", { bubbles: true }));
+      window.setTimeout(() => {
+        el.focus();
+        el.setSelectionRange(el.value.length, el.value.length);
+      }, 600);
+    }
+    window.addEventListener("prefill-contact", onPrefill);
+    return () => window.removeEventListener("prefill-contact", onPrefill);
+  }, []);
+
+  async function submit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    if (status === "sending") return;
     const f = e.currentTarget;
     const data = new FormData(f);
     const honeypot = (data.get("website") as string) || "";
@@ -28,17 +49,63 @@ export function Contact() {
       setStatusMsg(t(CONTACT.form.invalid));
       return;
     }
+
     setStatus("sending");
     setStatusMsg(t(CONTACT.form.sending));
-    setTimeout(() => {
-      setStatus("sent");
-      setStatusMsg(t(CONTACT.form.success));
+
+    try {
+      if (!WEB3FORMS_KEY) {
+        const subject = `Portfolio · contacto de ${name}`;
+        const body = `Nombre: ${name}\nEmail: ${email}\n\n${msg}`;
+        window.location.href = `mailto:${TARGET_EMAIL}?subject=${encodeURIComponent(
+          subject,
+        )}&body=${encodeURIComponent(body)}`;
+        setStatus("sent");
+        setStatusMsg(t(CONTACT.form.success));
+      } else {
+        const res = await fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify({
+            access_key: WEB3FORMS_KEY,
+            subject: `Portfolio · contacto de ${name}`,
+            from_name: `${name} (portfolio)`,
+            replyto: email,
+            name,
+            email,
+            message: msg,
+            redirect: false,
+          }),
+        });
+        const json: { success?: boolean; message?: string } = await res
+          .json()
+          .catch(() => ({}));
+        if (!res.ok || !json.success) {
+          throw new Error(json.message || `HTTP ${res.status}`);
+        }
+        setStatus("sent");
+        setStatusMsg(t(CONTACT.form.success));
+      }
       f.reset();
       setTimeout(() => {
         setStatus("idle");
         setStatusMsg("");
-      }, 4500);
-    }, 700);
+      }, 5000);
+    } catch (err) {
+      setStatus("error");
+      const detail = err instanceof Error ? err.message : "";
+      setStatusMsg(
+        (t(CONTACT.form.error) || "Error") +
+          (detail ? ` · ${detail}` : "") +
+          " · " +
+          (lang === "es"
+            ? "escríbeme directo a " + TARGET_EMAIL
+            : "email me directly at " + TARGET_EMAIL),
+      );
+    }
   }
 
   return (
@@ -155,14 +222,13 @@ export function Contact() {
               { id: "cf-name", name: "name", type: "text", label: t(CONTACT.form.name), ph: t(CONTACT.form.namePh), max: 120, autoComplete: "name" },
               { id: "cf-email", name: "email", type: "email", label: t(CONTACT.form.email), ph: t(CONTACT.form.emailPh), max: 200, autoComplete: "email" },
             ].map((f) => (
-              <label
-                key={f.id}
-                htmlFor={f.id}
-                className="mb-2 flex flex-col border border-paper/10 bg-paper/[0.04] transition-colors focus-within:border-paper/30"
-              >
-                <span className="px-4 pt-3 font-mono text-[0.62rem] uppercase tracking-[0.1em] text-paper/35">
+              <div key={f.id} className="group relative mb-7">
+                <label
+                  htmlFor={f.id}
+                  className="mb-2 block font-mono text-[0.56rem] uppercase tracking-[0.22em] text-paper/40"
+                >
                   {f.label}
-                </span>
+                </label>
                 <input
                   id={f.id}
                   name={f.name}
@@ -171,39 +237,50 @@ export function Contact() {
                   maxLength={f.max}
                   placeholder={f.ph}
                   required
-                  className="w-full bg-transparent px-4 pb-3 pt-1.5 font-sans text-[0.9rem] text-paper placeholder:text-paper/20 focus:outline-none"
+                  className="w-full border-0 border-b border-paper/15 bg-transparent pb-2.5 pt-1 font-serif text-[1.05rem] text-paper placeholder:text-paper/20 placeholder:font-sans placeholder:text-[0.85rem] focus:border-paper focus:outline-none focus:ring-0 transition-colors"
                 />
-              </label>
+              </div>
             ))}
 
-            <label
-              htmlFor="cf-msg"
-              className="mb-2 flex flex-col border border-paper/10 bg-paper/[0.04] transition-colors focus-within:border-paper/30"
-            >
-              <span className="px-4 pt-3 font-mono text-[0.62rem] uppercase tracking-[0.1em] text-paper/35">
+            <div className="group relative mb-7">
+              <label
+                htmlFor="cf-msg"
+                className="mb-2 block font-mono text-[0.56rem] uppercase tracking-[0.22em] text-paper/40"
+              >
                 {t(CONTACT.form.msg)}
-              </span>
+              </label>
               <textarea
+                ref={msgRef}
                 id="cf-msg"
                 name="message"
                 maxLength={3000}
                 placeholder={t(CONTACT.form.msgPh)}
                 required
-                className="min-h-[100px] w-full resize-y bg-transparent px-4 pb-3 pt-1.5 font-sans text-[0.9rem] text-paper placeholder:text-paper/20 focus:outline-none"
+                className="min-h-[110px] w-full resize-y border-0 border-b border-paper/15 bg-transparent pb-2.5 pt-1 font-serif text-[1.02rem] leading-[1.5] text-paper placeholder:text-paper/20 placeholder:font-sans placeholder:text-[0.85rem] focus:border-paper focus:outline-none focus:ring-0 transition-colors"
               />
-            </label>
+            </div>
 
             <button
               type="submit"
               disabled={status === "sending"}
               className={cn(
-                "relative isolate mt-2 w-full overflow-hidden border-0 bg-paper px-6 py-3.5 font-sans text-[0.78rem] font-semibold uppercase tracking-[0.08em] text-ink transition-colors",
-                "before:absolute before:inset-0 before:-z-10 before:origin-right before:scale-x-0 before:bg-rust before:transition-transform before:duration-500",
-                "hover:before:origin-left hover:before:scale-x-100 hover:text-paper",
+                "group/btn relative isolate mt-4 inline-flex items-center justify-between gap-4 self-start border-0 border-b border-paper/30 py-3 pl-0 pr-1 font-mono text-[0.72rem] uppercase tracking-[0.18em] text-paper transition-colors hover:border-rust hover:text-rust",
                 "disabled:opacity-60",
               )}
             >
-              {status === "sending" ? t(CONTACT.form.sending) : status === "sent" ? t(CONTACT.form.sent) : t(CONTACT.form.send)}
+              <span>
+                {status === "sending"
+                  ? t(CONTACT.form.sending)
+                  : status === "sent"
+                    ? t(CONTACT.form.sent)
+                    : t(CONTACT.form.send)}
+              </span>
+              <span
+                aria-hidden
+                className="text-[1.1rem] leading-none transition-transform duration-500 group-hover/btn:translate-x-2"
+              >
+                →
+              </span>
             </button>
 
             <p
@@ -212,6 +289,7 @@ export function Contact() {
               className={cn(
                 "mt-3 min-h-[1em] font-mono text-[0.65rem] uppercase tracking-[0.1em]",
                 status === "invalid" && "text-rust",
+                status === "error" && "text-rust",
                 status === "sent" && "text-paper/60",
                 status === "sending" && "text-paper/40",
                 status === "idle" && "text-paper/40",

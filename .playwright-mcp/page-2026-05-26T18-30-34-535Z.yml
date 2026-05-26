@@ -1,0 +1,622 @@
+- generic [ref=e2]:
+  - link "Saltar al contenido" [ref=e3] [cursor=pointer]:
+    - /url: "#main"
+  - generic: DIAGNÓSTICO
+  - navigation "Navegación principal" [ref=e12]:
+    - link "Emilio Pastor — Inicio" [ref=e13] [cursor=pointer]:
+      - /url: "#top"
+      - text: Emilio Pastor
+    - generic [ref=e15]:
+      - list [ref=e16]:
+        - listitem [ref=e17]:
+          - link "Servicios" [ref=e18] [cursor=pointer]:
+            - /url: "#services"
+            - generic [ref=e19]: I
+            - generic [ref=e20]: Servicios
+        - listitem [ref=e22]:
+          - link "Proceso" [ref=e23] [cursor=pointer]:
+            - /url: "#process"
+            - generic [ref=e24]: II
+            - generic [ref=e25]: Proceso
+        - listitem [ref=e27]:
+          - link "Casos" [ref=e28] [cursor=pointer]:
+            - /url: "#casos"
+            - generic [ref=e29]: III
+            - generic [ref=e30]: Casos
+        - listitem [ref=e32]:
+          - link "Sobre mí" [ref=e33] [cursor=pointer]:
+            - /url: "#about"
+            - generic [ref=e34]: IV
+            - generic [ref=e35]: Sobre mí
+        - listitem [ref=e37]:
+          - link "Stack" [ref=e38] [cursor=pointer]:
+            - /url: "#stack"
+            - generic [ref=e39]: VI
+            - generic [ref=e40]: Stack
+      - group "Cambiar idioma" [ref=e42]:
+        - button "en" [ref=e44] [cursor=pointer]
+        - generic [ref=e45]:
+          - generic [ref=e46]: /
+          - button "es" [pressed] [ref=e47] [cursor=pointer]
+      - link "Diagnóstico gratis" [ref=e48] [cursor=pointer]:
+        - /url: "#contact"
+        - generic [ref=e49]: Diagnóstico gratis
+        - generic [ref=e50]: →
+  - main [ref=e51]:
+    - region "Presentación" [ref=e52]:
+      - complementary:
+        - generic:
+          - generic:
+            - generic:
+              - generic:
+                - generic: / 04
+              - generic:
+                - generic:
+                  - generic: estudio · 02
+                  - generic: Automoción · Captación
+                - heading [level=3]: Web de captación para concesionario
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic: Problema
+                      - paragraph: Presencia online débil y leads sin destino.
+                    - generic:
+                      - generic:
+                        - generic: Solución
+                      - paragraph: Catálogo dinámico y formularios pensados para convertir.
+              - generic:
+                - generic: caso de estudio
+                - generic: EP · 2024 →
+        - generic:
+          - generic: obra · 2024 → 2026
+          - generic: córdoba · estudio
+      - generic [ref=e53]:
+        - generic [ref=e54]:
+          - generic [ref=e55]: Aceptando nuevos proyectos
+          - generic [ref=e58]: Córdoba · España · Remoto
+        - heading "Emilio Pastor Zurita" [level=1] [ref=e757]:
+          - generic [ref=e64]: Emilio
+          - generic [ref=e66]: Pastor
+          - generic [ref=e68]: Zurita
+        - generic [ref=e69]:
+          - generic [ref=e70]: Desarrollador freelance · Construyo con IA
+          - paragraph [ref=e72]: Construyo webs y software a medida con IA. Del problema a producto funcionando, en menos tiempo que un desarrollo tradicional.
+        - generic [ref=e73]:
+          - link "Diagnóstico gratis" [ref=e74] [cursor=pointer]:
+            - /url: "#contact"
+          - link "Ver casos" [ref=e75] [cursor=pointer]:
+            - /url: "#casos"
+          - link "Descargar CV" [ref=e76] [cursor=pointer]:
+            - /url: /assets/CV.pdf
+            - img [ref=e77]
+            - text: Descargar CV
+      - generic [ref=e81]:
+        - generic [ref=e82]: presentación · 00 / VII
+        - list [ref=e83]:
+          - listitem [ref=e84]:
+            - generic [ref=e85]: Webs a medida
+          - listitem [ref=e86]:
+            - generic [ref=e88]: Software a medida
+          - listitem [ref=e89]:
+            - generic [ref=e91]: Automatización
+          - listitem [ref=e92]:
+            - generic [ref=e94]: Landings de captación
+          - listitem [ref=e95]:
+            - generic [ref=e97]: Integraciones IA
+        - link "Continúa" [ref=e98] [cursor=pointer]:
+          - /url: "#stats"
+          - text: Continúa
+          - img [ref=e99]
+    - region "Métricas" [ref=e101]:
+      - generic [ref=e102]:
+        - generic [ref=e103]:
+          - generic [ref=e106]: 01 / 04
+          - generic [ref=e108]: 3+
+          - paragraph [ref=e111]: años desarrollando software
+        - generic [ref=e112]:
+          - generic [ref=e115]: 02 / 04
+          - generic [ref=e117]: 10+
+          - paragraph [ref=e120]: proyectos entregados
+        - generic [ref=e121]:
+          - generic [ref=e124]: 03 / 04
+          - generic [ref=e126]: 5+
+          - paragraph [ref=e129]: soluciones con IA
+        - generic [ref=e130]:
+          - generic [ref=e133]: 04 / 04
+          - generic [ref=e135]: "3"
+          - paragraph [ref=e138]: sectores principales
+    - region "Servicios" [ref=e139]:
+      - generic [ref=e140]:
+        - generic [ref=e141]:
+          - generic [ref=e142]:
+            - generic [ref=e143]: I
+            - generic [ref=e144]:
+              - generic [ref=e145]: Servicios
+              - heading "En qué puedo ayudarte" [level=2] [ref=e146]
+          - generic [ref=e147]: 03 servicios
+        - generic [ref=e148]:
+          - article [ref=e149]:
+            - generic [ref=e150]:
+              - generic [ref=e151]: servicio · 01
+              - generic [ref=e152]: "01"
+            - heading "Software y aplicaciones de gestión a medida" [level=3] [ref=e153]
+            - paragraph [ref=e154]: ERPs, paneles internos y herramientas de gestión hechos a medida para tu negocio. Si llevas el control en Excel u hojas sueltas, lo paso a una aplicación que trabaja por ti.
+            - generic [ref=e155]:
+              - list [ref=e156]:
+                - listitem [ref=e157]: ERPs
+                - listitem [ref=e158]: Paneles internos
+                - listitem [ref=e159]: Gestión
+              - link "Pedir presupuesto" [ref=e160] [cursor=pointer]:
+                - /url: "#contact"
+                - generic [ref=e161]: Pedir presupuesto
+                - img [ref=e162]
+          - article [ref=e165]:
+            - generic [ref=e166]:
+              - generic [ref=e167]: servicio · 02
+              - generic [ref=e168]: "02"
+            - heading "Automatización de tareas y procesos repetitivos" [level=3] [ref=e169]
+            - paragraph [ref=e170]: Si una tarea se repite cada semana, se puede automatizar. Conecto tus herramientas, recupero las horas que se van en copiar y pegar, y libero al equipo para lo que sí mueve el negocio.
+            - generic [ref=e171]:
+              - list [ref=e172]:
+                - listitem [ref=e173]: Automatización
+                - listitem [ref=e174]: Integraciones
+                - listitem [ref=e175]: IA
+              - link "Pedir presupuesto" [ref=e176] [cursor=pointer]:
+                - /url: "#contact"
+                - generic [ref=e177]: Pedir presupuesto
+                - img [ref=e178]
+          - article [ref=e181]:
+            - generic [ref=e182]:
+              - generic [ref=e183]: servicio · 03
+              - generic [ref=e184]: "03"
+            - heading "Webs y landings orientadas a captar clientes" [level=3] [ref=e185]
+            - paragraph [ref=e186]: "Webs pensadas para un objetivo claro: que la gente que entra termine contactando contigo. Diseño, copy y desarrollo trabajando juntos para mover el negocio, no para decorar."
+            - generic [ref=e187]:
+              - list [ref=e188]:
+                - listitem [ref=e189]: Webs a medida
+                - listitem [ref=e190]: Landings
+                - listitem [ref=e191]: Captación
+              - link "Pedir presupuesto" [ref=e192] [cursor=pointer]:
+                - /url: "#contact"
+                - generic [ref=e193]: Pedir presupuesto
+                - img [ref=e194]
+    - region "Proceso" [ref=e197]:
+      - generic [ref=e198]:
+        - generic [ref=e199]:
+          - generic [ref=e200]:
+            - generic [ref=e201]: II
+            - generic [ref=e202]:
+              - generic [ref=e203]: Proceso
+              - heading "Cómo trabajamos juntos" [level=2] [ref=e204]
+          - generic [ref=e205]: 04 pasos
+        - generic [ref=e206]:
+          - article [ref=e207]:
+            - generic [ref=e208]:
+              - generic [ref=e209]: paso · 01
+              - generic [ref=e210]: →
+            - generic [ref=e211]: "01"
+            - generic [ref=e212]:
+              - generic [ref=e213]: 20 minutos · gratis
+              - heading "Diagnóstico" [level=3] [ref=e214]
+            - paragraph [ref=e215]: Te escucho, entiendo el problema y te digo si puedo ayudarte. Sin compromiso, sin tecnicismos, sin venderte humo.
+          - article [ref=e216]:
+            - generic [ref=e217]:
+              - generic [ref=e218]: paso · 02
+              - generic [ref=e219]: →
+            - generic [ref=e220]: "02"
+            - generic [ref=e221]:
+              - generic [ref=e222]: 3 días
+              - heading "Brief y propuesta" [level=3] [ref=e223]
+            - paragraph [ref=e224]: Mapamos alcance, plazos y un precio cerrado. Sin sorpresas durante el proyecto. Si no encaja, lo dejamos aquí.
+          - article [ref=e225]:
+            - generic [ref=e226]:
+              - generic [ref=e227]: paso · 03
+              - generic [ref=e228]: →
+            - generic [ref=e229]: "03"
+            - generic [ref=e230]:
+              - generic [ref=e231]: 7 — 10 días
+              - heading "Demo funcional" [level=3] [ref=e232]
+            - paragraph [ref=e233]: Te enseño algo que funciona — no maquetas ni promesas. Iteramos en corto sobre lo real, no sobre lo imaginado.
+          - article [ref=e234]:
+            - generic [ref=e236]: paso · 04
+            - generic [ref=e237]: "04"
+            - generic [ref=e238]:
+              - generic [ref=e239]: Continuo
+              - heading "Producción y soporte" [level=3] [ref=e240]
+            - paragraph [ref=e241]: Lanzamiento, formación al equipo y mejoras continuas. No desaparezco después de entregar.
+        - generic [ref=e242]:
+          - paragraph [ref=e243]: "Del primer mensaje a la demo funcional: dos semanas. Sin agencias, sin intermediarios, sin contratos eternos."
+          - link "Empezar diagnóstico" [ref=e244] [cursor=pointer]:
+            - /url: "#contact"
+            - generic [ref=e245]: Empezar diagnóstico
+            - generic [ref=e246]: →
+    - region "Casos" [ref=e247]:
+      - generic [ref=e248]:
+        - generic [ref=e249]:
+          - generic [ref=e250]:
+            - generic [ref=e251]: III
+            - generic [ref=e252]:
+              - generic [ref=e253]: Casos
+              - heading "Proyectos destacados" [level=2] [ref=e254]
+          - generic [ref=e255]: 04 casos
+        - generic [ref=e256]:
+          - article [ref=e257]:
+            - generic [ref=e258]:
+              - generic [ref=e259]: "01"
+              - generic [ref=e260]: Despachos · Extranjería
+            - generic [ref=e261]:
+              - generic [ref=e263]:
+                - generic [ref=e264]: "01"
+                - generic [ref=e265]:
+                  - paragraph [ref=e266]: Migraria
+                  - paragraph [ref=e267]: estudio · EP
+              - generic [ref=e269]: caso de estudio
+              - generic [ref=e270]: Despachos
+            - heading "ERP para despacho de extranjería" [level=3] [ref=e271]
+            - generic [ref=e272]:
+              - generic [ref=e273]:
+                - generic [ref=e276]: Problema
+                - paragraph [ref=e277]: El despacho gestionaba cientos de expedientes y plazos legales a mano, con riesgo de perder fechas y horas tiradas en seguimiento manual.
+              - generic [ref=e278]:
+                - generic [ref=e281]: Solución
+                - paragraph [ref=e282]: Aplicación a medida que centraliza casos, documentación y plazos. El equipo dedica menos tiempo a tareas repetitivas y trabaja sobre datos siempre actualizados.
+            - list [ref=e283]:
+              - listitem [ref=e284]: Software a medida
+              - listitem [ref=e285]: Gestión de casos
+              - listitem [ref=e286]: Automatización
+          - article [ref=e287]:
+            - generic [ref=e288]:
+              - generic [ref=e289]: "02"
+              - generic [ref=e290]: Automoción · Captación
+            - generic [ref=e291]:
+              - generic [ref=e293]:
+                - generic [ref=e294]: "02"
+                - generic [ref=e295]:
+                  - paragraph [ref=e296]: Concesionario
+                  - paragraph [ref=e297]: estudio · EP
+              - generic [ref=e299]: caso de estudio
+              - generic [ref=e300]: Automoción
+            - heading "Web de captación para concesionario" [level=3] [ref=e301]
+            - generic [ref=e302]:
+              - generic [ref=e303]:
+                - generic [ref=e306]: Problema
+                - paragraph [ref=e307]: Presencia online débil y leads que no llegaban a contactar con el equipo comercial.
+              - generic [ref=e308]:
+                - generic [ref=e311]: Solución
+                - paragraph [ref=e312]: Web con catálogo dinámico, fichas de vehículo y formularios pensados para convertir. Más visitas terminan en contacto cualificado con el concesionario.
+            - list [ref=e313]:
+              - listitem [ref=e314]: Web a medida
+              - listitem [ref=e315]: Captación de leads
+              - listitem [ref=e316]: Catálogo dinámico
+          - article [ref=e317]:
+            - generic [ref=e318]:
+              - generic [ref=e319]: "03"
+              - generic [ref=e320]: Hostelería · Automatización
+            - generic [ref=e321]:
+              - generic [ref=e323]:
+                - generic [ref=e324]: "03"
+                - generic [ref=e325]:
+                  - paragraph [ref=e326]: AutoCaña
+                  - paragraph [ref=e327]: estudio · EP
+              - generic [ref=e329]: caso de estudio
+              - generic [ref=e330]: Hostelería
+            - heading "AutoCaña — automatización para bares" [level=3] [ref=e331]
+            - generic [ref=e332]:
+              - generic [ref=e333]:
+                - generic [ref=e336]: Problema
+                - paragraph [ref=e337]: Tareas repetitivas del día a día consumían horas del equipo y dejaban poco margen para atender al cliente.
+              - generic [ref=e338]:
+                - generic [ref=e341]: Solución
+                - paragraph [ref=e342]: Sistema a medida que automatiza la operativa crítica del negocio y libera tiempo del personal para lo importante.
+            - list [ref=e343]:
+              - listitem [ref=e344]: Software a medida
+              - listitem [ref=e345]: Automatización
+              - listitem [ref=e346]: Hostelería
+          - article [ref=e347]:
+            - generic [ref=e348]:
+              - generic [ref=e349]: "04"
+              - generic [ref=e350]: Servicios · Equipos
+            - generic [ref=e351]:
+              - generic [ref=e353]:
+                - generic [ref=e354]: "04"
+                - generic [ref=e355]:
+                  - paragraph [ref=e356]: CASANA
+                  - paragraph [ref=e357]: estudio · EP
+              - generic [ref=e359]: caso de estudio
+              - generic [ref=e360]: Servicios
+            - heading "CASANA — gestión de empleados y servicios" [level=3] [ref=e361]
+            - generic [ref=e362]:
+              - generic [ref=e363]:
+                - generic [ref=e366]: Problema
+                - paragraph [ref=e367]: Coordinar personal y servicios a mano generaba errores, descontento y horas perdidas en el cuadrante.
+              - generic [ref=e368]:
+                - generic [ref=e371]: Solución
+                - paragraph [ref=e372]: Plataforma propia que organiza al personal, asigna servicios y mantiene visible todo el flujo del negocio.
+            - list [ref=e373]:
+              - listitem [ref=e374]: Plataforma a medida
+              - listitem [ref=e375]: Gestión interna
+              - listitem [ref=e376]: Operaciones
+    - region "Sobre mí" [ref=e377]:
+      - generic [ref=e378]:
+        - generic [ref=e380]:
+          - generic [ref=e381]: IV
+          - generic [ref=e382]:
+            - generic [ref=e383]: Perfil
+            - heading "Sobre mí" [level=2] [ref=e384]
+        - generic [ref=e385]:
+          - generic [ref=e386]:
+            - paragraph [ref=e387]: Soy desarrollador freelance con base en Córdoba. Construyo webs, landings y software a medida para despachos profesionales, clínicas, startups y negocios que necesitan resolver algo concreto.
+            - paragraph [ref=e388]: "Mi forma de trabajar se apoya en IA en todo el proceso, lo que me permite entregar antes y con menos fricción que un desarrollo tradicional. No es magia: es una manera de construir más enfocada en el problema del cliente que en el código."
+            - paragraph [ref=e389]: "Vengo del desarrollo de software industrial, con experiencia en sistemas MES/MOM en Indra. Ese mundo me enseñó algo simple: el software tiene que funcionar de verdad y resolver el problema que se le encarga, no solo parecer que lo hace."
+            - paragraph [ref=e390]: Si tienes un proceso que cada semana te roba horas o un negocio que necesita una web que de verdad capte clientes, hablamos. Te digo en 20 minutos qué se puede hacer y cómo.
+          - generic [ref=e391]:
+            - generic [ref=e392]:
+              - img "Retrato de Emilio Pastor Zurita" [ref=e759]
+              - generic [ref=e760]:
+                - generic [ref=e761]: retrato · 2026
+                - generic [ref=e763]: córdoba · estudio
+            - generic [ref=e764]:
+              - generic [ref=e765]:
+                - generic [ref=e766]: ficha técnica
+                - generic [ref=e767]: 05 datos
+              - generic [ref=e768]:
+                - generic [ref=e769]:
+                  - term [ref=e770]: Rol
+                  - definition [ref=e771]:
+                    - strong [ref=e772]: Desarrollador freelance
+                    - text: Webs y software a medida con IA
+                - generic [ref=e773]:
+                  - term [ref=e774]: Sectores
+                  - definition [ref=e775]: Despachos profesionales · Clínicas · Startups y emprendedores
+                - generic [ref=e776]:
+                  - term [ref=e777]: Zona
+                  - definition [ref=e778]:
+                    - text: Córdoba · Andalucía · Toda España
+                    - text: Trabajo en remoto
+                - generic [ref=e779]:
+                  - term [ref=e780]: Formación
+                  - definition [ref=e781]:
+                    - strong [ref=e782]: Desarrollo de Aplicaciones Web
+                    - text: DAW — Ciclo Formativo Superior
+                - generic [ref=e783]:
+                  - term [ref=e784]: Idiomas
+                  - definition [ref=e785]: Español (nativo) · Inglés (profesional)
+    - region "Trayectoria" [ref=e411]:
+      - generic [ref=e412]:
+        - generic [ref=e413]:
+          - generic [ref=e414]:
+            - generic [ref=e415]: V
+            - generic [ref=e416]:
+              - generic [ref=e417]: Trayectoria
+              - heading "Antes del freelance" [level=2] [ref=e418]
+          - generic [ref=e419]: 03 etapas
+        - list [ref=e420]:
+          - listitem [ref=e421]:
+            - generic [ref=e424]:
+              - generic [ref=e425]: etapa · 01
+              - generic [ref=e426]: 2025 — 2026
+              - generic [ref=e427]: Indra / Deuser
+            - generic [ref=e428]:
+              - heading "Desarrollador de software industrial (MES/MOM)" [level=3] [ref=e429]
+              - paragraph [ref=e430]: "Desarrollo y despliegue de software de fabricación en planta para grandes industrias. Trabajo en proyectos donde el software no puede fallar: parada de línea, datos críticos, integraciones con maquinaria real. La mejor escuela posible para construir software serio."
+              - list [ref=e431]:
+                - listitem [ref=e432]: Software industrial
+                - listitem [ref=e433]: Sistemas MES/MOM
+                - listitem [ref=e434]: Integraciones de datos
+                - listitem [ref=e435]: Producción
+          - listitem [ref=e436]:
+            - generic [ref=e439]:
+              - generic [ref=e440]: etapa · 02
+              - generic [ref=e441]: Prácticas internacionales
+              - generic [ref=e442]: S.T.A.E — Reggio Emilia, Italia
+            - generic [ref=e443]:
+              - heading "Técnico IT" [level=3] [ref=e444]
+              - paragraph [ref=e445]: Estancia profesional en una empresa italiana del sector tecnológico. Soporte, mantenimiento y configuración de sistemas en un entorno laboral exigente y en otro idioma.
+              - list [ref=e446]:
+                - listitem [ref=e447]: Trabajo internacional
+                - listitem [ref=e448]: Redes y sistemas
+                - listitem [ref=e449]: Soporte técnico
+          - listitem [ref=e450]:
+            - generic [ref=e453]:
+              - generic [ref=e454]: etapa · 03
+              - generic [ref=e455]: Inicios
+              - generic [ref=e456]: Negocio local — Córdoba
+            - generic [ref=e457]:
+              - heading "Marketing digital y web" [level=3] [ref=e458]
+              - paragraph [ref=e459]: "Primer contacto con la web orientada a negocio: contenidos, redes sociales y visibilidad online para un comercio local. Aprendí pronto que una web sin objetivo claro no sirve para nada."
+              - list [ref=e460]:
+                - listitem [ref=e461]: Contenido web
+                - listitem [ref=e462]: Captación local
+                - listitem [ref=e463]: Visibilidad online
+    - region "Stack" [ref=e464]:
+      - generic [ref=e465]:
+        - generic [ref=e466]:
+          - generic [ref=e467]:
+            - generic [ref=e468]: VI
+            - generic [ref=e469]:
+              - generic [ref=e470]: Cómo construyo
+              - heading "Stack y herramientas" [level=2] [ref=e471]
+          - generic [ref=e472]: 04 áreas
+        - generic [ref=e473]:
+          - generic [ref=e474]:
+            - generic [ref=e475]:
+              - heading "Frontend" [level=3] [ref=e476]
+              - generic [ref=e477]: "05"
+            - list [ref=e478]:
+              - listitem [ref=e479]:
+                - generic [ref=e480]:
+                  - generic [ref=e481]: TypeScript
+                  - generic [ref=e482]: Diario
+              - listitem [ref=e489]:
+                - generic [ref=e490]:
+                  - generic [ref=e491]: React
+                  - generic [ref=e492]: Diario
+              - listitem [ref=e499]:
+                - generic [ref=e500]:
+                  - generic [ref=e501]: Tailwind CSS
+                  - generic [ref=e502]: Diario
+              - listitem [ref=e509]:
+                - generic [ref=e510]:
+                  - generic [ref=e511]: Motion / GSAP
+                  - generic [ref=e512]: En uso
+              - listitem [ref=e519]:
+                - generic [ref=e520]:
+                  - generic [ref=e521]: Next.js
+                  - generic [ref=e522]: En uso
+          - generic [ref=e529]:
+            - generic [ref=e530]:
+              - heading "Backend & datos" [level=3] [ref=e531]
+              - generic [ref=e532]: "04"
+            - list [ref=e533]:
+              - listitem [ref=e534]:
+                - generic [ref=e535]:
+                  - generic [ref=e536]: Node.js
+                  - generic [ref=e537]: En uso
+              - listitem [ref=e544]:
+                - generic [ref=e545]:
+                  - generic [ref=e546]: PostgreSQL / MySQL
+                  - generic [ref=e547]: En uso
+              - listitem [ref=e554]:
+                - generic [ref=e555]:
+                  - generic [ref=e556]: REST APIs
+                  - generic [ref=e557]: Diario
+              - listitem [ref=e564]:
+                - generic [ref=e565]:
+                  - generic [ref=e566]: Prisma
+                  - generic [ref=e567]: Conocido
+          - generic [ref=e574]:
+            - generic [ref=e575]:
+              - heading "Herramientas" [level=3] [ref=e576]
+              - generic [ref=e577]: "04"
+            - list [ref=e578]:
+              - listitem [ref=e579]:
+                - generic [ref=e580]:
+                  - generic [ref=e581]: Git / GitHub
+                  - generic [ref=e582]: Diario
+              - listitem [ref=e589]:
+                - generic [ref=e590]:
+                  - generic [ref=e591]: VS Code
+                  - generic [ref=e592]: Diario
+              - listitem [ref=e599]:
+                - generic [ref=e600]:
+                  - generic [ref=e601]: Figma
+                  - generic [ref=e602]: Conocido
+              - listitem [ref=e609]:
+                - generic [ref=e610]:
+                  - generic [ref=e611]: Vercel / Cloudflare
+                  - generic [ref=e612]: Diario
+          - generic [ref=e619]:
+            - generic [ref=e620]:
+              - heading "IA y automatización" [level=3] [ref=e621]
+              - generic [ref=e622]: "05"
+            - list [ref=e623]:
+              - listitem [ref=e624]:
+                - generic [ref=e625]:
+                  - generic [ref=e626]: Claude API
+                  - generic [ref=e627]: Diario
+              - listitem [ref=e634]:
+                - generic [ref=e635]:
+                  - generic [ref=e636]: Prompt engineering
+                  - generic [ref=e637]: Diario
+              - listitem [ref=e644]:
+                - generic [ref=e645]:
+                  - generic [ref=e646]: Integraciones LLM
+                  - generic [ref=e647]: Diario
+              - listitem [ref=e654]:
+                - generic [ref=e655]:
+                  - generic [ref=e656]: n8n / workflows
+                  - generic [ref=e657]: En uso
+              - listitem [ref=e664]:
+                - generic [ref=e665]:
+                  - generic [ref=e666]: MES / MOM (Mendix)
+                  - generic [ref=e667]: Background
+    - region "Contacto" [ref=e674]:
+      - generic [ref=e675]:
+        - generic [ref=e677]:
+          - generic [ref=e678]: VII
+          - generic [ref=e679]:
+            - generic [ref=e680]: Contacto
+            - heading "Contacto" [level=2] [ref=e681]
+        - generic [ref=e683]: Diagnóstico gratis.
+        - generic [ref=e684]:
+          - generic [ref=e685]:
+            - paragraph [ref=e686]: ¿Una tarea que cada semana te roba horas? Cuéntamela y te digo en 20 minutos cómo automatizarla. Gratis y sin compromiso. También hago radiografías de web en vídeo si lo que te preocupa es tu presencia online.
+            - list [ref=e687]:
+              - listitem [ref=e688]:
+                - link "Email emiliopastorzurita906@gmail.com" [ref=e689] [cursor=pointer]:
+                  - /url: mailto:emiliopastorzurita906@gmail.com
+                  - generic [ref=e690]:
+                    - img [ref=e691]
+                    - text: Email
+                  - generic [ref=e694]: emiliopastorzurita906@gmail.com
+              - listitem [ref=e695]:
+                - link "LinkedIn linkedin.com/in/emilio-pastor-zurita" [ref=e696] [cursor=pointer]:
+                  - /url: https://www.linkedin.com/in/emilio-pastor-zurita/
+                  - generic [ref=e697]:
+                    - img [ref=e698]
+                    - text: LinkedIn
+                  - generic [ref=e702]: linkedin.com/in/emilio-pastor-zurita
+          - form "Formulario de contacto" [ref=e703]:
+            - generic:
+              - text: No rellenar
+              - textbox
+            - generic [ref=e704]:
+              - generic [ref=e705]: Nombre
+              - textbox "Nombre" [ref=e706]:
+                - /placeholder: Tu nombre o empresa
+            - generic [ref=e707]:
+              - generic [ref=e708]: Email
+              - textbox "Email" [ref=e709]:
+                - /placeholder: tu@email.com
+            - generic [ref=e710]:
+              - generic [ref=e711]: Cuéntame tu caso
+              - textbox "Cuéntame tu caso" [ref=e712]:
+                - /placeholder: ¿Qué tarea te roba horas? ¿Qué web o software necesitas?
+            - button "Pedir diagnóstico gratis" [ref=e713] [cursor=pointer]:
+              - generic [ref=e714]: Pedir diagnóstico gratis
+              - generic [ref=e715]: →
+            - status [ref=e716]
+  - contentinfo [ref=e717]:
+    - generic [ref=e718]:
+      - heading "Emilio Pastor Zurita." [level=2] [ref=e720]
+      - generic [ref=e721]:
+        - generic [ref=e722]:
+          - generic [ref=e723]: Colofón
+          - list [ref=e724]:
+            - listitem [ref=e725]: Estudio independiente
+            - listitem [ref=e726]: Córdoba · España
+            - listitem [ref=e727]: Construido en 2026
+        - generic [ref=e728]:
+          - generic [ref=e729]: Contacto
+          - list [ref=e730]:
+            - listitem [ref=e731]:
+              - link "Email" [ref=e732] [cursor=pointer]:
+                - /url: mailto:emiliopastorzurita906@gmail.com
+                - text: Email
+            - listitem [ref=e734]:
+              - link "Diagnóstico gratis" [ref=e735] [cursor=pointer]:
+                - /url: "#contact"
+                - text: Diagnóstico gratis
+        - generic [ref=e737]:
+          - generic [ref=e738]: Enlaces
+          - list [ref=e739]:
+            - listitem [ref=e740]:
+              - link "LinkedIn" [ref=e741] [cursor=pointer]:
+                - /url: https://www.linkedin.com/in/emilio-pastor-zurita/
+                - text: LinkedIn
+            - listitem [ref=e743]:
+              - link "CV (PDF)" [ref=e744] [cursor=pointer]:
+                - /url: /assets/CV.pdf
+                - text: CV (PDF)
+        - generic [ref=e746]:
+          - generic [ref=e747]: Estado
+          - list [ref=e749]:
+            - listitem [ref=e750]: Aceptando proyectos
+            - listitem [ref=e751]: Próximo hueco · junio
+            - listitem [ref=e752]: Respuesta · 24h
+      - generic [ref=e753]:
+        - generic [ref=e754]: © MMXXVI · anno 2026
+        - generic [ref=e755]: Construido con IA
+        - generic [ref=e756]: EP · v1.0
+    - generic: "2026"

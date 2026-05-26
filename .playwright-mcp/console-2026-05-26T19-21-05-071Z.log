@@ -1,0 +1,268 @@
+[  187372ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:21608
+[  187384ms] [LOG] %cHola, dev. color:#D4460F;font-family:'Instrument Serif',serif;font-style:italic;font-size:28px;line-height:1; @ http://localhost:5173/src/lib/console-egg.ts:19
+[  187384ms] [LOG] %c
+  ███████ ██████
+  ██      ██   ██
+  █████   ██████
+  ██      ██
+  ███████ ██
+
+  Emilio Pastor Zurita — estudio
+  Webs y software a medida con IA · Córdoba
+ color:#111;background:#F5F3EE;font-family:ui-monospace,SFMono-Regular,monospace;font-size:12px;line-height:1.4;padding:8px 12px; @ http://localhost:5173/src/lib/console-egg.ts:20
+[  187384ms] [LOG] %cSi has llegado a la consola, lees código. Construyo cosas serias con clientes serios y a veces necesito manos como las tuyas.
+%cTengo proyectos interesantes — algunos con IA real, otros con SQL real, todos con plazos reales. color:#111;font-family:ui-sans-serif,system-ui,sans-serif;font-size:13px;line-height:1.55; color:#111;font-family:ui-sans-serif,system-ui,sans-serif;font-size:13px;line-height:1.55; @ http://localhost:5173/src/lib/console-egg.ts:21
+[  187384ms] [LOG] %c→ %cemiliopastorzurita906@gmail.com color:#111;font-family:ui-sans-serif,system-ui,sans-serif;font-size:13px;line-height:1.55; color:#D4460F;font-family:ui-sans-serif,system-ui,sans-serif;font-size:13px;text-decoration:underline; @ http://localhost:5173/src/lib/console-egg.ts:26
+[  187384ms] [LOG] %cstack visible · src/data/copy.ts · STACK color:#888880;font-family:ui-monospace,SFMono-Regular,monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase; @ http://localhost:5173/src/lib/console-egg.ts:31
+[  187384ms] [LOG] %ccaveman tip: si entiendes el código, sabrás si encajas. Y si no, también. color:#888880;font-family:ui-monospace,SFMono-Regular,monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase; @ http://localhost:5173/src/lib/console-egg.ts:32
+[  187490ms] [WARNING] Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly. @ http://localhost:5173/node_modules/.vite/deps/motion_react.js?v=5be3a9ce:675
+[  193486ms] [WARNING] You are trying to animate undefined from "-0.03709" to "-3.0515941725097795". -0.03709 is not an animatable value - to enable this animation set -0.03709 to a value animatable to -3.0515941725097795 via the `style` property. @ http://localhost:5173/node_modules/.vite/deps/motion_react.js?v=5be3a9ce:312
+[  193504ms] [WARNING] You are trying to animate undefined from "-0.0861" to "-5.834587777110559". -0.0861 is not an animatable value - to enable this animation set -0.0861 to a value animatable to -5.834587777110559 via the `style` property. @ http://localhost:5173/node_modules/.vite/deps/motion_react.js?v=5be3a9ce:312
+[  193521ms] [WARNING] You are trying to animate undefined from "-0.07356" to "-4.440337492134441". -0.07356 is not an animatable value - to enable this animation set -0.07356 to a value animatable to -4.440337492134441 via the `style` property. @ http://localhost:5173/node_modules/.vite/deps/motion_react.js?v=5be3a9ce:312
+[  193521ms] [WARNING] You are trying to animate undefined from "-0.06587" to "-3.294541284927319". -0.06587 is not an animatable value - to enable this animation set -0.06587 to a value animatable to -3.294541284927319 via the `style` property. @ http://localhost:5173/node_modules/.vite/deps/motion_react.js?v=5be3a9ce:312
+[  193536ms] [WARNING] You are trying to animate undefined from "-0.01682" to "-3.1444786349542575". -0.01682 is not an animatable value - to enable this animation set -0.01682 to a value animatable to -3.1444786349542575 via the `style` property. @ http://localhost:5173/node_modules/.vite/deps/motion_react.js?v=5be3a9ce:312
+[  193536ms] [WARNING] You are trying to animate undefined from "-0.01579" to "-2.362323479209611". -0.01579 is not an animatable value - to enable this animation set -0.01579 to a value animatable to -2.362323479209611 via the `style` property. @ http://localhost:5173/node_modules/.vite/deps/motion_react.js?v=5be3a9ce:312
+[  193569ms] [WARNING] You are trying to animate undefined from "-0.03838" to "-2.024618411372053". -0.03838 is not an animatable value - to enable this animation set -0.03838 to a value animatable to -2.024618411372053 via the `style` property. @ http://localhost:5173/node_modules/.vite/deps/motion_react.js?v=5be3a9ce:312
+[  193569ms] [WARNING] You are trying to animate undefined from "-0.00247" to "-1.2787407264525008". -0.00247 is not an animatable value - to enable this animation set -0.00247 to a value animatable to -1.2787407264525008 via the `style` property. @ http://localhost:5173/node_modules/.vite/deps/motion_react.js?v=5be3a9ce:312
+[  193769ms] [WARNING] You are trying to animate undefined from "-0.00211" to "-0.12030594667879546". -0.00211 is not an animatable value - to enable this animation set -0.00211 to a value animatable to -0.12030594667879546 via the `style` property. @ http://localhost:5173/node_modules/.vite/deps/motion_react.js?v=5be3a9ce:312
+[  194320ms] [WARNING] You are trying to animate undefined from "-0.10039" to "-3.983568405570116". -0.10039 is not an animatable value - to enable this animation set -0.10039 to a value animatable to -3.983568405570116 via the `style` property. @ http://localhost:5173/node_modules/.vite/deps/motion_react.js?v=5be3a9ce:312
+[  291714ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:21608
+[  291727ms] [LOG] %cHola, dev. color:#D4460F;font-family:'Instrument Serif',serif;font-style:italic;font-size:28px;line-height:1; @ http://localhost:5173/src/lib/console-egg.ts:19
+[  291727ms] [LOG] %c
+  ███████ ██████
+  ██      ██   ██
+  █████   ██████
+  ██      ██
+  ███████ ██
+
+  Emilio Pastor Zurita — estudio
+  Webs y software a medida con IA · Córdoba
+ color:#111;background:#F5F3EE;font-family:ui-monospace,SFMono-Regular,monospace;font-size:12px;line-height:1.4;padding:8px 12px; @ http://localhost:5173/src/lib/console-egg.ts:20
+[  291727ms] [LOG] %cSi has llegado a la consola, lees código. Construyo cosas serias con clientes serios y a veces necesito manos como las tuyas.
+%cTengo proyectos interesantes — algunos con IA real, otros con SQL real, todos con plazos reales. color:#111;font-family:ui-sans-serif,system-ui,sans-serif;font-size:13px;line-height:1.55; color:#111;font-family:ui-sans-serif,system-ui,sans-serif;font-size:13px;line-height:1.55; @ http://localhost:5173/src/lib/console-egg.ts:21
+[  291727ms] [LOG] %c→ %cemiliopastorzurita906@gmail.com color:#111;font-family:ui-sans-serif,system-ui,sans-serif;font-size:13px;line-height:1.55; color:#D4460F;font-family:ui-sans-serif,system-ui,sans-serif;font-size:13px;text-decoration:underline; @ http://localhost:5173/src/lib/console-egg.ts:26
+[  291727ms] [LOG] %cstack visible · src/data/copy.ts · STACK color:#888880;font-family:ui-monospace,SFMono-Regular,monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase; @ http://localhost:5173/src/lib/console-egg.ts:31
+[  291727ms] [LOG] %ccaveman tip: si entiendes el código, sabrás si encajas. Y si no, también. color:#888880;font-family:ui-monospace,SFMono-Regular,monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase; @ http://localhost:5173/src/lib/console-egg.ts:32
+[  291791ms] [WARNING] Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly. @ http://localhost:5173/node_modules/.vite/deps/motion_react.js?v=5be3a9ce:675
+[  300569ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:21608
+[  300578ms] [LOG] %cHola, dev. color:#D4460F;font-family:'Instrument Serif',serif;font-style:italic;font-size:28px;line-height:1; @ http://localhost:5173/src/lib/console-egg.ts:19
+[  300578ms] [LOG] %c
+  ███████ ██████
+  ██      ██   ██
+  █████   ██████
+  ██      ██
+  ███████ ██
+
+  Emilio Pastor Zurita — estudio
+  Webs y software a medida con IA · Córdoba
+ color:#111;background:#F5F3EE;font-family:ui-monospace,SFMono-Regular,monospace;font-size:12px;line-height:1.4;padding:8px 12px; @ http://localhost:5173/src/lib/console-egg.ts:20
+[  300578ms] [LOG] %cSi has llegado a la consola, lees código. Construyo cosas serias con clientes serios y a veces necesito manos como las tuyas.
+%cTengo proyectos interesantes — algunos con IA real, otros con SQL real, todos con plazos reales. color:#111;font-family:ui-sans-serif,system-ui,sans-serif;font-size:13px;line-height:1.55; color:#111;font-family:ui-sans-serif,system-ui,sans-serif;font-size:13px;line-height:1.55; @ http://localhost:5173/src/lib/console-egg.ts:21
+[  300578ms] [LOG] %c→ %cemiliopastorzurita906@gmail.com color:#111;font-family:ui-sans-serif,system-ui,sans-serif;font-size:13px;line-height:1.55; color:#D4460F;font-family:ui-sans-serif,system-ui,sans-serif;font-size:13px;text-decoration:underline; @ http://localhost:5173/src/lib/console-egg.ts:26
+[  300578ms] [LOG] %cstack visible · src/data/copy.ts · STACK color:#888880;font-family:ui-monospace,SFMono-Regular,monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase; @ http://localhost:5173/src/lib/console-egg.ts:31
+[  300578ms] [LOG] %ccaveman tip: si entiendes el código, sabrás si encajas. Y si no, también. color:#888880;font-family:ui-monospace,SFMono-Regular,monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase; @ http://localhost:5173/src/lib/console-egg.ts:32
+[  300635ms] [WARNING] Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly. @ http://localhost:5173/node_modules/.vite/deps/motion_react.js?v=5be3a9ce:675
+[  382433ms] ReferenceError: Stats is not defined
+    at Shell (http://localhost:5173/src/App.tsx?t=1779823647360:122:30)
+    at renderWithHooks (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:11596:26)
+    at updateFunctionComponent (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:14630:28)
+    at beginWork (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:15972:22)
+    at HTMLUnknownElement.callCallback2 (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:3680:22)
+    at Object.invokeGuardedCallbackDev (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:3705:24)
+    at invokeGuardedCallback (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:3739:39)
+    at beginWork$1 (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:19818:15)
+    at performUnitOfWork (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:19251:20)
+    at workLoopSync (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:19190:13)
+[  382435ms] ReferenceError: Stats is not defined
+    at Shell (http://localhost:5173/src/App.tsx?t=1779823647360:122:30)
+    at renderWithHooks (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:11596:26)
+    at updateFunctionComponent (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:14630:28)
+    at beginWork (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:15972:22)
+    at HTMLUnknownElement.callCallback2 (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:3680:22)
+    at Object.invokeGuardedCallbackDev (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:3705:24)
+    at invokeGuardedCallback (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:3739:39)
+    at beginWork$1 (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:19818:15)
+    at performUnitOfWork (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:19251:20)
+    at workLoopSync (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:19190:13)
+[  382438ms] [ERROR] The above error occurred in the <Shell> component:
+
+    at Shell (http://localhost:5173/src/App.tsx?t=1779823647360:55:18)
+    at LangProvider (http://localhost:5173/src/hooks/use-lang.tsx:26:32)
+    at App
+
+Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries. @ http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:14079
+[  382440ms] ReferenceError: Stats is not defined
+    at Shell (http://localhost:5173/src/App.tsx?t=1779823647360:122:30)
+    at renderWithHooks (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:11596:26)
+    at updateFunctionComponent (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:14630:28)
+    at beginWork (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:15972:22)
+    at beginWork$1 (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:19806:22)
+    at performUnitOfWork (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:19251:20)
+    at workLoopSync (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:19190:13)
+    at renderRootSync (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:19169:15)
+    at recoverFromConcurrentError (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:18786:28)
+    at performSyncWorkOnRoot (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:18932:28)
+[  389061ms] ReferenceError: Stats is not defined
+    at Shell (http://localhost:5173/src/App.tsx?t=1779823653996:128:30)
+    at renderWithHooks (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:11596:26)
+    at mountIndeterminateComponent (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:14974:21)
+    at beginWork (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:15962:22)
+    at HTMLUnknownElement.callCallback2 (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:3680:22)
+    at Object.invokeGuardedCallbackDev (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:3705:24)
+    at invokeGuardedCallback (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:3739:39)
+    at beginWork$1 (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:19818:15)
+    at performUnitOfWork (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:19251:20)
+    at workLoopSync (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:19190:13)
+[  389062ms] ReferenceError: Stats is not defined
+    at Shell (http://localhost:5173/src/App.tsx?t=1779823653996:128:30)
+    at renderWithHooks (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:11596:26)
+    at mountIndeterminateComponent (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:14974:21)
+    at beginWork (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:15962:22)
+    at HTMLUnknownElement.callCallback2 (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:3680:22)
+    at Object.invokeGuardedCallbackDev (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:3705:24)
+    at invokeGuardedCallback (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:3739:39)
+    at beginWork$1 (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:19818:15)
+    at performUnitOfWork (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:19251:20)
+    at workLoopSync (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:19190:13)
+[  389062ms] [ERROR] The above error occurred in the <Shell> component:
+
+    at Shell (http://localhost:5173/src/App.tsx?t=1779823653996:56:18)
+    at LangProvider (http://localhost:5173/src/hooks/use-lang.tsx:26:32)
+    at App
+
+Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries. @ http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:14079
+[  389062ms] ReferenceError: Stats is not defined
+    at Shell (http://localhost:5173/src/App.tsx?t=1779823653996:128:30)
+    at renderWithHooks (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:11596:26)
+    at mountIndeterminateComponent (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:14974:21)
+    at beginWork (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:15962:22)
+    at beginWork$1 (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:19806:22)
+    at performUnitOfWork (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:19251:20)
+    at workLoopSync (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:19190:13)
+    at renderRootSync (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:19169:15)
+    at recoverFromConcurrentError (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:18786:28)
+    at performSyncWorkOnRoot (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:18932:28)
+[  443913ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:21608
+[  443926ms] [LOG] %cHola, dev. color:#D4460F;font-family:'Instrument Serif',serif;font-style:italic;font-size:28px;line-height:1; @ http://localhost:5173/src/lib/console-egg.ts:19
+[  443926ms] [LOG] %c
+  ███████ ██████
+  ██      ██   ██
+  █████   ██████
+  ██      ██
+  ███████ ██
+
+  Emilio Pastor Zurita — estudio
+  Webs y software a medida con IA · Córdoba
+ color:#111;background:#F5F3EE;font-family:ui-monospace,SFMono-Regular,monospace;font-size:12px;line-height:1.4;padding:8px 12px; @ http://localhost:5173/src/lib/console-egg.ts:20
+[  443926ms] [LOG] %cSi has llegado a la consola, lees código. Construyo cosas serias con clientes serios y a veces necesito manos como las tuyas.
+%cTengo proyectos interesantes — algunos con IA real, otros con SQL real, todos con plazos reales. color:#111;font-family:ui-sans-serif,system-ui,sans-serif;font-size:13px;line-height:1.55; color:#111;font-family:ui-sans-serif,system-ui,sans-serif;font-size:13px;line-height:1.55; @ http://localhost:5173/src/lib/console-egg.ts:21
+[  443926ms] [LOG] %c→ %cemiliopastorzurita906@gmail.com color:#111;font-family:ui-sans-serif,system-ui,sans-serif;font-size:13px;line-height:1.55; color:#D4460F;font-family:ui-sans-serif,system-ui,sans-serif;font-size:13px;text-decoration:underline; @ http://localhost:5173/src/lib/console-egg.ts:26
+[  443926ms] [LOG] %cstack visible · src/data/copy.ts · STACK color:#888880;font-family:ui-monospace,SFMono-Regular,monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase; @ http://localhost:5173/src/lib/console-egg.ts:31
+[  443926ms] [LOG] %ccaveman tip: si entiendes el código, sabrás si encajas. Y si no, también. color:#888880;font-family:ui-monospace,SFMono-Regular,monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase; @ http://localhost:5173/src/lib/console-egg.ts:32
+[  443992ms] [WARNING] Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly. @ http://localhost:5173/node_modules/.vite/deps/motion_react.js?v=5be3a9ce:675
+[  604916ms] [WARNING] You are trying to animate undefined from "-0.07558" to "-8.771783953668244". -0.07558 is not an animatable value - to enable this animation set -0.07558 to a value animatable to -8.771783953668244 via the `style` property. @ http://localhost:5173/node_modules/.vite/deps/motion_react.js?v=5be3a9ce:312
+[  604931ms] [WARNING] You are trying to animate undefined from "-0.04004" to "-5.9104283998299145". -0.04004 is not an animatable value - to enable this animation set -0.04004 to a value animatable to -5.9104283998299145 via the `style` property. @ http://localhost:5173/node_modules/.vite/deps/motion_react.js?v=5be3a9ce:312
+[  604932ms] [WARNING] You are trying to animate undefined from "-0.13426" to "-8.618867744112329". -0.13426 is not an animatable value - to enable this animation set -0.13426 to a value animatable to -8.618867744112329 via the `style` property. @ http://localhost:5173/node_modules/.vite/deps/motion_react.js?v=5be3a9ce:312
+[  604949ms] [WARNING] You are trying to animate undefined from "-0.11427" to "-6.824939671241666". -0.11427 is not an animatable value - to enable this animation set -0.11427 to a value animatable to -6.824939671241666 via the `style` property. @ http://localhost:5173/node_modules/.vite/deps/motion_react.js?v=5be3a9ce:312
+[  604965ms] [WARNING] You are trying to animate undefined from "-0.00906" to "-1.9407891800454127". -0.00906 is not an animatable value - to enable this animation set -0.00906 to a value animatable to -1.9407891800454127 via the `style` property. @ http://localhost:5173/node_modules/.vite/deps/motion_react.js?v=5be3a9ce:312
+[  605048ms] [WARNING] You are trying to animate undefined from "-0.01209" to "-1.0828144216957418". -0.01209 is not an animatable value - to enable this animation set -0.01209 to a value animatable to -1.0828144216957418 via the `style` property. @ http://localhost:5173/node_modules/.vite/deps/motion_react.js?v=5be3a9ce:312
+[  605282ms] [WARNING] You are trying to animate undefined from "-0.00295" to "-0.15921789450430102". -0.00295 is not an animatable value - to enable this animation set -0.00295 to a value animatable to -0.15921789450430102 via the `style` property. @ http://localhost:5173/node_modules/.vite/deps/motion_react.js?v=5be3a9ce:312
+[  605282ms] [WARNING] You are trying to animate undefined from "-0.00093" to "-0.1039087109036474". -0.00093 is not an animatable value - to enable this animation set -0.00093 to a value animatable to -0.1039087109036474 via the `style` property. @ http://localhost:5173/node_modules/.vite/deps/motion_react.js?v=5be3a9ce:312
+[  605349ms] [WARNING] You are trying to animate undefined from "-0.01301" to "-1.2173854527343726". -0.01301 is not an animatable value - to enable this animation set -0.01301 to a value animatable to -1.2173854527343726 via the `style` property. @ http://localhost:5173/node_modules/.vite/deps/motion_react.js?v=5be3a9ce:312
+[  605382ms] [WARNING] You are trying to animate undefined from "-0.067" to "-2.386158431494545". -0.067 is not an animatable value - to enable this animation set -0.067 to a value animatable to -2.386158431494545 via the `style` property. @ http://localhost:5173/node_modules/.vite/deps/motion_react.js?v=5be3a9ce:312
+[  605399ms] [WARNING] You are trying to animate undefined from "-0.04656" to "-2.200856526472445". -0.04656 is not an animatable value - to enable this animation set -0.04656 to a value animatable to -2.200856526472445 via the `style` property. @ http://localhost:5173/node_modules/.vite/deps/motion_react.js?v=5be3a9ce:312
+[ 1700769ms] ReferenceError: HeroDeliverable is not defined
+    at Hero (http://localhost:5173/src/components/sections/hero.tsx?t=1779824965714:67:32)
+    at renderWithHooks (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:11596:26)
+    at updateFunctionComponent (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:14630:28)
+    at beginWork (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:15972:22)
+    at HTMLUnknownElement.callCallback2 (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:3680:22)
+    at Object.invokeGuardedCallbackDev (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:3705:24)
+    at invokeGuardedCallback (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:3739:39)
+    at beginWork$1 (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:19818:15)
+    at performUnitOfWork (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:19251:20)
+    at workLoopSync (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:19190:13)
+[ 1700774ms] ReferenceError: HeroDeliverable is not defined
+    at Hero (http://localhost:5173/src/components/sections/hero.tsx?t=1779824965714:67:32)
+    at renderWithHooks (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:11596:26)
+    at updateFunctionComponent (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:14630:28)
+    at beginWork (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:15972:22)
+    at HTMLUnknownElement.callCallback2 (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:3680:22)
+    at Object.invokeGuardedCallbackDev (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:3705:24)
+    at invokeGuardedCallback (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:3739:39)
+    at beginWork$1 (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:19818:15)
+    at performUnitOfWork (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:19251:20)
+    at workLoopSync (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:19190:13)
+[ 1700777ms] [ERROR] The above error occurred in the <Hero> component:
+
+    at Hero (http://localhost:5173/src/components/sections/hero.tsx?t=1779824965714:27:13)
+    at main
+    at Shell (http://localhost:5173/src/App.tsx?t=1779824429378:56:18)
+    at LangProvider (http://localhost:5173/src/hooks/use-lang.tsx:26:32)
+    at App
+
+Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries. @ http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:14079
+[ 1700782ms] ReferenceError: HeroDeliverable is not defined
+    at Hero (http://localhost:5173/src/components/sections/hero.tsx?t=1779824965714:67:32)
+    at renderWithHooks (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:11596:26)
+    at updateFunctionComponent (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:14630:28)
+    at beginWork (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:15972:22)
+    at beginWork$1 (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:19806:22)
+    at performUnitOfWork (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:19251:20)
+    at workLoopSync (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:19190:13)
+    at renderRootSync (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:19169:15)
+    at recoverFromConcurrentError (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:18786:28)
+    at performSyncWorkOnRoot (http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:18932:28)
+[ 1796889ms] [WARNING] You are trying to animate undefined from "-0.0559" to "-2.696610131491804". -0.0559 is not an animatable value - to enable this animation set -0.0559 to a value animatable to -2.696610131491804 via the `style` property. @ http://localhost:5173/node_modules/.vite/deps/motion_react.js?v=5be3a9ce:312
+[ 1796922ms] [WARNING] You are trying to animate undefined from "-0.00418" to "-1.9874024423815024". -0.00418 is not an animatable value - to enable this animation set -0.00418 to a value animatable to -1.9874024423815024 via the `style` property. @ http://localhost:5173/node_modules/.vite/deps/motion_react.js?v=5be3a9ce:312
+[ 1796940ms] [WARNING] You are trying to animate undefined from "-0.09853" to "-4.268331660663661". -0.09853 is not an animatable value - to enable this animation set -0.09853 to a value animatable to -4.268331660663661 via the `style` property. @ http://localhost:5173/node_modules/.vite/deps/motion_react.js?v=5be3a9ce:312
+[ 1796956ms] [WARNING] You are trying to animate undefined from "-0.03714" to "-3.429262550927846". -0.03714 is not an animatable value - to enable this animation set -0.03714 to a value animatable to -3.429262550927846 via the `style` property. @ http://localhost:5173/node_modules/.vite/deps/motion_react.js?v=5be3a9ce:312
+[ 1796973ms] [WARNING] You are trying to animate undefined from "-0.00726" to "-0.9120455474473632". -0.00726 is not an animatable value - to enable this animation set -0.00726 to a value animatable to -0.9120455474473632 via the `style` property. @ http://localhost:5173/node_modules/.vite/deps/motion_react.js?v=5be3a9ce:312
+[ 1796973ms] [WARNING] You are trying to animate undefined from "-0.02273" to "-1.0143319584876485". -0.02273 is not an animatable value - to enable this animation set -0.02273 to a value animatable to -1.0143319584876485 via the `style` property. @ http://localhost:5173/node_modules/.vite/deps/motion_react.js?v=5be3a9ce:312
+[ 1797256ms] [WARNING] You are trying to animate undefined from "-0.02165" to "-2.3758333320685763". -0.02165 is not an animatable value - to enable this animation set -0.02165 to a value animatable to -2.3758333320685763 via the `style` property. @ http://localhost:5173/node_modules/.vite/deps/motion_react.js?v=5be3a9ce:312
+[ 1797290ms] [WARNING] You are trying to animate undefined from "-0.07392" to "-2.845881505194006". -0.07392 is not an animatable value - to enable this animation set -0.07392 to a value animatable to -2.845881505194006 via the `style` property. @ http://localhost:5173/node_modules/.vite/deps/motion_react.js?v=5be3a9ce:312
+[ 1797323ms] [WARNING] You are trying to animate undefined from "-0.03206" to "-3.0846631348043214". -0.03206 is not an animatable value - to enable this animation set -0.03206 to a value animatable to -3.0846631348043214 via the `style` property. @ http://localhost:5173/node_modules/.vite/deps/motion_react.js?v=5be3a9ce:312
+[ 1797323ms] [WARNING] You are trying to animate undefined from "-0.02579" to "-2.662649584376183". -0.02579 is not an animatable value - to enable this animation set -0.02579 to a value animatable to -2.662649584376183 via the `style` property. @ http://localhost:5173/node_modules/.vite/deps/motion_react.js?v=5be3a9ce:312
+[ 1797339ms] [WARNING] You are trying to animate undefined from "-0.07291" to "-2.745290516110992". -0.07291 is not an animatable value - to enable this animation set -0.07291 to a value animatable to -2.745290516110992 via the `style` property. @ http://localhost:5173/node_modules/.vite/deps/motion_react.js?v=5be3a9ce:312
+[ 1797356ms] [WARNING] You are trying to animate undefined from "-0.00826" to "-1.251167463972089". -0.00826 is not an animatable value - to enable this animation set -0.00826 to a value animatable to -1.251167463972089 via the `style` property. @ http://localhost:5173/node_modules/.vite/deps/motion_react.js?v=5be3a9ce:312
+[ 1797757ms] [WARNING] You are trying to animate undefined from "-0.06118" to "-5.446935698613374". -0.06118 is not an animatable value - to enable this animation set -0.06118 to a value animatable to -5.446935698613374 via the `style` property. @ http://localhost:5173/node_modules/.vite/deps/motion_react.js?v=5be3a9ce:312
+[ 1797772ms] [WARNING] You are trying to animate undefined from "-0.06128" to "0". -0.06128 is not an animatable value - to enable this animation set -0.06128 to a value animatable to 0 via the `style` property. @ http://localhost:5173/node_modules/.vite/deps/motion_react.js?v=5be3a9ce:312
+[ 1797772ms] [WARNING] You are trying to animate undefined from "-0.21433" to "0". -0.21433 is not an animatable value - to enable this animation set -0.21433 to a value animatable to 0 via the `style` property. @ http://localhost:5173/node_modules/.vite/deps/motion_react.js?v=5be3a9ce:312
+[ 1797772ms] [WARNING] You are trying to animate undefined from "-0.03346" to "0". -0.03346 is not an animatable value - to enable this animation set -0.03346 to a value animatable to 0 via the `style` property. @ http://localhost:5173/node_modules/.vite/deps/motion_react.js?v=5be3a9ce:312
+[ 1801223ms] [WARNING] You are trying to animate undefined from "-0.3028" to "-5.146730257085775". -0.3028 is not an animatable value - to enable this animation set -0.3028 to a value animatable to -5.146730257085775 via the `style` property. @ http://localhost:5173/node_modules/.vite/deps/motion_react.js?v=5be3a9ce:312
+[ 1801223ms] [WARNING] You are trying to animate undefined from "-0.24456" to "-13.648213212413877". -0.24456 is not an animatable value - to enable this animation set -0.24456 to a value animatable to -13.648213212413877 via the `style` property. @ http://localhost:5173/node_modules/.vite/deps/motion_react.js?v=5be3a9ce:312
+[ 2278501ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ http://localhost:5173/node_modules/.vite/deps/chunk-NXESFFTV.js?v=5be3a9ce:21608
+[ 2278514ms] [LOG] %cHola, dev. color:#D4460F;font-family:'Instrument Serif',serif;font-style:italic;font-size:28px;line-height:1; @ http://localhost:5173/src/lib/console-egg.ts:19
+[ 2278514ms] [LOG] %c
+  ███████ ██████
+  ██      ██   ██
+  █████   ██████
+  ██      ██
+  ███████ ██
+
+  Emilio Pastor Zurita — estudio
+  Webs y software a medida con IA · Córdoba
+ color:#111;background:#F5F3EE;font-family:ui-monospace,SFMono-Regular,monospace;font-size:12px;line-height:1.4;padding:8px 12px; @ http://localhost:5173/src/lib/console-egg.ts:20
+[ 2278514ms] [LOG] %cSi has llegado a la consola, lees código. Construyo cosas serias con clientes serios y a veces necesito manos como las tuyas.
+%cTengo proyectos interesantes — algunos con IA real, otros con SQL real, todos con plazos reales. color:#111;font-family:ui-sans-serif,system-ui,sans-serif;font-size:13px;line-height:1.55; color:#111;font-family:ui-sans-serif,system-ui,sans-serif;font-size:13px;line-height:1.55; @ http://localhost:5173/src/lib/console-egg.ts:21
+[ 2278514ms] [LOG] %c→ %cemiliopastorzurita906@gmail.com color:#111;font-family:ui-sans-serif,system-ui,sans-serif;font-size:13px;line-height:1.55; color:#D4460F;font-family:ui-sans-serif,system-ui,sans-serif;font-size:13px;text-decoration:underline; @ http://localhost:5173/src/lib/console-egg.ts:26
+[ 2278514ms] [LOG] %cstack visible · src/data/copy.ts · STACK color:#888880;font-family:ui-monospace,SFMono-Regular,monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase; @ http://localhost:5173/src/lib/console-egg.ts:31
+[ 2278514ms] [LOG] %ccaveman tip: si entiendes el código, sabrás si encajas. Y si no, también. color:#888880;font-family:ui-monospace,SFMono-Regular,monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase; @ http://localhost:5173/src/lib/console-egg.ts:32
+[ 2278578ms] [WARNING] Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly. @ http://localhost:5173/node_modules/.vite/deps/motion_react.js?v=5be3a9ce:675
+[ 2282324ms] [WARNING] You are trying to animate undefined from "-0.07021" to "-6.328800527044952". -0.07021 is not an animatable value - to enable this animation set -0.07021 to a value animatable to -6.328800527044952 via the `style` property. @ http://localhost:5173/node_modules/.vite/deps/motion_react.js?v=5be3a9ce:312
+[ 2282343ms] [WARNING] You are trying to animate undefined from "-0.03501" to "-2.6529536821569453". -0.03501 is not an animatable value - to enable this animation set -0.03501 to a value animatable to -2.6529536821569453 via the `style` property. @ http://localhost:5173/node_modules/.vite/deps/motion_react.js?v=5be3a9ce:312
+[ 2282343ms] [WARNING] You are trying to animate undefined from "-0.14476" to "-4.142308305992751". -0.14476 is not an animatable value - to enable this animation set -0.14476 to a value animatable to -4.142308305992751 via the `style` property. @ http://localhost:5173/node_modules/.vite/deps/motion_react.js?v=5be3a9ce:312
+[ 2282343ms] [WARNING] You are trying to animate undefined from "-0.079" to "-7.098591505142125". -0.079 is not an animatable value - to enable this animation set -0.079 to a value animatable to -7.098591505142125 via the `style` property. @ http://localhost:5173/node_modules/.vite/deps/motion_react.js?v=5be3a9ce:312
+[ 2282343ms] [WARNING] You are trying to animate undefined from "-0.23299" to "-9.42383082519261". -0.23299 is not an animatable value - to enable this animation set -0.23299 to a value animatable to -9.42383082519261 via the `style` property. @ http://localhost:5173/node_modules/.vite/deps/motion_react.js?v=5be3a9ce:312
+[ 2282358ms] [WARNING] You are trying to animate undefined from "-0.01316" to "-0.9301777287638597". -0.01316 is not an animatable value - to enable this animation set -0.01316 to a value animatable to -0.9301777287638597 via the `style` property. @ http://localhost:5173/node_modules/.vite/deps/motion_react.js?v=5be3a9ce:312
+[ 2282358ms] [WARNING] You are trying to animate undefined from "-0.0932" to "-8.765965804022775". -0.0932 is not an animatable value - to enable this animation set -0.0932 to a value animatable to -8.765965804022775 via the `style` property. @ http://localhost:5173/node_modules/.vite/deps/motion_react.js?v=5be3a9ce:312
+[ 2282375ms] [WARNING] You are trying to animate undefined from "-0.1885" to "-6.744292313435609". -0.1885 is not an animatable value - to enable this animation set -0.1885 to a value animatable to -6.744292313435609 via the `style` property. @ http://localhost:5173/node_modules/.vite/deps/motion_react.js?v=5be3a9ce:312
+[ 2282392ms] [WARNING] You are trying to animate undefined from "-0.0539" to "-2.457223655012861". -0.0539 is not an animatable value - to enable this animation set -0.0539 to a value animatable to -2.457223655012861 via the `style` property. @ http://localhost:5173/node_modules/.vite/deps/motion_react.js?v=5be3a9ce:312
+[ 2282591ms] [WARNING] You are trying to animate undefined from "-0.00011" to "-0.23302766768172267". -0.00011 is not an animatable value - to enable this animation set -0.00011 to a value animatable to -0.23302766768172267 via the `style` property. @ http://localhost:5173/node_modules/.vite/deps/motion_react.js?v=5be3a9ce:312
+[ 2282609ms] [WARNING] You are trying to animate undefined from "-0.00676" to "-0.4947746132820463". -0.00676 is not an animatable value - to enable this animation set -0.00676 to a value animatable to -0.4947746132820463 via the `style` property. @ http://localhost:5173/node_modules/.vite/deps/motion_react.js?v=5be3a9ce:312
+[ 2282692ms] [WARNING] You are trying to animate undefined from "-0.00904" to "-0.3218072318783105". -0.00904 is not an animatable value - to enable this animation set -0.00904 to a value animatable to -0.3218072318783105 via the `style` property. @ http://localhost:5173/node_modules/.vite/deps/motion_react.js?v=5be3a9ce:312
+[ 2282692ms] [WARNING] You are trying to animate undefined from "-0.00508" to "-0.755421606951163". -0.00508 is not an animatable value - to enable this animation set -0.00508 to a value animatable to -0.755421606951163 via the `style` property. @ http://localhost:5173/node_modules/.vite/deps/motion_react.js?v=5be3a9ce:312
+[ 2284675ms] [WARNING] You are trying to animate undefined from "-0.00937" to "-1.2752716543971157". -0.00937 is not an animatable value - to enable this animation set -0.00937 to a value animatable to -1.2752716543971157 via the `style` property. @ http://localhost:5173/node_modules/.vite/deps/motion_react.js?v=5be3a9ce:312

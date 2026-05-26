@@ -1,25 +1,14 @@
-import { motion, useReducedMotion } from "motion/react";
+import { motion } from "motion/react";
 import { ArrowDown, FileDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { HERO } from "@/data/copy";
 import { useT } from "@/hooks/use-lang";
-import { ScrambleText } from "@/components/effects/scramble";
-import { HeroLive } from "@/components/effects/hero-live";
-import { Particles } from "@/components/effects/particles";
+import { MagneticName } from "@/components/effects/magnetic-name";
 
 const NAME_LINES = ["Emilio", "Pastor", "Zurita"];
 
 export function Hero() {
   const t = useT();
-  const reduce = useReducedMotion();
-
-  const lineReveal = {
-    hidden: { y: "110%" },
-    show: (i: number) => ({
-      y: 0,
-      transition: { duration: 1.0, ease: [0.16, 1, 0.3, 1], delay: 0.15 + i * 0.08 },
-    }),
-  };
 
   return (
     <section
@@ -27,7 +16,6 @@ export function Hero() {
       aria-label="Presentación"
       className="relative grid min-h-svh grid-rows-[1fr_auto] overflow-hidden px-6 md:px-12"
     >
-      {/* orbs */}
       <div
         aria-hidden
         className="pointer-events-none absolute -right-[10%] -top-[20%] z-0 h-[600px] w-[600px] rounded-full blur-[90px]"
@@ -38,9 +26,6 @@ export function Hero() {
         className="pointer-events-none absolute -left-[6%] bottom-[-4%] z-0 h-[450px] w-[450px] rounded-full blur-[90px]"
         style={{ background: "radial-gradient(circle, rgba(26,107,60,0.07) 0%, transparent 70%)" }}
       />
-
-      <Particles targetSelector="#top" />
-      <HeroLive />
 
       <div className="relative z-[2] flex flex-col justify-end pb-12 pt-[120px]">
         <motion.div
@@ -54,47 +39,27 @@ export function Hero() {
             {t(HERO.available)}
           </span>
           <span className="block h-3 w-px bg-ink/15" />
-          <span className="relative inline-flex items-center gap-1.5 border border-rust/30 bg-rust/[0.05] px-2.5 py-1 font-mono text-[0.6rem] uppercase tracking-[0.1em] text-rust">
-            <span className="block h-1 w-1 rounded-full bg-rust" />
-            {t(HERO.badge)}
-          </span>
-          <span className="block h-3 w-px bg-ink/15" />
           <span className="font-mono text-[0.7rem] tracking-[0.08em] text-muted">
             {t(HERO.loc)}
           </span>
         </motion.div>
 
-        <h1 className="font-serif italic leading-[0.92] tracking-ultra text-ink"
+        <h1
+          className="font-serif italic tracking-ultra text-ink"
           style={{ fontSize: "clamp(4rem, 10vw, 9.5rem)" }}
         >
-          {NAME_LINES.map((line, i) => (
-            <span key={line} className="block overflow-hidden">
-              <motion.span
-                className="inline-block will-change-transform"
-                variants={lineReveal}
-                initial="hidden"
-                animate="show"
-                custom={i}
-              >
-                <ScrambleText text={line} duration={0.9} delay={0.25 + i * 0.12} disabled={reduce ?? false} />
-              </motion.span>
-            </span>
-          ))}
+          <MagneticName lines={NAME_LINES} />
         </h1>
 
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
-          className="mt-5 flex flex-wrap items-baseline gap-5"
+          className="mt-5"
         >
           <span className="font-mono text-[0.85rem] uppercase tracking-[0.06em] text-muted">
             {t(HERO.role)}
           </span>
-          <span className="hidden h-3.5 w-px bg-ink/15 md:block" />
-          <p className="max-w-[480px] text-[0.95rem] leading-[1.7] text-muted">
-            {t(HERO.desc)}
-          </p>
         </motion.div>
 
         <motion.div
@@ -124,22 +89,33 @@ export function Hero() {
         initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 0.85 }}
-        className="relative z-[2] flex flex-wrap items-center justify-between gap-4 border-t border-line py-5"
+        className="relative z-[2] flex flex-wrap items-center justify-between gap-6 border-t border-line py-5"
       >
-        <ul className="flex flex-wrap gap-2" role="list">
+        <span className="font-mono text-[0.55rem] uppercase tracking-[0.24em] text-muted/65 num-tabular">
+          presentación · 00 / 07
+        </span>
+
+        <ul className="hidden flex-wrap items-center gap-x-3 gap-y-1 md:flex" role="list">
           {HERO.pills.map((p, i) => (
             <li
               key={i}
-              className="border border-line px-2.5 py-1 font-mono text-[0.65rem] tracking-[0.06em] text-muted transition-all hover:-translate-y-0.5 hover:border-ink hover:text-ink"
+              className="group flex items-center gap-3 font-mono text-[0.58rem] uppercase tracking-[0.18em] text-muted/75 transition-colors hover:text-ink"
             >
-              {t(p)}
+              {i > 0 && (
+                <span aria-hidden className="block h-px w-3 bg-ink/15" />
+              )}
+              <span>{t(p)}</span>
             </li>
           ))}
         </ul>
-        <div className="flex items-center gap-2 font-mono text-[0.65rem] uppercase tracking-[0.1em] text-muted/80">
-          <ArrowDown className="h-3.5 w-3.5 animate-bounce" />
-          Scroll
-        </div>
+
+        <a
+          href="#stats"
+          className="group flex items-center gap-2 font-mono text-[0.58rem] uppercase tracking-[0.22em] text-muted/75 transition-colors hover:text-ink"
+        >
+          {t({ es: "Continúa", en: "Continue" })}
+          <ArrowDown className="h-3 w-3 transition-transform duration-500 group-hover:translate-y-1" />
+        </a>
       </motion.div>
     </section>
   );

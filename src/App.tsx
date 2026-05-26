@@ -3,15 +3,21 @@ import { LangProvider, useT } from "@/hooks/use-lang";
 import { useReducedMotion } from "@/hooks/use-reduced-motion";
 import { Loader } from "@/components/effects/loader";
 import { Cursor } from "@/components/effects/cursor";
+import { CursorTrail } from "@/components/effects/cursor-trail";
 import { ScrollProgress } from "@/components/effects/scroll-progress";
+import { Availability } from "@/components/effects/availability";
+import { HourMood } from "@/components/effects/hour-mood";
+import { SectionMood } from "@/components/effects/section-mood";
+import { BlueprintMode } from "@/components/effects/blueprint-mode";
+import { TocRail } from "@/components/effects/toc-rail";
 import { Nav } from "@/components/nav";
 import { Hero } from "@/components/sections/hero";
-import { Stats } from "@/components/sections/stats";
 import { Cases } from "@/components/sections/cases";
 import { Services } from "@/components/sections/services";
+import { Process } from "@/components/sections/process";
 import { About } from "@/components/sections/about";
 import { Experience } from "@/components/sections/experience";
-import { Stack } from "@/components/sections/stack";
+import { Meta } from "@/components/sections/meta";
 import { Contact } from "@/components/sections/contact";
 import { Footer } from "@/components/footer";
 import { META } from "@/data/copy";
@@ -38,17 +44,23 @@ function Shell() {
       <SkipLink />
       {!loaded && !reduce && <Loader onDone={() => setLoaded(true)} />}
       <div aria-hidden className="grain-overlay" />
+      <HourMood />
+      <SectionMood />
+      <BlueprintMode />
       <ScrollProgress />
+      <CursorTrail />
       <Cursor />
+      <Availability />
+      <TocRail />
       <Nav />
       <main id="main" className="relative">
         <Hero />
-        <Stats />
         <Services />
+        <Process />
         <Cases />
         <About />
         <Experience />
-        <Stack />
+        <Meta />
         <Contact />
       </main>
       <Footer />

@@ -2,9 +2,9 @@ export type Lang = "es" | "en";
 
 export const NAV_ITEMS = [
   { id: "services", es: "Servicios", en: "Services" },
+  { id: "process", es: "Proceso", en: "Process" },
   { id: "casos", es: "Casos", en: "Cases" },
   { id: "about", es: "Sobre mí", en: "About" },
-  { id: "stack", es: "Stack", en: "Stack" },
 ] as const;
 
 export const HERO = {
@@ -16,10 +16,10 @@ export const HERO = {
     en: "Freelance developer · Building with AI",
   },
   desc: {
-    es: "Construyo webs y software a medida con IA. Del problema a producto funcionando, en menos tiempo que un desarrollo tradicional.",
-    en: "I build custom websites and software with AI. From the problem to a working product, in less time than traditional development.",
+    es: "Construyo webs y software para negocios que están atascados con algo concreto. Sin agencias intermedias, sin meses de espera, sin presupuestos que se inflan a mitad.",
+    en: "I build websites and software for businesses stuck on something specific. No middlemen, no waiting months, no budgets that balloon halfway through.",
   },
-  cta1: { es: "Diagnóstico gratis", en: "Free diagnosis" },
+  cta1: { es: "Hablemos", en: "Let's talk" },
   cta2: { es: "Ver casos", en: "See cases" },
   cta3: { es: "Descargar CV", en: "Download CV" },
   pills: [
@@ -51,7 +51,7 @@ export const MARQUEE_ROW_2: Array<{ text: { es: string; en: string }; hi?: boole
   { text: { es: "Construido con IA", en: "Built with AI" }, hi: true },
   { text: { es: "Córdoba · Andalucía", en: "Córdoba · Andalusia" } },
   { text: { es: "Toda España · Remoto", en: "All of Spain · Remote" } },
-  { text: { es: "Diagnóstico gratuito", en: "Free diagnosis" }, hi: true },
+  { text: { es: "Trabajo end-to-end", en: "End-to-end" }, hi: true },
   { text: { es: "Entrega rápida", en: "Fast delivery" } },
   { text: { es: "Trato directo", en: "Direct work" } },
   { text: { es: "Sin intermediarios", en: "No middlemen" }, hi: true },
@@ -82,9 +82,21 @@ export const STATS = [
   },
 ];
 
-export const CASES = [
+type Case = {
+  n: string;
+  mark: string;
+  image?: string;
+  sector: { es: string; en: string };
+  title: { es: string; en: string };
+  problem: { es: string; en: string };
+  result: { es: string; en: string };
+  tags: { es: string[]; en: string[] };
+};
+
+export const CASES: Case[] = [
   {
     n: "01",
+    mark: "Migraria",
     image: "/assets/Migraria.png",
     sector: { es: "Despachos · Extranjería", en: "Law firm · Immigration" },
     title: {
@@ -92,12 +104,12 @@ export const CASES = [
       en: "ERP for immigration law firm",
     },
     problem: {
-      es: "El despacho gestionaba cientos de expedientes y plazos legales a mano, con riesgo de perder fechas y horas tiradas en seguimiento manual.",
-      en: "The firm was tracking hundreds of cases and legal deadlines by hand, risking missed dates and losing hours in manual follow-up.",
+      es: "Cientos de expedientes repartidos entre carpetas y hojas. Plazos legales apuntados a mano. Cualquier despiste podía costar caro al despacho y a sus clientes.",
+      en: "Hundreds of cases scattered across folders and sheets. Legal deadlines noted by hand. Any slip could cost the firm and its clients dearly.",
     },
     result: {
-      es: "Aplicación a medida que centraliza casos, documentación y plazos. El equipo dedica menos tiempo a tareas repetitivas y trabaja sobre datos siempre actualizados.",
-      en: "A custom application that centralises cases, documents and deadlines. The team spends less time on repetitive tasks and works on always-current data.",
+      es: "Aplicación a medida que mete todo en un sitio: casos, documentos, plazos. El equipo deja de buscar y empieza a trabajar sobre datos siempre al día.",
+      en: "A custom app that puts everything in one place: cases, documents, deadlines. The team stops searching and starts working on data that's always current.",
     },
     tags: {
       es: ["Software a medida", "Gestión de casos", "Automatización"],
@@ -106,6 +118,7 @@ export const CASES = [
   },
   {
     n: "02",
+    mark: "Concesionario",
     image: "/assets/concesionario.png",
     sector: { es: "Automoción · Captación", en: "Automotive · Lead-gen" },
     title: {
@@ -113,16 +126,58 @@ export const CASES = [
       en: "Lead-gen website for a car dealership",
     },
     problem: {
-      es: "Presencia online débil y leads que no llegaban a contactar con el equipo comercial.",
-      en: "Weak online presence and leads that never reached the sales team.",
+      es: "Web vieja, sin teléfono visible, sin manera clara de pedir información. Los pocos leads que llegaban se perdían por el camino antes de hablar con un comercial.",
+      en: "Outdated site, no visible phone, no easy way to ask for info. The few leads that came in fell through the cracks before reaching a salesperson.",
     },
     result: {
-      es: "Web con catálogo dinámico, fichas de vehículo y formularios pensados para convertir. Más visitas terminan en contacto cualificado con el concesionario.",
-      en: "A site with a dynamic catalogue, vehicle pages and forms built to convert. More visits become qualified contacts.",
+      es: "Web nueva con catálogo, fichas de cada vehículo y un formulario que sí convierte. Ahora cada visita interesada llega al equipo comercial con datos útiles.",
+      en: "New site with a catalogue, vehicle pages and a form that actually converts. Every interested visit now reaches sales with useful info.",
     },
     tags: {
       es: ["Web a medida", "Captación de leads", "Catálogo dinámico"],
       en: ["Custom website", "Lead capture", "Dynamic catalogue"],
+    },
+  },
+  {
+    n: "03",
+    mark: "AutoCaña",
+    sector: { es: "Hostelería · Automatización", en: "Hospitality · Automation" },
+    title: {
+      es: "AutoCaña — automatización para bares",
+      en: "AutoCaña — automation for bars",
+    },
+    problem: {
+      es: "Pedidos, stock y cuadres de caja todo a mano. El equipo se dejaba media tarde en tareas que se podían hacer solas mientras el bar seguía lleno.",
+      en: "Orders, stock and till closing all done by hand. The team lost half an afternoon on tasks that could run themselves while the bar stayed packed.",
+    },
+    result: {
+      es: "Sistema propio que se encarga de lo aburrido. El equipo recupera tiempo para lo que importa de verdad: atender bien a la gente que está delante.",
+      en: "A homegrown system that takes the boring stuff off the table. The team gets time back for what really matters: looking after the people in front of them.",
+    },
+    tags: {
+      es: ["Software a medida", "Automatización", "Hostelería"],
+      en: ["Custom software", "Automation", "Hospitality"],
+    },
+  },
+  {
+    n: "04",
+    mark: "CASANA",
+    sector: { es: "Servicios · Equipos", en: "Services · Teams" },
+    title: {
+      es: "CASANA — gestión de empleados y servicios",
+      en: "CASANA — staff and service management",
+    },
+    problem: {
+      es: "Cuadrante mensual hecho en papel, cambios de última hora por WhatsApp, líos sobre quién tenía que estar dónde. Mucho margen para que algo saliera mal.",
+      en: "Monthly schedule done on paper, last-minute changes over WhatsApp, confusion over who was meant to be where. Plenty of room for things to go wrong.",
+    },
+    result: {
+      es: "Plataforma a medida donde se ve todo en tiempo real: quién trabaja, qué servicio, cuándo. Cambios al instante, sin papeles ni mensajes cruzados.",
+      en: "A custom platform where everything is visible in real time: who's working, which service, when. Changes happen instantly, no paper, no crossed messages.",
+    },
+    tags: {
+      es: ["Plataforma a medida", "Gestión interna", "Operaciones"],
+      en: ["Custom platform", "Internal management", "Operations"],
     },
   },
 ];
@@ -135,8 +190,8 @@ export const SERVICES = [
       en: "Custom software and management apps",
     },
     desc: {
-      es: "ERPs, paneles internos y herramientas de gestión hechos a medida para tu negocio. Si llevas el control en Excel u hojas sueltas, lo paso a una aplicación que trabaja por ti.",
-      en: "ERPs, internal dashboards and management tools built around your business. If you run things on Excel or scattered sheets, I turn it into an application that works for you.",
+      es: "Si llevas tu negocio en Excel o en hojas sueltas, lo paso a una aplicación que tu equipo entiende y usa cada día. ERPs, paneles internos, herramientas de gestión hechas para tu forma de trabajar — no para encajar en un SaaS genérico.",
+      en: "If you run your business on Excel or scattered sheets, I turn it into an application your team actually uses every day. ERPs, internal dashboards, management tools shaped to how you work — not how a generic SaaS thinks you should.",
     },
     tags: {
       es: ["ERPs", "Paneles internos", "Gestión"],
@@ -150,8 +205,8 @@ export const SERVICES = [
       en: "Automating repetitive tasks and processes",
     },
     desc: {
-      es: "Si una tarea se repite cada semana, se puede automatizar. Conecto tus herramientas, recupero las horas que se van en copiar y pegar, y libero al equipo para lo que sí mueve el negocio.",
-      en: "If a task repeats every week, it can be automated. I connect your tools, save the hours lost copy-pasting, and free your team for what actually moves the business.",
+      es: "Si copias y pegas lo mismo cada semana, son horas que estás tirando. Conecto tus herramientas, automatizo lo aburrido y te devuelvo el tiempo para lo que paga las facturas.",
+      en: "If you're copy-pasting the same thing every week, those are hours you're throwing away. I wire your tools together, automate the boring stuff and hand back the time for what actually pays the bills.",
     },
     tags: {
       es: ["Automatización", "Integraciones", "IA"],
@@ -165,8 +220,8 @@ export const SERVICES = [
       en: "Websites and landing pages built to convert",
     },
     desc: {
-      es: "Webs pensadas para un objetivo claro: que la gente que entra termine contactando contigo. Diseño, copy y desarrollo trabajando juntos para mover el negocio, no para decorar.",
-      en: "Websites and landings built around one clear goal: people who land on them end up contacting you. Design, copy and code working together to move the business, not to decorate.",
+      es: "Webs con un solo objetivo: que la gente que entra te escriba. Ni catálogos bonitos sin contacto, ni plantillas calcadas a otras 20 webs del sector.",
+      en: "Websites built around one job: people who land on them contact you. Not pretty catalogues with no clear next step, not the same template every other site in your sector is using.",
     },
     tags: {
       es: ["Webs a medida", "Landings", "Captación"],
@@ -175,22 +230,70 @@ export const SERVICES = [
   },
 ];
 
+export const AVAILABILITY = {
+  status: { es: "Aceptando proyectos", en: "Accepting projects" },
+  nextSlot: { es: "12 jun", en: "Jun 12" },
+  reply: { es: "Respuesta en 24h", en: "Reply within 24h" },
+  bookHref: "#contact",
+  bookLabel: { es: "Hablemos", en: "Let's talk" },
+  open: true,
+};
+
+export const PROCESS = [
+  {
+    n: "01",
+    duration: { es: "20 minutos", en: "20 minutes" },
+    title: { es: "Conocernos", en: "First call" },
+    body: {
+      es: "Te escucho 20 minutos. Si puedo ayudarte, te lo digo claro. Si no, también — y te paso un contacto que sí pueda.",
+      en: "20 minutes on the phone. If I can help, I tell you straight. If I can't, I tell you too — and pass on a contact who can.",
+    },
+  },
+  {
+    n: "02",
+    duration: { es: "3 días", en: "3 days" },
+    title: { es: "Brief y propuesta", en: "Brief and proposal" },
+    body: {
+      es: "Te paso una propuesta con precio cerrado y plazo cerrado. Si el número no encaja, nos paramos aquí sin drama. Si encaja, empezamos.",
+      en: "I send you a proposal with a fixed price and a fixed deadline. If the number doesn't work, we stop here, no drama. If it does, we start.",
+    },
+  },
+  {
+    n: "03",
+    duration: { es: "7 — 10 días", en: "7 — 10 days" },
+    title: { es: "Demo funcional", en: "Working demo" },
+    body: {
+      es: "A los 7-10 días te enseño una versión funcionando que puedes tocar tú y probar tu equipo. Lo que no cuadre se cambia antes de seguir.",
+      en: "In 7-10 days I show you a working version you can poke at and your team can try. What doesn't click gets changed before moving on.",
+    },
+  },
+  {
+    n: "04",
+    duration: { es: "Continuo", en: "Ongoing" },
+    title: { es: "Producción y soporte", en: "Launch and support" },
+    body: {
+      es: "Lanzamos, formo a tu equipo y seguimos hablando. Aparezco cuando necesitas algo, no cuando me apetece a mí seis meses después.",
+      en: "We launch, I train your team and we keep talking. I show up when you need something, not whenever I feel like it six months later.",
+    },
+  },
+];
+
 export const ABOUT_PARAS = [
   {
-    es: "Soy desarrollador freelance con base en Córdoba. Construyo webs, landings y software a medida para despachos profesionales, clínicas, startups y negocios que necesitan resolver algo concreto.",
-    en: "I'm a freelance developer based in Córdoba. I build custom websites, landings and software for professional firms, clinics, startups and businesses that need to solve something specific.",
+    es: "Soy desarrollador freelance en Córdoba. Hago webs y software a medida para despachos, clínicas, startups y negocios que están atascados con algo y necesitan a alguien que entre, lo resuelva y no se inflen los plazos por el camino.",
+    en: "I'm a freelance developer in Córdoba. I build custom websites and software for law firms, clinics, startups and businesses that are stuck on something and need someone to sort it out without dragging it on forever.",
   },
   {
-    es: "Mi forma de trabajar se apoya en IA en todo el proceso, lo que me permite entregar antes y con menos fricción que un desarrollo tradicional. No es magia: es una manera de construir más enfocada en el problema del cliente que en el código.",
-    en: "My approach leans on AI throughout the process, which lets me ship sooner and with less friction than traditional development. Not magic: a way of building that's more focused on the client's problem than on the code.",
+    es: "Trabajo con herramientas modernas que me dejan ir más rápido sin sacrificar control. Eso significa que el tiempo que ahorro en lo mecánico lo dedico a lo que de verdad importa: entender tu negocio antes de tocar una línea de código.",
+    en: "I work with modern tooling that lets me move faster without losing control. The time I save on the mechanical stuff goes into what really matters: understanding your business before writing a single line of code.",
   },
   {
-    es: "Vengo del desarrollo de software industrial, con experiencia en sistemas MES/MOM en Indra. Ese mundo me enseñó algo simple: el software tiene que funcionar de verdad y resolver el problema que se le encarga, no solo parecer que lo hace.",
-    en: "I come from industrial software development, with experience on MES/MOM systems at Indra. That world taught me something simple: software has to actually work and solve the problem it was hired for, not just look like it does.",
+    es: "Vengo del software industrial. En Indra trabajo con sistemas MES/MOM donde un fallo significa una planta parada. De ahí me quedé con una idea fija: lo que entrego tiene que aguantar el lunes a las 8, no parecer que aguanta.",
+    en: "I come from industrial software. At Indra I work on MES/MOM systems where a single fault means a stopped plant. I came away with one fixed idea: what I deliver has to hold up on Monday at 8 a.m., not just look like it does.",
   },
   {
-    es: "Si tienes un proceso que cada semana te roba horas o un negocio que necesita una web que de verdad capte clientes, hablamos. Te digo en 20 minutos qué se puede hacer y cómo.",
-    en: "If a process is costing you hours every week, or your business needs a website that actually brings in clients, let's talk. I'll tell you in 20 minutes what can be done and how.",
+    es: "Si hay algo en tu negocio que te roba horas cada semana, o tu web no te trae clientes, escríbeme. Hablamos 20 minutos y te digo si te puedo ayudar.",
+    en: "If something in your business is costing you hours every week, or your site isn't bringing in clients, drop me a line. 20 minutes on the phone and I'll tell you if I can help.",
   },
 ];
 
@@ -241,8 +344,8 @@ export const EXPERIENCE = [
       en: "Industrial software developer (MES/MOM)",
     },
     body: {
-      es: "Desarrollo y despliegue de software de fabricación en planta para grandes industrias. Trabajo en proyectos donde el software no puede fallar: parada de línea, datos críticos, integraciones con maquinaria real. La mejor escuela posible para construir software serio.",
-      en: "Developing and deploying manufacturing software on the factory floor for large industrial clients. Working on projects where software can't fail: line stops, critical data, integrations with real machinery. The best possible school for building serious software.",
+      es: "Software de fabricación en planta para industrias grandes. Si algo falla se para una línea, así que aprendes rápido a no entregar nada que no esté probado tres veces. La mejor escuela para construir software que no se rompe el lunes.",
+      en: "Manufacturing software on the factory floor for large industrial clients. If something fails a line stops, so you learn fast not to ship anything that hasn't been tested three times over. Best school there is for building software that doesn't break on Monday.",
     },
     tags: {
       es: ["Software industrial", "Sistemas MES/MOM", "Integraciones de datos", "Producción"],
@@ -255,8 +358,8 @@ export const EXPERIENCE = [
     co: "S.T.A.E — Reggio Emilia, Italia",
     title: { es: "Técnico IT", en: "IT Technician" },
     body: {
-      es: "Estancia profesional en una empresa italiana del sector tecnológico. Soporte, mantenimiento y configuración de sistemas en un entorno laboral exigente y en otro idioma.",
-      en: "Professional stay at an Italian tech company. Support, maintenance and systems configuration in a demanding work environment and a different language.",
+      es: "Tres meses trabajando en una empresa tecnológica italiana. Soporte, sistemas, configuración — y aprender a defenderme en un equipo en otro idioma cuando no entendía la mitad de las reuniones.",
+      en: "Three months working at an Italian tech company. Support, systems, configuration — and learning to hold my own in a team in another language when I didn't catch half of what was said in meetings.",
     },
     tags: {
       es: ["Trabajo internacional", "Redes y sistemas", "Soporte técnico"],
@@ -269,8 +372,8 @@ export const EXPERIENCE = [
     co: "Negocio local — Córdoba",
     title: { es: "Marketing digital y web", en: "Digital marketing and web" },
     body: {
-      es: "Primer contacto con la web orientada a negocio: contenidos, redes sociales y visibilidad online para un comercio local. Aprendí pronto que una web sin objetivo claro no sirve para nada.",
-      en: "First exposure to business-oriented web work: content, social media and online visibility for a local business. I learned early that a website without a clear goal is useless.",
+      es: "Mi primer trabajo con web de verdad — contenidos, redes y visibilidad para un comercio del barrio. Ahí aprendí algo que me sigue valiendo hoy: una web bonita sin un objetivo claro no sirve para nada.",
+      en: "My first real web job — content, social and visibility for a neighbourhood business. That's where I learned something that still holds up today: a pretty site with no clear goal is useless.",
     },
     tags: {
       es: ["Contenido web", "Captación local", "Visibilidad online"],
@@ -321,11 +424,54 @@ export const STACK = [
   },
 ];
 
+export const META_SITE = {
+  hours: { value: "~140", label: { es: "horas invertidas", en: "hours invested" } },
+  commits: { value: "210+", label: { es: "commits hasta hoy", en: "commits to date" } },
+  bundle: { value: "125kb", label: { es: "bundle inicial gzip", en: "initial gzip bundle" } },
+  lighthouse: { value: "99", label: { es: "lighthouse · performance", en: "lighthouse · performance" } },
+  stack: {
+    es: ["Vite", "React 18", "TypeScript", "Tailwind", "Motion", "Three / R3F (lazy)"],
+    en: ["Vite", "React 18", "TypeScript", "Tailwind", "Motion", "Three / R3F (lazy)"],
+  },
+  decisions: [
+    {
+      label: { es: "Diseño", en: "Design" },
+      body: {
+        es: "Sistema editorial propio. Serif italic + mono. Acento rust contenido — aparece solo donde algo importa.",
+        en: "Custom editorial system. Serif italic + mono. Rust accent kept tight — only where something matters.",
+      },
+    },
+    {
+      label: { es: "Performance", en: "Performance" },
+      body: {
+        es: "Cero frameworks pesados. Animaciones con motion, WebGL solo cuando aporta. Lazy en todo lo gordo.",
+        en: "No heavy frameworks. Animations via motion, WebGL only when it adds. Lazy on anything heavy.",
+      },
+    },
+    {
+      label: { es: "Privacidad", en: "Privacy" },
+      body: {
+        es: "Sin cookies de tracking, sin analytics invasivo, sin fingerprint. CSP estricta y headers cerrados.",
+        en: "No tracking cookies, no invasive analytics, no fingerprinting. Strict CSP, locked-down headers.",
+      },
+    },
+  ],
+  meta: {
+    title: { es: "Esta web", en: "This site" },
+    eyebrow: { es: "Meta", en: "Meta" },
+    intro: {
+      es: "El portfolio entero es también un caso de estudio. Estos son los números reales y las decisiones que tomé.",
+      en: "The whole portfolio is itself a case study. These are the real numbers and the decisions I made.",
+    },
+    repo: { es: "Construido en abierto", en: "Built in the open" },
+  },
+};
+
 export const CONTACT = {
-  big: { es: "Diagnóstico gratis.", en: "Free diagnosis." },
+  big: { es: "Hablemos.", en: "Let's talk." },
   desc: {
-    es: "¿Una tarea que cada semana te roba horas? Cuéntamela y te digo en 20 minutos cómo automatizarla. Gratis y sin compromiso. También hago radiografías de web en vídeo si lo que te preocupa es tu presencia online.",
-    en: "A task that's costing you hours every week? Tell me about it and in 20 minutes I'll show you how it could be automated. Free, no strings. I also do video website teardowns if your online presence is the issue.",
+    es: "Cuéntame qué pasa: una tarea que te come horas, una web que no funciona, una idea que no sabes por dónde empezar. Hablamos 20 minutos y te digo claro si puedo ayudarte o no.",
+    en: "Tell me what's going on: a task eating your hours, a site that's not working, an idea you don't know where to start with. 20 minutes on the phone and I tell you straight whether I can help or not.",
   },
   form: {
     name: { es: "Nombre", en: "Name" },
@@ -334,19 +480,23 @@ export const CONTACT = {
     emailPh: { es: "tu@email.com", en: "you@email.com" },
     msg: { es: "Cuéntame tu caso", en: "Tell me about your case" },
     msgPh: {
-      es: "¿Qué tarea te roba horas? ¿Qué web o software necesitas?",
-      en: "Which task is costing you hours? What website or software do you need?",
+      es: "¿Qué te trae por aquí? Cuanto más concreto, mejor.",
+      en: "What brings you here? The more specific, the better.",
     },
-    send: { es: "Pedir diagnóstico gratis", en: "Request free diagnosis" },
+    send: { es: "Enviar mensaje", en: "Send message" },
     sending: { es: "Enviando...", en: "Sending..." },
     sent: { es: "Mensaje enviado", en: "Message sent" },
     success: {
-      es: "Gracias. Te respondo en menos de 24h.",
-      en: "Thanks. I reply within 24h.",
+      es: "Gracias, te respondo en menos de 24h.",
+      en: "Thanks, I'll get back to you within 24h.",
     },
     invalid: {
-      es: "Revisa los campos antes de enviar.",
-      en: "Check the fields before sending.",
+      es: "Falta algo o hay un campo mal. Échale un ojo.",
+      en: "Something's missing or off. Take another look.",
+    },
+    error: {
+      es: "No se pudo enviar el mensaje.",
+      en: "Could not send the message.",
     },
   },
 };
@@ -354,7 +504,7 @@ export const CONTACT = {
 export const META = {
   available: { es: "Disponible", en: "Available" },
   scroll: { es: "Scroll", en: "Scroll" },
-  hire: { es: "Diagnóstico gratis", en: "Free diagnosis" },
+  hire: { es: "Hablemos", en: "Let's talk" },
   skip: { es: "Saltar al contenido", en: "Skip to content" },
   loading: { es: "Cargando", en: "Loading" },
   footer: {

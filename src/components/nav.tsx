@@ -45,9 +45,13 @@ export function Nav() {
       >
         <a
           href="#top"
-          className="font-serif text-lg italic tracking-tightish text-ink no-underline"
+          className="group inline-flex items-baseline gap-2 font-serif text-lg italic tracking-tightish text-ink no-underline"
           aria-label="Emilio Pastor — Inicio"
         >
+          <span
+            aria-hidden
+            className="block h-1.5 w-1.5 rounded-full bg-rust transition-transform duration-500 group-hover:scale-150"
+          />
           Emilio Pastor
         </a>
 
@@ -57,38 +61,54 @@ export function Nav() {
               <li key={it.id}>
                 <a
                   href={`#${it.id}`}
-                  className="relative text-[0.78rem] font-medium uppercase tracking-[0.1em] text-muted transition-colors hover:text-ink after:absolute after:-bottom-0.5 after:left-1/2 after:right-1/2 after:h-px after:bg-ink after:transition-[left,right] after:duration-200 hover:after:left-0 hover:after:right-0"
+                  className="group relative inline-block text-[0.78rem] font-medium uppercase tracking-[0.1em] text-muted transition-colors hover:text-ink"
                 >
-                  {lang === "es" ? it.es : it.en}
+                  <span className="relative">
+                    {lang === "es" ? it.es : it.en}
+                    <span
+                      aria-hidden
+                      className="absolute -bottom-1 left-1/2 right-1/2 h-px bg-ink transition-[left,right] duration-300 group-hover:left-0 group-hover:right-0"
+                    />
+                  </span>
                 </a>
               </li>
             ))}
           </ul>
 
-          <div className="flex items-center overflow-hidden border border-line">
-            {(["en", "es"] as const).map((l) => (
-              <button
-                key={l}
-                onClick={() => setLang(l)}
-                aria-pressed={lang === l}
-                className={cn(
-                  "px-3 py-1.5 font-mono text-[0.62rem] font-medium uppercase tracking-[0.1em] transition-colors leading-none",
-                  lang === l
-                    ? "bg-ink text-paper"
-                    : "text-muted hover:text-ink",
-                )}
-              >
-                {l}
-              </button>
+          <div
+            role="group"
+            aria-label="Cambiar idioma"
+            className="flex items-baseline gap-1 font-mono text-[0.62rem] uppercase tracking-[0.12em]"
+          >
+            {(["en", "es"] as const).map((l, i) => (
+              <span key={l} className="flex items-baseline">
+                {i > 0 && <span aria-hidden className="mr-1 text-muted/30">/</span>}
+                <button
+                  onClick={() => setLang(l)}
+                  aria-pressed={lang === l}
+                  className={cn(
+                    "transition-colors",
+                    lang === l ? "text-ink" : "text-muted/55 hover:text-ink",
+                  )}
+                >
+                  {l}
+                </button>
+              </span>
             ))}
           </div>
 
           <a
             href="#contact"
-            data-cursor-label="DIAGNÓSTICO"
-            className="hidden border border-ink px-5 py-2 text-[0.72rem] font-semibold uppercase tracking-[0.1em] text-ink transition-colors hover:bg-ink hover:text-paper md:inline-block"
+            data-cursor-label="HABLAR"
+            className="group hidden items-center gap-2 border-b border-ink/30 pb-1 pl-0 pr-1 font-mono text-[0.7rem] uppercase tracking-[0.12em] text-ink transition-colors hover:border-rust hover:text-rust md:inline-flex"
           >
-            {t(META.hire)}
+            <span>{t(META.hire)}</span>
+            <span
+              aria-hidden
+              className="text-[0.95rem] leading-none transition-transform duration-500 group-hover:translate-x-1"
+            >
+              →
+            </span>
           </a>
 
           <button
@@ -127,7 +147,7 @@ export function Nav() {
             onClick={() => setOpen(false)}
             className="mt-4 font-serif text-5xl italic leading-tight text-rust no-underline"
           >
-            {t(META.hire)}
+            {t(META.hire)} →
           </a>
         </div>
       )}

@@ -1,0 +1,25 @@
+- main [ref=e2]:
+  - generic [ref=e3]:
+    - generic [ref=e4]: EP · 2026
+    - generic [ref=e6]: error · 404
+  - generic [ref=e7]:
+    - generic [ref=e8]:
+      - generic [ref=e9]: página · perdida
+      - generic [ref=e10]: "404."
+      - paragraph [ref=e12]: La URL no existe. Mientras decides qué hacer, mueve el ratón y pilota el avión por los huecos. El que llegue lejos, gana.
+      - generic [ref=e13]:
+        - link "Volver al inicio" [ref=e14] [cursor=pointer]:
+          - /url: /
+          - generic [ref=e15]: Volver al inicio
+          - generic [ref=e16]: →
+        - button "Reiniciar juego" [ref=e17] [cursor=pointer]:
+          - generic [ref=e18]: Reiniciar juego
+          - generic [ref=e19]: ↻
+    - generic [ref=e20]:
+      - generic "Pilota el avión por los huecos" [ref=e21]
+      - generic:
+        - generic: mueve el ratón · pilota el avión
+        - generic: "000"
+  - generic [ref=e22]:
+    - generic [ref=e23]: Córdoba · estudio
+    - generic [ref=e24]: Emilio Pastor Zurita · v1.0

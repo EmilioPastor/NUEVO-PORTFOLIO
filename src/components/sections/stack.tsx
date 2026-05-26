@@ -1,35 +1,31 @@
-import { motion, useInView } from "motion/react";
-import { useEffect, useRef, useState } from "react";
+import { motion } from "motion/react";
 import { SectionHead } from "@/components/section-head";
 import { STACK } from "@/data/copy";
 import { useT } from "@/hooks/use-lang";
 import { cn } from "@/lib/utils";
 
-function Bar({ pct, hot }: { pct: number; hot: boolean }) {
-  const ref = useRef<HTMLDivElement | null>(null);
-  const inView = useInView(ref, { once: true, amount: 0.3 });
-  const [w, setW] = useState(pct);
+function levelToDots(level: number) {
+  return Math.max(1, Math.min(5, Math.round(level / 20)));
+}
 
-  useEffect(() => {
-    if (!inView) return;
-    setW(0);
-    const id = window.requestAnimationFrame(() => setW(pct));
-    return () => window.cancelAnimationFrame(id);
-  }, [inView, pct]);
-
+function Dots({ level, hot }: { level: number; hot: boolean }) {
+  const filled = levelToDots(level);
   return (
-    <div ref={ref} className="h-[1.5px] w-full overflow-hidden rounded-sm bg-line">
-      <div
-        className={cn(
-          "h-full rounded-sm transition-[width] [transition-duration:1200ms]",
-          hot ? "bg-rust" : "bg-ink/80",
-        )}
-        style={{
-          width: `${w}%`,
-          transitionTimingFunction: "cubic-bezier(0.25, 0.46, 0.45, 0.94)",
-        }}
-      />
-    </div>
+    <span className="flex items-center gap-1" aria-hidden>
+      {Array.from({ length: 5 }).map((_, i) => (
+        <span
+          key={i}
+          className={cn(
+            "block h-1 w-1 rounded-full transition-colors",
+            i < filled
+              ? hot
+                ? "bg-rust"
+                : "bg-ink"
+              : "bg-ink/15",
+          )}
+        />
+      ))}
+    </span>
   );
 }
 
@@ -45,6 +41,7 @@ export function Stack() {
         <SectionHead
           label={t({ es: "Cómo construyo", en: "How I build" })}
           title={t({ es: "Stack y herramientas", en: "Stack and tools" })}
+          count={t({ es: `0${STACK.length} áreas`, en: `0${STACK.length} areas` })}
         />
         <div className="grid grid-cols-1 gap-px border border-line bg-line md:grid-cols-2 xl:grid-cols-4">
           {STACK.map((col, i) => (
@@ -56,29 +53,39 @@ export function Stack() {
               transition={{ duration: 0.85, delay: i * 0.08, ease: [0.16, 1, 0.3, 1] }}
               className="bg-paperOff p-7"
             >
-              <h3
-                className={cn(
-                  "mb-6 border-b border-line pb-3 font-mono text-[0.65rem] uppercase tracking-[0.14em]",
-                  i === STACK.length - 1 ? "text-rust" : "text-muted",
-                )}
-              >
-                {t(col.title)}
-              </h3>
-              <ul className="flex flex-col gap-3.5" role="list">
+              <header className="mb-5 flex items-baseline justify-between border-b border-line pb-3">
+                <h3
+                  className={cn(
+                    "font-mono text-[0.6rem] uppercase tracking-[0.22em]",
+                    i === STACK.length - 1 ? "text-rust" : "text-ink",
+                  )}
+                >
+                  {t(col.title)}
+                </h3>
+                <span className="font-mono text-[0.55rem] uppercase tracking-[0.18em] text-muted/60 num-tabular">
+                  0{col.items.length}
+                </span>
+              </header>
+              <ul className="flex flex-col" role="list">
                 {col.items.map((it, j) => (
-                  <li key={j} className="flex flex-col gap-1.5">
-                    <div className="flex items-center justify-between">
-                      <span className="text-[0.88rem] font-medium text-ink">{it.name}</span>
+                  <li
+                    key={j}
+                    className="group flex items-center justify-between gap-3 border-b border-ink/[0.06] py-2.5 last:border-b-0"
+                  >
+                    <span className="flex flex-col gap-0.5">
+                      <span className="text-[0.85rem] font-medium text-ink transition-colors">
+                        {it.name}
+                      </span>
                       <span
                         className={cn(
-                          "font-mono text-[0.6rem] tracking-[0.05em]",
-                          it.hot ? "text-rust" : "text-muted/80",
+                          "font-mono text-[0.55rem] uppercase tracking-[0.16em]",
+                          it.hot ? "text-rust" : "text-muted/70",
                         )}
                       >
                         {t(it.note)}
                       </span>
-                    </div>
-                    <Bar pct={it.level} hot={it.hot} />
+                    </span>
+                    <Dots level={it.level} hot={it.hot} />
                   </li>
                 ))}
               </ul>

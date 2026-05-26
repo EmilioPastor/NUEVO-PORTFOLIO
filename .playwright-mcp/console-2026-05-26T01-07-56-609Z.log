@@ -1,0 +1,77 @@
+[     192ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ http://localhost:5174/node_modules/.vite/deps/chunk-NXESFFTV.js?v=bd00f5df:21608
+[  555787ms] ReferenceError: HeroMandala is not defined
+    at Hero (http://localhost:5174/src/components/sections/hero.tsx?t=1779758232268:75:32)
+    at renderWithHooks (http://localhost:5174/node_modules/.vite/deps/chunk-NXESFFTV.js?v=bd00f5df:11596:26)
+    at updateFunctionComponent (http://localhost:5174/node_modules/.vite/deps/chunk-NXESFFTV.js?v=bd00f5df:14630:28)
+    at beginWork (http://localhost:5174/node_modules/.vite/deps/chunk-NXESFFTV.js?v=bd00f5df:15972:22)
+    at HTMLUnknownElement.callCallback2 (http://localhost:5174/node_modules/.vite/deps/chunk-NXESFFTV.js?v=bd00f5df:3680:22)
+    at Object.invokeGuardedCallbackDev (http://localhost:5174/node_modules/.vite/deps/chunk-NXESFFTV.js?v=bd00f5df:3705:24)
+    at invokeGuardedCallback (http://localhost:5174/node_modules/.vite/deps/chunk-NXESFFTV.js?v=bd00f5df:3739:39)
+    at beginWork$1 (http://localhost:5174/node_modules/.vite/deps/chunk-NXESFFTV.js?v=bd00f5df:19818:15)
+    at performUnitOfWork (http://localhost:5174/node_modules/.vite/deps/chunk-NXESFFTV.js?v=bd00f5df:19251:20)
+    at workLoopSync (http://localhost:5174/node_modules/.vite/deps/chunk-NXESFFTV.js?v=bd00f5df:19190:13)
+[  555790ms] ReferenceError: HeroMandala is not defined
+    at Hero (http://localhost:5174/src/components/sections/hero.tsx?t=1779758232268:75:32)
+    at renderWithHooks (http://localhost:5174/node_modules/.vite/deps/chunk-NXESFFTV.js?v=bd00f5df:11596:26)
+    at updateFunctionComponent (http://localhost:5174/node_modules/.vite/deps/chunk-NXESFFTV.js?v=bd00f5df:14630:28)
+    at beginWork (http://localhost:5174/node_modules/.vite/deps/chunk-NXESFFTV.js?v=bd00f5df:15972:22)
+    at HTMLUnknownElement.callCallback2 (http://localhost:5174/node_modules/.vite/deps/chunk-NXESFFTV.js?v=bd00f5df:3680:22)
+    at Object.invokeGuardedCallbackDev (http://localhost:5174/node_modules/.vite/deps/chunk-NXESFFTV.js?v=bd00f5df:3705:24)
+    at invokeGuardedCallback (http://localhost:5174/node_modules/.vite/deps/chunk-NXESFFTV.js?v=bd00f5df:3739:39)
+    at beginWork$1 (http://localhost:5174/node_modules/.vite/deps/chunk-NXESFFTV.js?v=bd00f5df:19818:15)
+    at performUnitOfWork (http://localhost:5174/node_modules/.vite/deps/chunk-NXESFFTV.js?v=bd00f5df:19251:20)
+    at workLoopSync (http://localhost:5174/node_modules/.vite/deps/chunk-NXESFFTV.js?v=bd00f5df:19190:13)
+[  555793ms] [ERROR] The above error occurred in the <Hero> component:
+
+    at Hero (http://localhost:5174/src/components/sections/hero.tsx?t=1779758232268:27:13)
+    at main
+    at Shell (http://localhost:5174/src/App.tsx?t=1779757646911:50:18)
+    at LangProvider (http://localhost:5174/src/hooks/use-lang.tsx:26:32)
+    at App
+
+Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries. @ http://localhost:5174/node_modules/.vite/deps/chunk-NXESFFTV.js?v=bd00f5df:14079
+[  555796ms] ReferenceError: HeroMandala is not defined
+    at Hero (http://localhost:5174/src/components/sections/hero.tsx?t=1779758232268:75:32)
+    at renderWithHooks (http://localhost:5174/node_modules/.vite/deps/chunk-NXESFFTV.js?v=bd00f5df:11596:26)
+    at updateFunctionComponent (http://localhost:5174/node_modules/.vite/deps/chunk-NXESFFTV.js?v=bd00f5df:14630:28)
+    at beginWork (http://localhost:5174/node_modules/.vite/deps/chunk-NXESFFTV.js?v=bd00f5df:15972:22)
+    at beginWork$1 (http://localhost:5174/node_modules/.vite/deps/chunk-NXESFFTV.js?v=bd00f5df:19806:22)
+    at performUnitOfWork (http://localhost:5174/node_modules/.vite/deps/chunk-NXESFFTV.js?v=bd00f5df:19251:20)
+    at workLoopSync (http://localhost:5174/node_modules/.vite/deps/chunk-NXESFFTV.js?v=bd00f5df:19190:13)
+    at renderRootSync (http://localhost:5174/node_modules/.vite/deps/chunk-NXESFFTV.js?v=bd00f5df:19169:15)
+    at recoverFromConcurrentError (http://localhost:5174/node_modules/.vite/deps/chunk-NXESFFTV.js?v=bd00f5df:18786:28)
+    at performSyncWorkOnRoot (http://localhost:5174/node_modules/.vite/deps/chunk-NXESFFTV.js?v=bd00f5df:18932:28)
+[  564904ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ http://localhost:5174/node_modules/.vite/deps/chunk-NXESFFTV.js?v=a484fc9f:21608
+[  565210ms] TypeError: Cannot read properties of undefined (reading 'S')
+    at Tt.exports (http://localhost:5174/node_modules/.vite/deps/@react-three_fiber.js?v=a484fc9f:8136:528)
+    at createReconciler (http://localhost:5174/node_modules/.vite/deps/@react-three_fiber.js?v=a484fc9f:9320:23)
+    at http://localhost:5174/node_modules/.vite/deps/@react-three_fiber.js?v=a484fc9f:9534:18
+[  565216ms] TypeError: Cannot read properties of undefined (reading 'S')
+    at Tt.exports (http://localhost:5174/node_modules/.vite/deps/@react-three_fiber.js?v=a484fc9f:8136:528)
+    at createReconciler (http://localhost:5174/node_modules/.vite/deps/@react-three_fiber.js?v=a484fc9f:9320:23)
+    at http://localhost:5174/node_modules/.vite/deps/@react-three_fiber.js?v=a484fc9f:9534:18
+[  565217ms] TypeError: Cannot read properties of undefined (reading 'S')
+    at Tt.exports (http://localhost:5174/node_modules/.vite/deps/@react-three_fiber.js?v=a484fc9f:8136:528)
+    at createReconciler (http://localhost:5174/node_modules/.vite/deps/@react-three_fiber.js?v=a484fc9f:9320:23)
+    at http://localhost:5174/node_modules/.vite/deps/@react-three_fiber.js?v=a484fc9f:9534:18
+[  565222ms] [ERROR] The above error occurred in one of your React components:
+
+    at Lazy
+    at Suspense
+    at div
+    at aside
+    at HeroSculpture (http://localhost:5174/src/components/effects/hero-sculpture.tsx:24:18)
+    at section
+    at Hero (http://localhost:5174/src/components/sections/hero.tsx?t=1779758239393:28:13)
+    at main
+    at Shell (http://localhost:5174/src/App.tsx?t=1779758239393:50:18)
+    at LangProvider (http://localhost:5174/src/hooks/use-lang.tsx:26:32)
+    at App
+
+Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries. @ http://localhost:5174/node_modules/.vite/deps/chunk-NXESFFTV.js?v=a484fc9f:14079
+[  565225ms] TypeError: Cannot read properties of undefined (reading 'S')
+    at Tt.exports (http://localhost:5174/node_modules/.vite/deps/@react-three_fiber.js?v=a484fc9f:8136:528)
+    at createReconciler (http://localhost:5174/node_modules/.vite/deps/@react-three_fiber.js?v=a484fc9f:9320:23)
+    at http://localhost:5174/node_modules/.vite/deps/@react-three_fiber.js?v=a484fc9f:9534:18

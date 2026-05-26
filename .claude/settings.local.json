@@ -16,7 +16,26 @@
       "mcp__plugin_playwright_playwright__browser_take_screenshot",
       "mcp__plugin_playwright_playwright__browser_evaluate",
       "Read(//c/c/Users/emili/Desktop/PROYECTOS PERSONALES/NUEVO PORTFOLIO/**)",
-      "Bash(xargs sed -i 's/py-24 md:py-32/py-16 md:py-24/g')"
+      "Bash(xargs sed -i 's/py-24 md:py-32/py-16 md:py-24/g')",
+      "mcp__plugin_playwright_playwright__browser_fill_form",
+      "mcp__plugin_playwright_playwright__browser_click",
+      "mcp__plugin_playwright_playwright__browser_network_requests",
+      "Bash(gh repo *)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Bash(npx -y skills)",
+      "Bash(npx -y skills --help)",
+      "Bash(timeout 30 npx -y skills list)",
+      "Bash(npx -y skills add anthropics/frontend-design --all)",
+      "Bash(npx -y skills add anthropics/skills --list)",
+      "Bash(npx -y skills add anthropics/skills -s frontend-design,brand-guidelines,canvas-design,algorithmic-art -a '*' -y)",
+      "Bash(ls -la ~/.claude/skills/ 2>&1 | head -30)",
+      "Read(//c/Users/emili/.claude/skills/**)",
+      "Bash(ls ~/.agents/skills/ 2>&1 | head -40)",
+      "Read(//c/Users/emili/.agents/skills/**)",
+      "Bash(npx tsc *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:5175/)",
+      "Bash(node -e \"\\(async \\(\\) => { const p = await import\\('playwright'\\).then\\(m => m.chromium.launch\\(\\)\\); const ctx = await p.newContext\\({viewport:{width:1440,height:900}}\\); const page = await ctx.newPage\\(\\); await page.goto\\('http://localhost:5173/#casos'\\); await page.waitForTimeout\\(1500\\); await page.screenshot\\({path:'cases-zoom.png', fullPage:false}\\); await p.close\\(\\); }\\)\\(\\)\")",
+      "mcp__plugin_playwright_playwright__browser_wait_for"
     ],
     "additionalDirectories": [
       "C:\\Users\\emili\\Desktop\\PROYECTOS PERSONALES\\NUEVO PORTFOLIO\\assets"

@@ -1,0 +1,29 @@
+[     156ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ http://localhost:5174/node_modules/.vite/deps/chunk-NXESFFTV.js?v=a484fc9f:21608
+[     452ms] TypeError: Cannot read properties of undefined (reading 'S')
+    at Tt.exports (http://localhost:5174/node_modules/.vite/deps/@react-three_fiber.js?v=a484fc9f:8136:528)
+    at createReconciler (http://localhost:5174/node_modules/.vite/deps/@react-three_fiber.js?v=a484fc9f:9320:23)
+    at http://localhost:5174/node_modules/.vite/deps/@react-three_fiber.js?v=a484fc9f:9534:18
+[     455ms] TypeError: Cannot read properties of undefined (reading 'S')
+    at Tt.exports (http://localhost:5174/node_modules/.vite/deps/@react-three_fiber.js?v=a484fc9f:8136:528)
+    at createReconciler (http://localhost:5174/node_modules/.vite/deps/@react-three_fiber.js?v=a484fc9f:9320:23)
+    at http://localhost:5174/node_modules/.vite/deps/@react-three_fiber.js?v=a484fc9f:9534:18
+[     459ms] [ERROR] The above error occurred in one of your React components:
+
+    at Lazy
+    at Suspense
+    at div
+    at aside
+    at HeroSculpture (http://localhost:5174/src/components/effects/hero-sculpture.tsx:24:18)
+    at section
+    at Hero (http://localhost:5174/src/components/sections/hero.tsx?t=1779758239393:28:13)
+    at main
+    at Shell (http://localhost:5174/src/App.tsx?t=1779758239393:50:18)
+    at LangProvider (http://localhost:5174/src/hooks/use-lang.tsx:26:32)
+    at App
+
+Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries. @ http://localhost:5174/node_modules/.vite/deps/chunk-NXESFFTV.js?v=a484fc9f:14079
+[     462ms] TypeError: Cannot read properties of undefined (reading 'S')
+    at Tt.exports (http://localhost:5174/node_modules/.vite/deps/@react-three_fiber.js?v=a484fc9f:8136:528)
+    at createReconciler (http://localhost:5174/node_modules/.vite/deps/@react-three_fiber.js?v=a484fc9f:9320:23)
+    at http://localhost:5174/node_modules/.vite/deps/@react-three_fiber.js?v=a484fc9f:9534:18
