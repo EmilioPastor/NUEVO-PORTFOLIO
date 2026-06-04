@@ -5,11 +5,9 @@ import { Loader } from "@/components/effects/loader";
 import { Cursor } from "@/components/effects/cursor";
 import { CursorTrail } from "@/components/effects/cursor-trail";
 import { ScrollProgress } from "@/components/effects/scroll-progress";
-import { Availability } from "@/components/effects/availability";
 import { HourMood } from "@/components/effects/hour-mood";
 import { SectionMood } from "@/components/effects/section-mood";
 import { BlueprintMode } from "@/components/effects/blueprint-mode";
-import { TocRail } from "@/components/effects/toc-rail";
 import { Nav } from "@/components/nav";
 import { Hero } from "@/components/sections/hero";
 import { Cases } from "@/components/sections/cases";
@@ -50,8 +48,6 @@ function Shell() {
       <ScrollProgress />
       <CursorTrail />
       <Cursor />
-      <Availability />
-      <TocRail />
       <Nav />
       <main id="main" className="relative">
         <Hero />
