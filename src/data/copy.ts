@@ -21,7 +21,6 @@ export const HERO = {
   },
   cta1: { es: "Hablemos", en: "Let's talk" },
   cta2: { es: "Ver casos", en: "See cases" },
-  cta3: { es: "Descargar CV", en: "Download CV" },
   pills: [
     { es: "Webs a medida", en: "Custom websites" },
     { es: "Software a medida", en: "Custom software" },

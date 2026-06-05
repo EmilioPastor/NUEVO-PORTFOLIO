@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { ArrowDown, FileDown } from "lucide-react";
+import { ArrowDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { HERO } from "@/data/copy";
 import { useT } from "@/hooks/use-lang";
@@ -75,12 +75,6 @@ export function Hero() {
           </Button>
           <Button asChild variant="ghost" size="lg">
             <a href="#casos">{t(HERO.cta2)}</a>
-          </Button>
-          <Button asChild variant="ghost" size="lg">
-            <a href="/assets/CV.pdf" download data-cursor-label="PDF">
-              <FileDown className="h-4 w-4" />
-              {t(HERO.cta3)}
-            </a>
           </Button>
         </motion.div>
       </div>

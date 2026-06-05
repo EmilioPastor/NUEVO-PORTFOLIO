@@ -58,12 +58,6 @@ export function Footer() {
                 href: "https://www.linkedin.com/in/emilio-pastor-zurita/",
                 external: true,
               },
-              {
-                label: "CV (PDF)",
-                href: "/assets/CV.pdf",
-                external: false,
-                download: true,
-              },
             ]}
           />
           <Col
