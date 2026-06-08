@@ -2,8 +2,6 @@ import { useEffect, useState } from "react";
 import { LangProvider, useT } from "@/hooks/use-lang";
 import { useReducedMotion } from "@/hooks/use-reduced-motion";
 import { Loader } from "@/components/effects/loader";
-import { Cursor } from "@/components/effects/cursor";
-import { CursorTrail } from "@/components/effects/cursor-trail";
 import { ScrollProgress } from "@/components/effects/scroll-progress";
 import { HourMood } from "@/components/effects/hour-mood";
 import { SectionMood } from "@/components/effects/section-mood";
@@ -46,8 +44,6 @@ function Shell() {
       <SectionMood />
       <BlueprintMode />
       <ScrollProgress />
-      <CursorTrail />
-      <Cursor />
       <Nav />
       <main id="main" className="relative">
         <Hero />
